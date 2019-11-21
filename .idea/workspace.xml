@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/foodies-ui.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-ui/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-core/src/main/java/com/foodies/common/CrudService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-core/src/main/java/com/foodies/common/CrudServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +13,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -82,8 +77,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574374847528</updated>
-      <workItem from="1574374850556" duration="1657000" />
+      <workItem from="1574374850556" duration="2198000" />
     </task>
+    <task id="LOCAL-00001" summary="added foodies-ui module">
+      <created>1574376538066</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574376538066</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,5 +105,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="added foodies-ui module" />
+    <option name="LAST_COMMIT_MESSAGE" value="added foodies-ui module" />
   </component>
 </project>
