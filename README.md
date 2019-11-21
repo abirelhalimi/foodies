@@ -1,5 +1,5 @@
 # foodies
-This project contains currently 3 modules.
+This project contains currently 4 modules.
 foodies-web: It will contain Rest controllers
 foodies-core: It should contain all business logic
 foodies-repository: ORM and data logic
