@@ -1,2 +1,2 @@
-# foodies
+# Foodies
 
