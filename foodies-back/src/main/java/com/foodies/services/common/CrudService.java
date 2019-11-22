@@ -1,4 +1,4 @@
-package com.foodies.common;
+package com.foodies.services.common;
 
 import java.util.List;
 

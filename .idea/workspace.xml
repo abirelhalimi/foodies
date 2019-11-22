@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-core/src/main/java/com/foodies/common/CrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-core/src/main/java/com/foodies/common/CrudServiceImpl.java" afterDir="false" />
+    <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="created models, repositories and all crud services">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/FoodiesApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Recipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Recommendation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Restaurant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/repositories/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/repositories/RecipeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/repositories/RecommendationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/repositories/RestaurantRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/common/CrudServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/common/ObjectUpdater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/common/ObjectUpdaterImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/CommentCrudService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RecipeCrudService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RecommendationCrudService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RestaurantCrudService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/UserCrudService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/CommentCrudServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RecipeCrudServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RecommendationCrudServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RestaurantCrudServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/UserCrudServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/test/java/com/foodies/FoodiesApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-ui/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-core/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-core/src/main/java/com/foodies/common/CrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/common/CrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-core/src/main/java/com/foodies/common/CrudServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-repository/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-web/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,13 +83,35 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="js.buildTools.grunt.grunt-cli.package" value="" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\models" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\repositories" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\services" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-web\src\main\java\com\foodies" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -62,10 +125,44 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.FoodiesApplication">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="FoodiesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="foodies-back" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.foodies.FoodiesApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="foodies-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.foodies.FoodiesApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="js.build_tools.grunt">
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="Spring Boot.FoodiesApplication" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -77,7 +174,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574374847528</updated>
-      <workItem from="1574374850556" duration="2198000" />
+      <workItem from="1574374850556" duration="2348000" />
+      <workItem from="1574412226409" duration="3308000" />
+      <workItem from="1574429494950" duration="1371000" />
+      <workItem from="1574444898397" duration="5744000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -86,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574376538066</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="crud services">
+      <created>1574377178734</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574377178734</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,7 +204,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -106,6 +215,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added foodies-ui module" />
-    <option name="LAST_COMMIT_MESSAGE" value="added foodies-ui module" />
+    <MESSAGE value="crud services" />
+    <MESSAGE value="created models, repositories and all crud services" />
+    <option name="LAST_COMMIT_MESSAGE" value="created models, repositories and all crud services" />
   </component>
 </project>
