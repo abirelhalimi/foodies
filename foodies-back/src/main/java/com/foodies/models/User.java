@@ -7,13 +7,6 @@ import java.util.List;
 @SequenceGenerator(name = "USER_SQ", sequenceName = "user_sequence")
 public class User {
 
-    public User(String email, String password, String username, String image) {
-        this.email = email;
-        this.password = password;
-        this.username = username;
-        this.image = image;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "USER_SQ")
     private Long id;
