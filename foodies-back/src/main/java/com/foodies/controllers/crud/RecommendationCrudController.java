@@ -1,4 +1,4 @@
-package com.foodies.controllers;
+package com.foodies.controllers.crud;
 
 import com.foodies.models.Recommendation;
 import com.foodies.services.crud.RecommendationCrudService;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@RequestMapping(value = "/api/recommendation")
+@RequestMapping(value = "/api/recommendations")
 @RestController
 public class RecommendationCrudController {
 

@@ -18,10 +18,21 @@ public class User {
     private String image;
 
     @ManyToMany
+    private List<Cuisine> cuisines;
+
+    @ManyToMany
     private List<User> followers;
 
     @ManyToMany
     private List<User> following;
+
+    public List<Cuisine> getCuisines() {
+        return cuisines;
+    }
+
+    public void setCuisines(List<Cuisine> cuisines) {
+        this.cuisines = cuisines;
+    }
 
     public String getEmail() {
         return email;

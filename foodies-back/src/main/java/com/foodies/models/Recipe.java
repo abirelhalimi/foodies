@@ -2,19 +2,22 @@ package com.foodies.models;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @SequenceGenerator(name = "RECIPE_SQ", sequenceName = "recipe_sequence")
 public class Recipe {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO,generator = "RECIPE_SQ")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "RECIPE_SQ")
     private Long id;
 
-    private String cuisine;
     private Date date;
     private String image;
     private String text;
+
+    @ManyToMany
+    private List<Cuisine> cuisines;
 
     @ManyToOne
     private User user;
@@ -59,11 +62,12 @@ public class Recipe {
         this.id = id;
     }
 
-    public String getCuisine() {
-        return cuisine;
+    public List<Cuisine> getCuisines() {
+        return cuisines;
     }
 
-    public void setCuisine(String cuisine) {
-        this.cuisine = cuisine;
+    public void setCuisines(List<Cuisine> cuisines) {
+        this.cuisines = cuisines;
     }
+
 }

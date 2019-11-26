@@ -7,24 +7,12 @@ import java.util.List;
 @SequenceGenerator(name = "RESTAURANT_SQ", sequenceName = "restaurant_sequence")
 public class Restaurant {
 
-    public Restaurant(String address, String telephone, String cuisine, String rating, String email, String password, String username, String image) {
-        this.address = address;
-        this.telephone = telephone;
-        this.cuisine = cuisine;
-        this.rating = rating;
-        this.email = email;
-        this.password = password;
-        this.username = username;
-        this.image = image;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "RESTAURANT_SQ")
     private Long id;
 
     private String address;
     private String telephone;
-    private String cuisine;
     private String rating;
     private String email;
     private String password;
@@ -33,10 +21,21 @@ public class Restaurant {
     private String image;
 
     @ManyToMany
+    private List<Cuisine> cuisines;
+
+    @ManyToMany
     private List<User> followers;
 
     @ManyToMany
     private List<User> following;
+
+    public List<Cuisine> getCuisines() {
+        return cuisines;
+    }
+
+    public void setCuisines(List<Cuisine> cuisines) {
+        this.cuisines = cuisines;
+    }
 
     public String getEmail() {
         return email;
@@ -120,14 +119,6 @@ public class Restaurant {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
-    }
-
-    public String getCuisine() {
-        return cuisine;
-    }
-
-    public void setCuisine(String cuisine) {
-        this.cuisine = cuisine;
     }
 
     public String getRating() {

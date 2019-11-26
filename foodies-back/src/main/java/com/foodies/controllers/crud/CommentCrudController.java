@@ -1,7 +1,6 @@
-package com.foodies.controllers;
+package com.foodies.controllers.crud;
 
 import com.foodies.models.Comment;
-import com.foodies.models.User;
 import com.foodies.services.crud.CommentCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@RequestMapping(value = "/api/comment")
+@RequestMapping(value = "/api/comments")
 @RestController
 public class CommentCrudController {
 
@@ -27,7 +26,7 @@ public class CommentCrudController {
     }
 
     @PutMapping(value = "/{id}")
-    public Comment update(@PathVariable("id") Long id , @Valid @RequestBody Comment newCommentData) {
+    public Comment update(@PathVariable("id") Long id, @Valid @RequestBody Comment newCommentData) {
         return commentCrudService.update(commentCrudService.getById(id), newCommentData);
     }
 

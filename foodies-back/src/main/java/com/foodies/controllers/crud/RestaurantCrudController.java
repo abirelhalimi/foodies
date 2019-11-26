@@ -1,4 +1,4 @@
-package com.foodies.controllers;
+package com.foodies.controllers.crud;
 
 import com.foodies.models.Restaurant;
 import com.foodies.services.crud.RestaurantCrudService;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@RequestMapping(value = "/api/restaurant")
+@RequestMapping(value = "/api/restaurants")
 @RestController
 public class RestaurantCrudController {
 
