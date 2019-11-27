@@ -6,7 +6,11 @@ import com.foodies.services.common.CrudServiceImpl;
 import com.foodies.services.crud.UserCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserCrudServiceImpl extends CrudServiceImpl<User> implements UserCrudService {
@@ -14,8 +18,49 @@ public class UserCrudServiceImpl extends CrudServiceImpl<User> implements UserCr
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private PasswordEncoder encoder = new BCryptPasswordEncoder();
+
     @Override
     protected CrudRepository<User, Long> repository() {
         return userRepository;
+    }
+
+    @Override
+    public User add(User user) {
+        user.setPassword(encoder.encode(user.getPassword()));
+        if(userDoesntExists(user.getEmail(), user.getUsername())) {
+            userRepository.save(user);
+        }
+        return user;
+    }
+
+    @Override
+    public User update(User objectToUpdate, User newObjectData) {
+        if (newObjectData.getEmail() != null && userDoesntExists(newObjectData.getEmail(), newObjectData.getUsername())) {
+            objectToUpdate.setEmail(newObjectData.getEmail());
+        }
+
+        if (newObjectData.getPassword() != null) {
+            objectToUpdate.setPassword(encoder.encode(newObjectData.getPassword()));
+        }
+        userRepository.save(objectToUpdate);
+        return objectToUpdate;
+    }
+
+    private boolean userDoesntExists(String email, String username) {
+
+        List<User> users;
+        users = userRepository.findAll();
+
+        if (users == null) {
+            return true;
+        }
+        for (User user : users) {
+            if (user.getEmail().equals(email) || user.getUsername().equals(username)) {
+                return false;
+            }
+        }
+        return true;
     }
 }

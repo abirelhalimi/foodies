@@ -7,24 +7,12 @@ import java.util.List;
 @SequenceGenerator(name = "RESTAURANT_SQ", sequenceName = "restaurant_sequence")
 public class Restaurant {
 
-    public Restaurant(String address, String telephone, String cuisine, String rating, String email, String password, String username, String image) {
-        this.address = address;
-        this.telephone = telephone;
-        this.cuisine = cuisine;
-        this.rating = rating;
-        this.email = email;
-        this.password = password;
-        this.username = username;
-        this.image = image;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "RESTAURANT_SQ")
     private Long id;
 
     private String address;
     private String telephone;
-    private String cuisine;
     private String rating;
     private String email;
     private String password;
@@ -33,10 +21,42 @@ public class Restaurant {
     private String image;
 
     @ManyToMany
-    private List<User> followers;
+    private List<Cuisine> cuisines;
 
     @ManyToMany
-    private List<User> following;
+    private List<User> followers;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
 
     public String getEmail() {
         return email;
@@ -78,63 +98,19 @@ public class Restaurant {
         this.image = image;
     }
 
+    public List<Cuisine> getCuisines() {
+        return cuisines;
+    }
+
+    public void setCuisines(List<Cuisine> cuisines) {
+        this.cuisines = cuisines;
+    }
+
     public List<User> getFollowers() {
         return followers;
     }
 
     public void setFollowers(List<User> followers) {
         this.followers = followers;
-    }
-
-    public List<User> getFollowing() {
-        return following;
-    }
-
-    public void setFollowing(List<User> following) {
-        this.following = following;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
-
-    public String getCuisine() {
-        return cuisine;
-    }
-
-    public void setCuisine(String cuisine) {
-        this.cuisine = cuisine;
-    }
-
-    public String getRating() {
-        return rating;
-    }
-
-    public void setRating(String rating) {
-        this.rating = rating;
     }
 }

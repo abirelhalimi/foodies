@@ -1,5 +1,6 @@
 package com.foodies.services.common;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +11,10 @@ import java.util.Optional;
 @Service
 public abstract class CrudServiceImpl<T> implements CrudService<T> {
 
+
+    @Autowired
+    private ObjectUpdater objectUpdater;
+
     protected abstract CrudRepository<T, Long> repository();
 
     @Override
@@ -19,8 +24,11 @@ public abstract class CrudServiceImpl<T> implements CrudService<T> {
 
     @Override
     public T update(T objectToUpdate, T newObjectData) {
-        Field[] fields = objectToUpdate.getClass().getDeclaredFields();
-
+        try {
+            objectUpdater.update(objectToUpdate, newObjectData);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return repository().save(objectToUpdate);
     }
 

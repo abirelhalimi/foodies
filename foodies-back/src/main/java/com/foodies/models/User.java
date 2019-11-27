@@ -7,13 +7,6 @@ import java.util.List;
 @SequenceGenerator(name = "USER_SQ", sequenceName = "user_sequence")
 public class User {
 
-    public User(String email, String password, String username, String image) {
-        this.email = email;
-        this.password = password;
-        this.username = username;
-        this.image = image;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "USER_SQ")
     private Long id;
@@ -25,10 +18,21 @@ public class User {
     private String image;
 
     @ManyToMany
+    private List<Cuisine> cuisines;
+
+    @ManyToMany
     private List<User> followers;
 
     @ManyToMany
     private List<User> following;
+
+    public List<Cuisine> getCuisines() {
+        return cuisines;
+    }
+
+    public void setCuisines(List<Cuisine> cuisines) {
+        this.cuisines = cuisines;
+    }
 
     public String getEmail() {
         return email;

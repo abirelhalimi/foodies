@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="foodies-ui" />
         <module name="foodies-back" />
+        <module name="foodies" />
+        <module name="foodies-ui" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="foodies" options="-parameters" />
       <module name="foodies-back" options="-parameters" />
       <module name="foodies-core" options="-parameters" />
       <module name="foodies-repository" options="-parameters" />
