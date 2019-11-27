@@ -2,28 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/UserProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/crud/CuisineCrudController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/crud/DonationCrudController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Cuisine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Donation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/repositories/CuisineRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/repositories/DonationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/CuisineCrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/DonationCrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/CuisineCrudServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/DonationCrudServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/FoodiesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/FoodiesApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/CommentCrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/crud/CommentCrudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RecipeCrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/crud/RecipeCrudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RecommendationCrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/crud/RecommendationCrudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantCrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/crud/RestaurantCrudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/UserCrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/crud/UserCrudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Recipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/UserCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/UserCrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RestaurantCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RestaurantCrudServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/UserCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/UserCrudServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +149,8 @@
       <workItem from="1574699029816" duration="6061000" />
       <workItem from="1574708604891" duration="14000" />
       <workItem from="1574761633190" duration="242000" />
-      <workItem from="1574763130820" duration="3827000" />
+      <workItem from="1574763130820" duration="4022000" />
+      <workItem from="1574861945751" duration="4470000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -185,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574707756396</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="crud update">
+      <created>1574767010625</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574767010625</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +205,7 @@
     <MESSAGE value="crud services" />
     <MESSAGE value="created models, repositories and all crud services" />
     <MESSAGE value="crud controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="crud controllers" />
+    <MESSAGE value="crud update" />
+    <option name="LAST_COMMIT_MESSAGE" value="crud update" />
   </component>
 </project>
