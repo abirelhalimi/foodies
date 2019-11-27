@@ -1,6 +1,5 @@
 package com.foodies.controllers;
 
-import com.foodies.models.Restaurant;
 import com.foodies.models.User;
 import com.foodies.services.crud.UserCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +31,7 @@ public class UserController {
         newUserData.getFollowers().add(userCrudService.getById(idUser));
         User userToUpdateOther = userCrudService.getById(idUser), newUserDataOther = userCrudService.getById(idUser);
         newUserDataOther.getFollowing().add(userCrudService.getById(id));
-        userCrudService.update(userToUpdateOther, newUserDataOther);
+        User user1 = userCrudService.update(userToUpdateOther, newUserDataOther);
         return userCrudService.update(userToUpdate, newUserData);
     }
 
@@ -42,7 +41,7 @@ public class UserController {
         newUserData.getFollowers().remove(userCrudService.getById(idUser));
         User userToUpdateOther = userCrudService.getById(idUser), newUserDataOther = userCrudService.getById(idUser);
         newUserDataOther.getFollowing().remove(userCrudService.getById(id));
-        userCrudService.update(userToUpdateOther, newUserDataOther);
+        User user1 = userCrudService.update(userToUpdateOther, newUserDataOther);
         return userCrudService.update(userToUpdate, newUserData);
     }
 }
