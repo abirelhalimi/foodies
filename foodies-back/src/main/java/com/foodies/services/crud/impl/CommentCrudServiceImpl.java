@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class CommentCrudServiceImpl extends CrudServiceImpl<Comment> implements CommentCrudService {
 
@@ -17,5 +20,17 @@ public class CommentCrudServiceImpl extends CrudServiceImpl<Comment> implements 
     @Override
     protected CrudRepository<Comment, Long> repository() {
         return commentRepository;
+    }
+
+    @Override
+    public List<Comment> getCommentsByPost(Long id) {
+        List<Comment> allComments = commentRepository.findAll();
+        List<Comment> postComments = new ArrayList<>();
+        allComments.forEach(comment -> {
+            if (comment.getRecipe().getId() == id) {
+                postComments.add(comment);
+            }
+        });
+        return postComments;
     }
 }

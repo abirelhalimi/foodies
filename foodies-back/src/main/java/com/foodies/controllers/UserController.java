@@ -26,22 +26,12 @@ public class UserController {
     }
 
     @PostMapping(value = "/follow/{id}")
-    public User follow(@PathVariable Long id, @Valid @RequestBody Long idUser) {
-        User userToUpdate = userCrudService.getById(id), newUserData = userCrudService.getById(id);
-        newUserData.getFollowers().add(userCrudService.getById(idUser));
-        User userToUpdateOther = userCrudService.getById(idUser), newUserDataOther = userCrudService.getById(idUser);
-        newUserDataOther.getFollowing().add(userCrudService.getById(id));
-        User user1 = userCrudService.update(userToUpdateOther, newUserDataOther);
-        return userCrudService.update(userToUpdate, newUserData);
+    public List<User> follow(@PathVariable Long id, @Valid @RequestBody Long idUser) {
+        return userCrudService.follow(id, idUser);
     }
 
     @PostMapping(value = "/unfollow/{id}")
-    public User unfollow(@PathVariable Long id, @Valid @RequestBody Long idUser) {
-        User userToUpdate = userCrudService.getById(id), newUserData = userCrudService.getById(id);
-        newUserData.getFollowers().remove(userCrudService.getById(idUser));
-        User userToUpdateOther = userCrudService.getById(idUser), newUserDataOther = userCrudService.getById(idUser);
-        newUserDataOther.getFollowing().remove(userCrudService.getById(id));
-        User user1 = userCrudService.update(userToUpdateOther, newUserDataOther);
-        return userCrudService.update(userToUpdate, newUserData);
+    public List<User> unfollow(@PathVariable Long id, @Valid @RequestBody Long idUser) {
+        return userCrudService.unfollow(id, idUser);
     }
 }

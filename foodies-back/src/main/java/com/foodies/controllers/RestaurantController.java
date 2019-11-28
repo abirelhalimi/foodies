@@ -1,8 +1,6 @@
 package com.foodies.controllers;
 
 import com.foodies.models.Restaurant;
-import com.foodies.models.User;
-import com.foodies.repositories.RestaurantRepository;
 import com.foodies.services.crud.RestaurantCrudService;
 import com.foodies.services.crud.UserCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,17 +30,13 @@ public class RestaurantController {
     }
 
     @PostMapping(value = "/follow/{id}")
-    public Restaurant follow(@PathVariable Long id, @Valid @RequestBody Long idUser) {
-        Restaurant restaurantToUpdate = restaurantCrudService.getById(id), newRestaurantData = restaurantCrudService.getById(id);
-        newRestaurantData.getFollowers().add(userCrudService.getById(idUser));
-        return restaurantCrudService.update(restaurantToUpdate, newRestaurantData);
+    public List<Restaurant> follow(@PathVariable Long id, @Valid @RequestBody Long idUser) {
+        return restaurantCrudService.follow(id, idUser);
     }
 
     @PostMapping(value = "/unfollow/{id}")
-    public Restaurant unfollow(@PathVariable Long id, @Valid @RequestBody Long idUser) {
-        Restaurant restaurantToUpdate = restaurantCrudService.getById(id), newRestaurantData = restaurantCrudService.getById(id);
-        newRestaurantData.getFollowers().remove(userCrudService.getById(idUser));
-        return restaurantCrudService.update(restaurantToUpdate, newRestaurantData);
+    public List<Restaurant> unfollow(@PathVariable Long id, @Valid @RequestBody Long idUser) {
+        return restaurantCrudService.unfollow(id, idUser);
     }
 
 }
