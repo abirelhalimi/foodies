@@ -26,6 +26,17 @@ public class User {
     @ManyToMany
     private List<User> following;
 
+    @ManyToMany
+    private List<Restaurant> followingRestaurant;
+
+    public List<Restaurant> getFollowingRestaurant() {
+        return followingRestaurant;
+    }
+
+    public void setFollowingRestaurant(List<Restaurant> followingRestaurant) {
+        this.followingRestaurant = followingRestaurant;
+    }
+
     public List<Cuisine> getCuisines() {
         return cuisines;
     }

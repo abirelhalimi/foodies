@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class RecipeCrudServiceImpl extends CrudServiceImpl<Recipe> implements RecipeCrudService {
 
@@ -17,5 +20,17 @@ public class RecipeCrudServiceImpl extends CrudServiceImpl<Recipe> implements Re
     @Override
     protected CrudRepository<Recipe, Long> repository() {
         return recipeRepository;
+    }
+
+    @Override
+    public List<Recipe> getByUser(Long id) {
+        List<Recipe> allRecipes = recipeRepository.findAll();
+        List<Recipe> userRecipes = new ArrayList<>();
+        allRecipes.forEach(recipe -> {
+            if (recipe.getUser().getId() == id) {
+                userRecipes.add(recipe);
+            }
+        });
+        return userRecipes;
     }
 }

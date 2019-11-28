@@ -5,6 +5,7 @@ import com.foodies.models.User;
 import com.foodies.repositories.RestaurantRepository;
 import com.foodies.services.common.CrudServiceImpl;
 import com.foodies.services.crud.RestaurantCrudService;
+import com.foodies.services.crud.UserCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -20,6 +21,9 @@ public class RestaurantCrudServiceImpl extends CrudServiceImpl<Restaurant> imple
     private RestaurantRepository restaurantRepository;
 
     @Autowired
+    private UserCrudService userCrudService;
+
+    @Autowired
     private PasswordEncoder encoder = new BCryptPasswordEncoder();
 
     @Override
@@ -30,7 +34,7 @@ public class RestaurantCrudServiceImpl extends CrudServiceImpl<Restaurant> imple
     @Override
     public Restaurant add(Restaurant restaurant) {
         restaurant.setPassword(encoder.encode(restaurant.getPassword()));
-        if(!restaurantExists(restaurant.getEmail(), restaurant.getUsername())) {
+        if (!restaurantExists(restaurant.getEmail(), restaurant.getUsername())) {
             restaurantRepository.save(restaurant);
         }
         return restaurant;
@@ -50,5 +54,33 @@ public class RestaurantCrudServiceImpl extends CrudServiceImpl<Restaurant> imple
             }
         }
         return false;
+    }
+
+    @Override
+    public List<Restaurant> follow(Long id, Long idUser) {
+        Restaurant restaurantToFollow = getById(id);
+        User userFollowing = userCrudService.getById(idUser);
+        addFollowers(restaurantToFollow, userFollowing);
+        userCrudService.addFollowingRestaurant(userFollowing, restaurantToFollow);
+        return userFollowing.getFollowingRestaurant();
+    }
+
+    private void addFollowers(Restaurant restaurantToFollow, User userFollowing) {
+        restaurantToFollow.getFollowers().add(userFollowing);
+        update(getById(restaurantToFollow.getId()), restaurantToFollow);
+    }
+
+    @Override
+    public List<Restaurant> unfollow(Long id, Long idUser) {
+        Restaurant restaurantToUnfollow = getById(id);
+        User userUnfollowing = userCrudService.getById(idUser);
+        removeFollowers(restaurantToUnfollow, userUnfollowing);
+        userCrudService.removeFollowingRestaurant(userUnfollowing, restaurantToUnfollow);
+        return userUnfollowing.getFollowingRestaurant();
+    }
+
+    private void removeFollowers(Restaurant restaurantToUnfollow, User userUnfollowing) {
+        restaurantToUnfollow.getFollowers().remove(userUnfollowing);
+        update(getById(restaurantToUnfollow.getId()), restaurantToUnfollow);
     }
 }

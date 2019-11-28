@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implements DonationCrudService {
 
@@ -17,5 +20,17 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
     @Override
     protected CrudRepository<Donation, Long> repository() {
         return donationRepository;
+    }
+
+    @Override
+    public List<Donation> getAllByRestaurant(Long id) {
+        List<Donation> allDonations = donationRepository.findAll();
+        List<Donation> userDonations = new ArrayList<>();
+        allDonations.forEach(donation -> {
+            if (donation.getRestaurant().getId() == id) {
+                userDonations.add(donation);
+            }
+        });
+        return userDonations;
     }
 }

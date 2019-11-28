@@ -1,5 +1,6 @@
 package com.foodies.services.crud.impl;
 
+import com.foodies.models.Restaurant;
 import com.foodies.models.User;
 import com.foodies.repositories.UserRepository;
 import com.foodies.services.common.CrudServiceImpl;
@@ -29,7 +30,7 @@ public class UserCrudServiceImpl extends CrudServiceImpl<User> implements UserCr
     @Override
     public User add(User user) {
         user.setPassword(encoder.encode(user.getPassword()));
-        if(userDoesntExists(user.getEmail(), user.getUsername())) {
+        if (userDoesntExists(user.getEmail(), user.getUsername())) {
             userRepository.save(user);
         }
         return user;
@@ -62,5 +63,56 @@ public class UserCrudServiceImpl extends CrudServiceImpl<User> implements UserCr
             }
         }
         return true;
+    }
+
+
+    @Override
+    public List<User> follow(Long id, Long idUser) {
+        User userToFollow = getById(id);
+        User userFollowing = getById(idUser);
+        addFollower(userToFollow, userFollowing);
+        addFollowing(userFollowing, userToFollow);
+        return userFollowing.getFollowing();
+    }
+
+    private void addFollowing(User userFollowing, User userToFollow) {
+        userFollowing.getFollowing().add(userToFollow);
+        update(getById(userFollowing.getId()), userFollowing);
+    }
+
+    @Override
+    public void addFollowingRestaurant(User userFollowing, Restaurant restaurantToFollow) {
+        userFollowing.getFollowingRestaurant().add(restaurantToFollow);
+        update(getById(userFollowing.getId()), userFollowing);
+    }
+
+    private void addFollower(User userToFollow, User userFollowing) {
+        userToFollow.getFollowers().add(userFollowing);
+        update(getById(userToFollow.getId()), userToFollow);
+    }
+
+    @Override
+    public List<User> unfollow(Long id, Long idUser) {
+        User userToUnfollow = getById(id);
+        User userUnfollowing = getById(idUser);
+        removeFollower(userToUnfollow, userUnfollowing);
+        removeFollowing(userUnfollowing, userToUnfollow);
+        return userUnfollowing.getFollowing();
+    }
+
+    private void removeFollowing(User userUnfollowing, User userToUnfollow) {
+        userUnfollowing.getFollowing().remove(userToUnfollow);
+        update(getById(userUnfollowing.getId()), userUnfollowing);
+    }
+
+    @Override
+    public void removeFollowingRestaurant(User userUnfollowing, Restaurant restaurantToUnfollow) {
+        userUnfollowing.getFollowingRestaurant().remove(restaurantToUnfollow);
+        update(getById(userUnfollowing.getId()), userUnfollowing);
+    }
+
+    private void removeFollower(User userToUnfollow, User userUnfollowing) {
+        userToUnfollow.getFollowers().remove(userUnfollowing);
+        update(getById(userToUnfollow.getId()), userToUnfollow);
     }
 }
