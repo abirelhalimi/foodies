@@ -1,32 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="user controller update">
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DonationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/PostController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/crud/MenuCrudController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/repositories/MenuRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/MenuCrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/MenuCrudServiceImpl.java" afterDir="false" />
+    <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/CommentCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/CommentCrudService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/DonationCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/DonationCrudService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RecipeCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RecipeCrudService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RecommendationCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RecommendationCrudService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RestaurantCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RestaurantCrudService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/UserCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/UserCrudService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/CommentCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/CommentCrudServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/DonationCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/DonationCrudServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RecipeCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RecipeCrudServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RecommendationCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RecommendationCrudServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RestaurantCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RestaurantCrudServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/UserCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/UserCrudServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DonationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DonationController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="controllers" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -167,6 +145,21 @@
       <workItem from="1574761633190" duration="242000" />
       <workItem from="1574763130820" duration="4022000" />
       <workItem from="1574861945751" duration="7371000" />
+      <workItem from="1575237564370" duration="43000" />
+      <workItem from="1576053805018" duration="2550000" />
+      <workItem from="1576078346714" duration="15000" />
+      <workItem from="1576167511096" duration="1063000" />
+      <workItem from="1576525229574" duration="681000" />
+      <workItem from="1576535944959" duration="8000" />
+      <workItem from="1576858472089" duration="498000" />
+      <workItem from="1577045888862" duration="896000" />
+      <workItem from="1577093641687" duration="2270000" />
+      <workItem from="1577201072313" duration="39000" />
+      <workItem from="1577975419846" duration="8000" />
+      <workItem from="1579094387890" duration="618000" />
+      <workItem from="1579360217775" duration="124000" />
+      <workItem from="1579438836998" duration="187000" />
+      <workItem from="1579689469075" duration="3442000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -217,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574868999015</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="all controllers. New Post Type.">
+      <created>1574975266117</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574975266117</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +246,7 @@
     <MESSAGE value="restaurant controller" />
     <MESSAGE value="user controller" />
     <MESSAGE value="user controller update" />
-    <option name="LAST_COMMIT_MESSAGE" value="user controller update" />
+    <MESSAGE value="all controllers. New Post Type." />
+    <option name="LAST_COMMIT_MESSAGE" value="all controllers. New Post Type." />
   </component>
 </project>

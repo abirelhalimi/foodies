@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RequestMapping(value = "/api/donate")
+@RestController
 public class DonationController {
 
     @Autowired
@@ -33,4 +34,5 @@ public class DonationController {
     public void delete(@PathVariable("id") Long id) {
         donationCrudService.delete(id);
     }
+
 }
