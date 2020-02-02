@@ -1,8 +1,11 @@
 package com.foodies.controllers;
 
+import com.foodies.models.Cuisine;
 import com.foodies.models.Recommendation;
 import com.foodies.models.Restaurant;
 import com.foodies.models.User;
+import com.foodies.services.crud.CuisineCrudService;
+import com.foodies.services.crud.RecommendationCrudService;
 import com.foodies.services.crud.RestaurantCrudService;
 import com.foodies.services.crud.UserCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +25,12 @@ public class DataController {
 
     @Autowired
     private RestaurantCrudService restaurantCrudService;
+
+    @Autowired
+    private RecommendationCrudService recommendationCrudService;
+
+    @Autowired
+    private CuisineCrudService cuisineCrudService;
 
     @GetMapping
     public String populateDatabase() {
@@ -66,16 +75,279 @@ public class DataController {
         restaurant.setUsername("mcdonalds");
         restaurantCrudService.add(restaurant);
 
-//        //Adding recommendations
-//        Recommendation recommendation = new Recommendation();
-//        Date date = new Date();
-//
-//        //first recommendation
-//        recommendation.setImage("myplate.png");
-//        recommendation.setRating("very good");
-//        recommendation.setText("I enjoyed my experience and the food was top notch");
-//        recommendation.setUser(userCrudService.getById((long) 1));
-////        recommendation.setDate();
+        //Adding recommendations
+        Recommendation recommendation = new Recommendation();
+
+        //first recommendation
+        recommendation.setImage("myplate.png");
+        recommendation.setRating("very good");
+        recommendation.setText("I enjoyed my experience and the food was top notch");
+        recommendation.setUser(userCrudService.getById((long) 1));
+        recommendation.setDate(new Date("01/25/2020"));
+        recommendation.setRestaurant(restaurantCrudService.getById((long) 1));
+        recommendationCrudService.add(recommendation);
+
+        //second recommendation
+        recommendation = new Recommendation();
+        recommendation.setImage("myplate2.png");
+        recommendation.setRating("good");
+        recommendation.setText("I enjoyed the experience and the food was top notch");
+        recommendation.setUser(userCrudService.getById((long) 2));
+        recommendation.setDate(new Date("01/26/2020"));
+        recommendation.setRestaurant(restaurantCrudService.getById((long) 2));
+        recommendationCrudService.add(recommendation);
+
+        //Adding cuisines
+        Cuisine cuisine = new Cuisine();
+
+        //cuisine
+        cuisine.setName("French");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Japanese");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Desert");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Seafood");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Asian");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Filipino");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Indian");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Sushi");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Mexican");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Ice cream");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Cafe");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("American");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Italian");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Brazilian");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Fast Food");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Pizza");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Bar Food");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("International");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Grill");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Healthy Food");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Steak");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("BBQ");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Lebanese");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Syrian");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Arabian");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Moroccan");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Tapas");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Chinese");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Vegetarian");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Vegan");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Breakfast");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Bakery");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Thai");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Australian");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Burger");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Spanish");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Mediterranean");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Middle Eastern");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Greek");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Turkish");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Diet meals");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Biscuit");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Drinks");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Burgers");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Chocolate");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Kids");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Pastry");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Tacos");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Salad");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Soup");
+        cuisineCrudService.add(cuisine);
 
         return "Database filled";
     }

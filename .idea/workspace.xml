@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
+    <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="Update - Security configuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Menu.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +160,9 @@
       <workItem from="1579360217775" duration="124000" />
       <workItem from="1579438836998" duration="187000" />
       <workItem from="1579689469075" duration="4278000" />
-      <workItem from="1580304490326" duration="3418000" />
+      <workItem from="1580304490326" duration="7896000" />
+      <workItem from="1580490644869" duration="702000" />
+      <workItem from="1580672395858" duration="377000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -225,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579704644951</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update - Security configuration">
+      <created>1580311632719</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580311632719</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +265,7 @@
     <MESSAGE value="user controller update" />
     <MESSAGE value="all controllers. New Post Type." />
     <MESSAGE value="Added Data Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Data Controller" />
+    <MESSAGE value="Update - Security configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Security configuration" />
   </component>
 </project>
