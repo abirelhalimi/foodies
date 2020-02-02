@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="Update - Security configuration">
+    <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/JwtAuthorizationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/MvcConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/SecurityConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/CustomUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/UserCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/UserCrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/UserCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/UserCrudServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,16 +87,17 @@
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-web\src\main\java\com\foodies" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.foodies" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\models" />
       <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\repositories" />
       <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\services" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.foodies.services" />
+      <recent name="com.foodies" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-web\src\main\java\com\foodies" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -163,6 +188,9 @@
       <workItem from="1580304490326" duration="7896000" />
       <workItem from="1580490644869" duration="702000" />
       <workItem from="1580672395858" duration="377000" />
+      <workItem from="1580673270049" duration="402000" />
+      <workItem from="1580673724069" duration="18000" />
+      <workItem from="1580674020767" duration="4157000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -234,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580311632719</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update - Data Controller">
+      <created>1580673348233</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1580673348233</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +301,7 @@
     <MESSAGE value="all controllers. New Post Type." />
     <MESSAGE value="Added Data Controller" />
     <MESSAGE value="Update - Security configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Security configuration" />
+    <MESSAGE value="Update - Data Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Data Controller" />
   </component>
 </project>

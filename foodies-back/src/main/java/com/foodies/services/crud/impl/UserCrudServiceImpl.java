@@ -111,6 +111,17 @@ public class UserCrudServiceImpl extends CrudServiceImpl<User> implements UserCr
         update(getById(userUnfollowing.getId()), userUnfollowing);
     }
 
+    @Override
+    public User findByUsername(String username) {
+        List<User> users = userRepository.findAll();
+        for (User user: users) {
+            if (user.getUsername().equals(username)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
     private void removeFollower(User userToUnfollow, User userUnfollowing) {
         userToUnfollow.getFollowers().remove(userUnfollowing);
         update(getById(userToUnfollow.getId()), userToUnfollow);

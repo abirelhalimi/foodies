@@ -1,11 +1,15 @@
 package com.foodies.models;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
 @SequenceGenerator(name = "RESTAURANT_SQ", sequenceName = "restaurant_sequence")
-public class Restaurant {
+public class Restaurant implements UserDetails{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "RESTAURANT_SQ")
@@ -66,6 +70,11 @@ public class Restaurant {
         this.email = email;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -76,6 +85,26 @@ public class Restaurant {
 
     public String getUsername() {
         return username;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return false;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return false;
     }
 
     public void setUsername(String username) {

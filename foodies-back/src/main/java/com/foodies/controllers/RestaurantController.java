@@ -16,9 +16,6 @@ public class RestaurantController {
     @Autowired
     private RestaurantCrudService restaurantCrudService;
 
-    @Autowired
-    private UserCrudService userCrudService;
-
     @GetMapping
     public List<Restaurant> getAll() {
         return restaurantCrudService.getAll();
