@@ -36,6 +36,12 @@ public class RestaurantCrudServiceImpl extends CrudServiceImpl<Restaurant> imple
         restaurant.setPassword(encoder.encode(restaurant.getPassword()));
         if (!restaurantExists(restaurant.getEmail(), restaurant.getUsername())) {
             restaurantRepository.save(restaurant);
+            User user = new User();
+            user.setImage(restaurant.getImage());
+            user.setUsername(restaurant.getUsername());
+            user.setPassword(restaurant.getPassword());
+            user.setEmail(restaurant.getEmail());
+            userCrudService.add(user);
         }
         return restaurant;
     }
