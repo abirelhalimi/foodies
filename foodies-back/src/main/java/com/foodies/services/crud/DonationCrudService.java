@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface DonationCrudService extends CrudService<Donation> {
     List<Donation> getAllByRestaurant(Long id);
+    void pickUp(Long id);
 }

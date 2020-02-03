@@ -9,6 +9,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -23,6 +24,13 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
     }
 
     @Override
+    public Donation add(Donation donation) {
+        donation.setDate(new Date());
+        donationRepository.save(donation);
+        return donation;
+    }
+
+    @Override
     public List<Donation> getAllByRestaurant(Long id) {
         List<Donation> allDonations = donationRepository.findAll();
         List<Donation> userDonations = new ArrayList<>();
@@ -32,5 +40,12 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
             }
         });
         return userDonations;
+    }
+
+    @Override
+    public void pickUp(Long id) {
+        Donation donation = donationRepository.getOne(id);
+        donation.setPickedUp(true);
+        donationRepository.save(donation);
     }
 }

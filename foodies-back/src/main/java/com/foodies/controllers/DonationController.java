@@ -25,6 +25,11 @@ public class DonationController {
         return donationCrudService.add(donation);
     }
 
+    @PostMapping("/{id}")
+    public void pickUp(@PathVariable("id") Long id) {
+        donationCrudService.pickUp(id);
+    }
+
     @PutMapping(value = "/{id}")
     public Donation edit(@PathVariable("id") Long id, @Valid @RequestBody Donation donation) {
         return donationCrudService.update(donationCrudService.getById(id), donation);
