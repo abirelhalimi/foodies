@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RestaurantCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RestaurantCrudServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/JwtAuthenticationFilter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +180,8 @@
       <workItem from="1580673270049" duration="402000" />
       <workItem from="1580673724069" duration="18000" />
       <workItem from="1580674020767" duration="4392000" />
-      <workItem from="1580766380625" duration="4134000" />
+      <workItem from="1580766380625" duration="4228000" />
+      <workItem from="1580900551354" duration="3299000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -273,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580769539652</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update - Restaurant service">
+      <created>1580770856974</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1580770856974</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,6 +316,7 @@
     <MESSAGE value="Update - Data Controller" />
     <MESSAGE value="Added JWT" />
     <MESSAGE value="Update - Donation Service &amp; Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Donation Service &amp; Controller" />
+    <MESSAGE value="Update - Restaurant service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Restaurant service" />
   </component>
 </project>
