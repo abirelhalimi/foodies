@@ -5,6 +5,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -21,7 +22,9 @@ public class User implements UserDetails {
     private String password;
     private String username;
     private String role = "USER";
-    private String image;
+
+    @Lob
+    private byte[] image;
 
     @ManyToMany
     private List<Cuisine> cuisines;
@@ -112,11 +115,11 @@ public class User implements UserDetails {
         this.role = role;
     }
 
-    public String getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 

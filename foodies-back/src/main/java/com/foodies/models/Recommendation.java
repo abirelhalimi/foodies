@@ -1,6 +1,7 @@
 package com.foodies.models;
 
 import javax.persistence.*;
+import java.sql.Blob;
 import java.util.Date;
 
 @Entity
@@ -18,7 +19,10 @@ public class Recommendation {
     private User user;
 
     private Date date;
-    private String image;
+
+    @Lob
+    private byte[] image;
+
     private String text;
     private String rating;
 
@@ -31,11 +35,11 @@ public class Recommendation {
         this.date = date;
     }
 
-    public String getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 
