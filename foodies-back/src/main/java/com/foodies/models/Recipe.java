@@ -1,6 +1,7 @@
 package com.foodies.models;
 
 import javax.persistence.*;
+import java.sql.Blob;
 import java.util.Date;
 import java.util.List;
 
@@ -13,7 +14,10 @@ public class Recipe {
     private Long id;
 
     private Date date;
-    private String image;
+
+    @Lob
+    private byte[] image;
+
     private String text;
 
     @ManyToMany
@@ -30,11 +34,11 @@ public class Recipe {
         this.date = date;
     }
 
-    public String getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 

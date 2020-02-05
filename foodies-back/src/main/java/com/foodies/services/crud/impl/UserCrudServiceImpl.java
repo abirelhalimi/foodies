@@ -11,6 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -125,5 +126,16 @@ public class UserCrudServiceImpl extends CrudServiceImpl<User> implements UserCr
     private void removeFollower(User userToUnfollow, User userUnfollowing) {
         userToUnfollow.getFollowers().remove(userUnfollowing);
         update(getById(userToUnfollow.getId()), userToUnfollow);
+    }
+
+    @Override
+    public List<User> getAll() {
+        List<User> users = new ArrayList<>();
+        for(User user : userRepository.findAll()) {
+            if (user.getRole().equals("USER")) {
+                users.add(user);
+            }
+        }
+        return users;
     }
 }

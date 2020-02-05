@@ -1,7 +1,6 @@
 package com.foodies.models;
 
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -9,20 +8,25 @@ import java.util.List;
 
 @Entity
 @SequenceGenerator(name = "RESTAURANT_SQ", sequenceName = "restaurant_sequence")
-public class Restaurant implements UserDetails{
+public class Restaurant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "RESTAURANT_SQ")
     private Long id;
 
     private String address;
+    private double longitude;
+    private double latitude;
     private String telephone;
     private String rating;
     private String email;
     private String password;
     private String username;
+    private String name;
     private String role = "USER";
-    private String image;
+
+    @Lob
+    private byte[] image;
 
     @ManyToMany
     private List<Cuisine> cuisines;
@@ -44,6 +48,30 @@ public class Restaurant implements UserDetails{
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 
     public String getTelephone() {
@@ -70,11 +98,6 @@ public class Restaurant implements UserDetails{
         this.email = email;
     }
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -85,26 +108,6 @@ public class Restaurant implements UserDetails{
 
     public String getUsername() {
         return username;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return false;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return false;
     }
 
     public void setUsername(String username) {
@@ -119,11 +122,11 @@ public class Restaurant implements UserDetails{
         this.role = role;
     }
 
-    public String getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 

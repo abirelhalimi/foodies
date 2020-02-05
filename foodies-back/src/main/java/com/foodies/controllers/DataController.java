@@ -8,12 +8,17 @@ import com.foodies.services.crud.CuisineCrudService;
 import com.foodies.services.crud.RecommendationCrudService;
 import com.foodies.services.crud.RestaurantCrudService;
 import com.foodies.services.crud.UserCrudService;
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Date;
+
+import static org.aspectj.bridge.MessageUtil.fail;
 
 
 @RequestMapping(value = "/api/mockData")
@@ -32,8 +37,38 @@ public class DataController {
     @Autowired
     private CuisineCrudService cuisineCrudService;
 
+    private void imgTreatment(String name, User user) throws IOException {
+
+        InputStream inputStream = this.getClass()
+                .getClassLoader()
+                .getResourceAsStream(name);
+
+        if(inputStream == null) {
+            fail("Unable to get resources");
+        }
+        else {
+            user.setImage(IOUtils.toByteArray(inputStream));
+        }
+
+    }
+
+    private void imgTreatmentR(String name, Restaurant restaurant) throws IOException {
+
+        InputStream inputStream = this.getClass()
+                .getClassLoader()
+                .getResourceAsStream(name);
+
+        if(inputStream == null) {
+            fail("Unable to get resources");
+        }
+        else {
+            restaurant.setImage(IOUtils.toByteArray(inputStream));
+        }
+
+    }
+
     @GetMapping
-    public String populateDatabase() {
+    public String populateDatabase() throws IOException {
 
         //Adding users
         User user = new User();
@@ -42,7 +77,7 @@ public class DataController {
         user.setEmail("regina@gmail.com");
         user.setPassword("regina");
         user.setUsername("reginaphalange");
-        user.setImage("regina.png");
+        imgTreatment("regina.png",user);
         userCrudService.add(user);
 
         //second user
@@ -50,36 +85,42 @@ public class DataController {
         user.setEmail("ken@gmail.com");
         user.setPassword("ken");
         user.setUsername("kenadams");
-        user.setImage("ken.png");
+        imgTreatment("ken.png", user);
         userCrudService.add(user);
 
         //Adding restaurants
         Restaurant restaurant = new Restaurant();
 
         //first restaurant
-        restaurant.setAddress("avenue blabla");
-        restaurant.setEmail("central perk");
-        restaurant.setImage("centralperk.png");
-        restaurant.setPassword("central");
-        restaurant.setTelephone("5551235");
-        restaurant.setUsername("centralperk");
+        restaurant.setAddress("34 BIS Rue Oued Fès, Rabat 10090");
+        restaurant.setEmail("bluespoon@gmail.com");
+        imgTreatmentR("bluespoon.png",restaurant);
+        restaurant.setPassword("bluespoon");
+        restaurant.setTelephone("0650-257842");
+        restaurant.setName("Bluespoon Coffee Kitchen");
+        restaurant.setUsername("bluespoon");
+        restaurant.setLatitude(34.000993);
+        restaurant.setLongitude(-6.848071);
         restaurantCrudService.add(restaurant);
 
         //second restaurant
         restaurant = new Restaurant();
-        restaurant.setAddress("avenue blublu");
-        restaurant.setEmail("mcdonalds@gmail.com");
-        restaurant.setImage("mcdonalds.png");
-        restaurant.setPassword("mcdonalds");
-        restaurant.setTelephone("5553215");
-        restaurant.setUsername("mcdonalds");
+        restaurant.setAddress("Rue Tansift, Rabat");
+        restaurant.setEmail("metros@gmail.com");
+        imgTreatmentR("metros.png",restaurant);
+        restaurant.setPassword("metros");
+        restaurant.setTelephone("05377-72425");
+        restaurant.setName("Metros De Pizza");
+        restaurant.setUsername("metros");
+        restaurant.setLatitude(34.003509);
+        restaurant.setLongitude(-6.848561);
         restaurantCrudService.add(restaurant);
 
         //Adding recommendations
         Recommendation recommendation = new Recommendation();
 
         //first recommendation
-        recommendation.setImage("myplate.png");
+//        recommendation.setImage("myplate.png");
         recommendation.setRating("very good");
         recommendation.setText("I enjoyed my experience and the food was top notch");
         recommendation.setUser(userCrudService.getById((long) 1));
@@ -89,7 +130,7 @@ public class DataController {
 
         //second recommendation
         recommendation = new Recommendation();
-        recommendation.setImage("myplate2.png");
+//        recommendation.setImage("myplate2.png");
         recommendation.setRating("good");
         recommendation.setText("I enjoyed the experience and the food was top notch");
         recommendation.setUser(userCrudService.getById((long) 2));
