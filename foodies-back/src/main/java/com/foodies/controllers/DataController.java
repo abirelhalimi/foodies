@@ -92,22 +92,28 @@ public class DataController {
         Restaurant restaurant = new Restaurant();
 
         //first restaurant
-        restaurant.setAddress("avenue blabla");
-        restaurant.setEmail("central perk");
-        imgTreatmentR("centralperk.png",restaurant);
-        restaurant.setPassword("central");
-        restaurant.setTelephone("5551235");
-        restaurant.setUsername("centralperk");
+        restaurant.setAddress("34 BIS Rue Oued Fès, Rabat 10090");
+        restaurant.setEmail("bluespoon@gmail.com");
+        imgTreatmentR("bluespoon.png",restaurant);
+        restaurant.setPassword("bluespoon");
+        restaurant.setTelephone("0650-257842");
+        restaurant.setName("Bluespoon Coffee Kitchen");
+        restaurant.setUsername("bluespoon");
+        restaurant.setLatitude(34.000993);
+        restaurant.setLongitude(-6.848071);
         restaurantCrudService.add(restaurant);
 
         //second restaurant
         restaurant = new Restaurant();
-        restaurant.setAddress("avenue blublu");
-        restaurant.setEmail("mcdonalds@gmail.com");
-        imgTreatmentR("mcdonalds.png",restaurant);
-        restaurant.setPassword("mcdonalds");
-        restaurant.setTelephone("5553215");
-        restaurant.setUsername("mcdonalds");
+        restaurant.setAddress("Rue Tansift, Rabat");
+        restaurant.setEmail("metros@gmail.com");
+        imgTreatmentR("metros.png",restaurant);
+        restaurant.setPassword("metros");
+        restaurant.setTelephone("05377-72425");
+        restaurant.setName("Metros De Pizza");
+        restaurant.setUsername("metros");
+        restaurant.setLatitude(34.003509);
+        restaurant.setLongitude(-6.848561);
         restaurantCrudService.add(restaurant);
 
         //Adding recommendations
