@@ -67,6 +67,21 @@ public class DataController {
 
     }
 
+    private void imgTreatmentRec(String name, Recommendation recommendation) throws IOException {
+
+        InputStream inputStream = this.getClass()
+                .getClassLoader()
+                .getResourceAsStream(name);
+
+        if(inputStream == null) {
+            fail("Unable to get resources");
+        }
+        else {
+            recommendation.setImage(IOUtils.toByteArray(inputStream));
+        }
+
+    }
+
     @GetMapping
     public String populateDatabase() throws IOException {
 
@@ -120,8 +135,8 @@ public class DataController {
         Recommendation recommendation = new Recommendation();
 
         //first recommendation
-//        recommendation.setImage("myplate.png");
-        recommendation.setRating("very good");
+        imgTreatmentRec("regina.png",recommendation);
+        recommendation.setRating(5);
         recommendation.setText("I enjoyed my experience and the food was top notch");
         recommendation.setUser(userCrudService.getById((long) 1));
         recommendation.setDate(new Date("01/25/2020"));
@@ -130,8 +145,8 @@ public class DataController {
 
         //second recommendation
         recommendation = new Recommendation();
-//        recommendation.setImage("myplate2.png");
-        recommendation.setRating("good");
+        imgTreatmentRec("regina.png",recommendation);
+        recommendation.setRating(3);
         recommendation.setText("I enjoyed the experience and the food was top notch");
         recommendation.setUser(userCrudService.getById((long) 2));
         recommendation.setDate(new Date("01/26/2020"));

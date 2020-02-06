@@ -107,4 +107,10 @@ public class PostController {
         return menuCrudService.getByRestaurant(id);
     }
 
+
+    @GetMapping(value = "/recommendations/{id}")
+    public List<Recommendation> getRestaurantRecommendations(@PathVariable Long id) {
+        return recommendationCrudService.getByRestaurant(id);
+    }
+
 }
