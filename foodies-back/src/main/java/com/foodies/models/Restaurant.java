@@ -18,7 +18,7 @@ public class Restaurant {
     private double longitude;
     private double latitude;
     private String telephone;
-    private String rating;
+    private int rating;
     private String email;
     private String password;
     private String username;
@@ -82,11 +82,11 @@ public class Restaurant {
         this.telephone = telephone;
     }
 
-    public String getRating() {
+    public int getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(int rating) {
         this.rating = rating;
     }
 

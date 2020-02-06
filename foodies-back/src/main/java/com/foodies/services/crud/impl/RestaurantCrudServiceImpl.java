@@ -1,9 +1,11 @@
 package com.foodies.services.crud.impl;
 
+import com.foodies.models.Recommendation;
 import com.foodies.models.Restaurant;
 import com.foodies.models.User;
 import com.foodies.repositories.RestaurantRepository;
 import com.foodies.services.common.CrudServiceImpl;
+import com.foodies.services.crud.RecommendationCrudService;
 import com.foodies.services.crud.RestaurantCrudService;
 import com.foodies.services.crud.UserCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -22,6 +25,9 @@ public class RestaurantCrudServiceImpl extends CrudServiceImpl<Restaurant> imple
 
     @Autowired
     private UserCrudService userCrudService;
+
+    @Autowired
+    private RecommendationCrudService recommendationCrudService;
 
     @Autowired
     private PasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -90,4 +96,18 @@ public class RestaurantCrudServiceImpl extends CrudServiceImpl<Restaurant> imple
         restaurantToUnfollow.getFollowers().remove(userUnfollowing);
         update(getById(restaurantToUnfollow.getId()), restaurantToUnfollow);
     }
+
+    @Override
+    public List<Restaurant> searchRestaurant(String name) {
+
+        List<Restaurant> restaurants = restaurantRepository.findAll();
+        List<Restaurant> result = new ArrayList<>();
+        restaurants.forEach(restaurant -> {
+            if (restaurant.getName().startsWith(name) || restaurant.getName().equals(name)) {
+                result.add(restaurant);
+            }
+        });
+        return result;
+    }
+
 }

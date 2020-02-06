@@ -10,4 +10,6 @@ public interface RestaurantCrudService extends CrudService<Restaurant> {
     List<Restaurant> follow(Long id, Long idUser);
 
     List<Restaurant> unfollow(Long id, Long idUser);
+
+    List<Restaurant> searchRestaurant(String name);
 }

@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Recommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Recommendation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RecommendationCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RecommendationCrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RestaurantCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RestaurantCrudService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RecommendationCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RecommendationCrudServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RestaurantCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RestaurantCrudServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

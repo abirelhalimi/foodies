@@ -1,9 +1,11 @@
 package com.foodies.services.crud.impl;
 
 import com.foodies.models.Recommendation;
+import com.foodies.models.Restaurant;
 import com.foodies.repositories.RecommendationRepository;
 import com.foodies.services.common.CrudServiceImpl;
 import com.foodies.services.crud.RecommendationCrudService;
+import com.foodies.services.crud.RestaurantCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,9 @@ public class RecommendationCrudServiceImpl extends CrudServiceImpl<Recommendatio
 
     @Autowired
     private RecommendationRepository recommendationRepository;
+
+    @Autowired
+    private RestaurantCrudService restaurantCrudService;
 
     @Override
     protected CrudRepository<Recommendation, Long> repository() {
@@ -45,5 +50,20 @@ public class RecommendationCrudServiceImpl extends CrudServiceImpl<Recommendatio
             }
         });
         return restaurantRecommendations;
+    }
+
+    @Override
+    public Recommendation add(Recommendation recommendation) {
+        recommendationRepository.save(recommendation);
+        addRating(recommendation.getRestaurant().getId());
+        return recommendation;
+    }
+
+    private void addRating(Long id) {
+        List<Recommendation> recommendations = getByRestaurant(id);
+        Restaurant restaurant = restaurantCrudService.getById(id);
+        int rating= recommendations.stream().mapToInt(Recommendation::getRating).sum();
+        restaurant.setRating(rating/recommendations.size());
+        restaurantCrudService.update(restaurantCrudService.getById(id),restaurant);
     }
 }
