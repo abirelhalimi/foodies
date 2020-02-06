@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RestaurantCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/RestaurantCrudService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RecommendationCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RecommendationCrudServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RestaurantCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/RestaurantCrudServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -310,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580938704882</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="update">
+      <created>1581013103218</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1581013103218</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -103,7 +103,7 @@ public class RestaurantCrudServiceImpl extends CrudServiceImpl<Restaurant> imple
         List<Restaurant> restaurants = restaurantRepository.findAll();
         List<Restaurant> result = new ArrayList<>();
         restaurants.forEach(restaurant -> {
-            if (restaurant.getName().startsWith(name) || restaurant.getName().equals(name)) {
+            if (restaurant.getName().toLowerCase().startsWith(name.toLowerCase()) || restaurant.getName().toLowerCase().equals(name.toLowerCase())) {
                 result.add(restaurant);
             }
         });
