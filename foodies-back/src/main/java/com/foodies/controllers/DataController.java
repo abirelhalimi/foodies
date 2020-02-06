@@ -405,6 +405,61 @@ public class DataController {
         cuisine.setName("Soup");
         cuisineCrudService.add(cuisine);
 
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Couscous");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Crepe");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Juice");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Kebab");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Paella");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Panninis");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Fish");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Chicken");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Pasta");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("FreshFood");
+        cuisineCrudService.add(cuisine);
+
+        //cuisine
+        cuisine = new Cuisine();
+        cuisine.setName("Sandwiches");
+        cuisineCrudService.add(cuisine);
+
         return "Database filled";
     }
 
