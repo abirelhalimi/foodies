@@ -27,10 +27,23 @@ public class RecommendationCrudServiceImpl extends CrudServiceImpl<Recommendatio
         List<Recommendation> allRecommendations = recommendationRepository.findAll();
         List<Recommendation> userRecommendations = new ArrayList<>();
         allRecommendations.forEach(recommendation -> {
-            if (recommendation.getUser().getId() == id) {
+            if (recommendation.getUser().getId().equals(id)) {
                 userRecommendations.add(recommendation);
             }
         });
         return userRecommendations;
+    }
+
+    @Override
+    public List<Recommendation> getByRestaurant(Long id) {
+
+        List<Recommendation> allRecommendations = recommendationRepository.findAll();
+        List<Recommendation> restaurantRecommendations = new ArrayList<>();
+        allRecommendations.forEach(recommendation -> {
+            if (recommendation.getRestaurant().getId().equals(id)) {
+                restaurantRecommendations.add(recommendation);
+            }
+        });
+        return restaurantRecommendations;
     }
 }

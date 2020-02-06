@@ -1,6 +1,8 @@
 package com.foodies.controllers;
 
+import com.foodies.models.Recommendation;
 import com.foodies.models.Restaurant;
+import com.foodies.services.crud.RecommendationCrudService;
 import com.foodies.services.crud.RestaurantCrudService;
 import com.foodies.services.crud.UserCrudService;
 import org.springframework.beans.factory.annotation.Autowired;

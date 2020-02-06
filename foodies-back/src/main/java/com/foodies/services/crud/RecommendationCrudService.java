@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface RecommendationCrudService extends CrudService<Recommendation> {
     List<Recommendation> getByUser(Long id);
+    public List<Recommendation> getByRestaurant(Long id);
 }

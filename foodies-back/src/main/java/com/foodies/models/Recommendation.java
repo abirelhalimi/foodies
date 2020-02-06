@@ -24,7 +24,7 @@ public class Recommendation {
     private byte[] image;
 
     private String text;
-    private String rating;
+    private int rating;
 
 
     public Date getDate() {
@@ -67,11 +67,11 @@ public class Recommendation {
         this.id = id;
     }
 
-    public String getRating() {
+    public int getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(int rating) {
         this.rating = rating;
     }
 
