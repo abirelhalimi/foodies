@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity
 @SequenceGenerator(name = "RECOMMENDATION_SQ", sequenceName = "recommendation_sequence")
-public class Recommendation {
+public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "RECOMMENDATION_SQ")

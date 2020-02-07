@@ -1,7 +1,7 @@
 package com.foodies.controllers.crud;
 
-import com.foodies.models.Recommendation;
-import com.foodies.services.crud.RecommendationCrudService;
+import com.foodies.models.Review;
+import com.foodies.services.crud.ReviewCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,30 +13,30 @@ import java.util.List;
 public class RecommendationCrudController {
 
     @Autowired
-    private RecommendationCrudService recommendationCrudService;
+    private ReviewCrudService reviewCrudService;
 
     @GetMapping
-    public List<Recommendation> getAll() {
-        return recommendationCrudService.getAll();
+    public List<Review> getAll() {
+        return reviewCrudService.getAll();
     }
 
     @PostMapping
-    public Recommendation add(@Valid @RequestBody Recommendation recommendation) {
-        return recommendationCrudService.add(recommendation);
+    public Review add(@Valid @RequestBody Review review) {
+        return reviewCrudService.add(review);
     }
 
     @PutMapping(value = "/{id}")
-    public Recommendation update(@PathVariable("id") Long id, @Valid @RequestBody Recommendation newRecommendationData) {
-        return recommendationCrudService.update(recommendationCrudService.getById(id), newRecommendationData);
+    public Review update(@PathVariable("id") Long id, @Valid @RequestBody Review newReviewData) {
+        return reviewCrudService.update(reviewCrudService.getById(id), newReviewData);
     }
 
     @DeleteMapping(value = "/{id}")
     public void delete(@PathVariable("id") Long id) {
-        recommendationCrudService.delete(id);
+        reviewCrudService.delete(id);
     }
 
     @GetMapping(value = "/{id}")
-    public Recommendation getById(@PathVariable Long id) {
-        return recommendationCrudService.getById(id);
+    public Review getById(@PathVariable Long id) {
+        return reviewCrudService.getById(id);
     }
 }

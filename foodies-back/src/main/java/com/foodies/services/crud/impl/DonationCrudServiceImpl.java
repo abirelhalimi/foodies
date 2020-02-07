@@ -31,11 +31,35 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
     }
 
     @Override
+    public List<Donation> getDonationsByRestaurant(Long id) {
+        List<Donation> allDonations = donationRepository.findAll();
+        List<Donation> userDonations = new ArrayList<>();
+        allDonations.forEach(donation -> {
+            if (donation.getRestaurant().getId() == id && !donation.isOffer()) {
+                userDonations.add(donation);
+            }
+        });
+        return userDonations;
+    }
+
+    @Override
     public List<Donation> getAllByRestaurant(Long id) {
         List<Donation> allDonations = donationRepository.findAll();
         List<Donation> userDonations = new ArrayList<>();
         allDonations.forEach(donation -> {
             if (donation.getRestaurant().getId() == id) {
+                userDonations.add(donation);
+            }
+        });
+        return userDonations;
+    }
+
+    @Override
+    public List<Donation> getOffersByRestaurant(Long id) {
+        List<Donation> allDonations = donationRepository.findAll();
+        List<Donation> userDonations = new ArrayList<>();
+        allDonations.forEach(donation -> {
+            if (donation.getRestaurant().getId() == id && donation.isOffer()) {
                 userDonations.add(donation);
             }
         });

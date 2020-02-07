@@ -15,9 +15,19 @@ public class DonationController {
     @Autowired
     private DonationCrudService donationCrudService;
 
+    @GetMapping(value = "/donation/{id}")
+    public List<Donation> getDonationsByRestaurant(@PathVariable("id") Long id) {
+        return donationCrudService.getDonationsByRestaurant(id);
+    }
+
     @GetMapping(value = "/{id}")
-    public List<Donation> getDonationsByUser(@PathVariable("id") Long id) {
-        return donationCrudService.getAllByRestaurant(id);
+    public List<Donation> getAllByRestaurant(@PathVariable("id") Long id) {
+        return donationCrudService.getDonationsByRestaurant(id);
+    }
+
+    @GetMapping(value = "/offers/{id}")
+    public List<Donation> getOffersByRestaurant(@PathVariable("id") Long id) {
+        return donationCrudService.getOffersByRestaurant(id);
     }
 
     @PostMapping

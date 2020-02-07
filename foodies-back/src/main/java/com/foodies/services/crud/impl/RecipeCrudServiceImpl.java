@@ -1,5 +1,6 @@
 package com.foodies.services.crud.impl;
 
+import com.foodies.models.Cuisine;
 import com.foodies.models.Recipe;
 import com.foodies.repositories.RecipeRepository;
 import com.foodies.services.common.CrudServiceImpl;
@@ -32,5 +33,17 @@ public class RecipeCrudServiceImpl extends CrudServiceImpl<Recipe> implements Re
             }
         });
         return userRecipes;
+    }
+
+    @Override
+    public List<Recipe> getRecipesByCuisine(Cuisine cuisine) {
+        List<Recipe> recipes = recipeRepository.findAll();
+        List<Recipe> result = new ArrayList<>();
+        recipes.forEach(recipe -> {
+            if (recipe.getCuisines().contains(cuisine)) {
+                result.add(recipe);
+            }
+        });
+        return result;
     }
 }

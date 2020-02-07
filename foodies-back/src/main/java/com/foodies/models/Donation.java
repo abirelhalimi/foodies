@@ -14,6 +14,7 @@ public class Donation {
     @ManyToOne
     private Restaurant restaurant;
 
+    private boolean isOffer;
     private boolean pickedUp = false;
     private Date date;
 
@@ -47,5 +48,13 @@ public class Donation {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public boolean isOffer() {
+        return isOffer;
+    }
+
+    public void setOffer(boolean offer) {
+        isOffer = offer;
     }
 }

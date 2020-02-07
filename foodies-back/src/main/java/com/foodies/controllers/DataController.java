@@ -1,11 +1,11 @@
 package com.foodies.controllers;
 
 import com.foodies.models.Cuisine;
-import com.foodies.models.Recommendation;
+import com.foodies.models.Review;
 import com.foodies.models.Restaurant;
 import com.foodies.models.User;
 import com.foodies.services.crud.CuisineCrudService;
-import com.foodies.services.crud.RecommendationCrudService;
+import com.foodies.services.crud.ReviewCrudService;
 import com.foodies.services.crud.RestaurantCrudService;
 import com.foodies.services.crud.UserCrudService;
 import org.apache.commons.io.IOUtils;
@@ -32,7 +32,7 @@ public class DataController {
     private RestaurantCrudService restaurantCrudService;
 
     @Autowired
-    private RecommendationCrudService recommendationCrudService;
+    private ReviewCrudService reviewCrudService;
 
     @Autowired
     private CuisineCrudService cuisineCrudService;
@@ -67,7 +67,7 @@ public class DataController {
 
     }
 
-    private void imgTreatmentRec(String name, Recommendation recommendation) throws IOException {
+    private void imgTreatmentRec(String name, Review review) throws IOException {
 
         InputStream inputStream = this.getClass()
                 .getClassLoader()
@@ -77,7 +77,7 @@ public class DataController {
             fail("Unable to get resources");
         }
         else {
-            recommendation.setImage(IOUtils.toByteArray(inputStream));
+            review.setImage(IOUtils.toByteArray(inputStream));
         }
 
     }
@@ -132,26 +132,26 @@ public class DataController {
         restaurantCrudService.add(restaurant);
 
         //Adding recommendations
-        Recommendation recommendation = new Recommendation();
+        Review review = new Review();
 
         //first recommendation
-        imgTreatmentRec("regina.png",recommendation);
-        recommendation.setRating(5);
-        recommendation.setText("I enjoyed my experience and the food was top notch");
-        recommendation.setUser(userCrudService.getById((long) 1));
-        recommendation.setDate(new Date("01/25/2020"));
-        recommendation.setRestaurant(restaurantCrudService.getById((long) 1));
-        recommendationCrudService.add(recommendation);
+        imgTreatmentRec("regina.png", review);
+        review.setRating(5);
+        review.setText("I enjoyed my experience and the food was top notch");
+        review.setUser(userCrudService.getById((long) 1));
+        review.setDate(new Date("01/25/2020"));
+        review.setRestaurant(restaurantCrudService.getById((long) 1));
+        reviewCrudService.add(review);
 
         //second recommendation
-        recommendation = new Recommendation();
-        imgTreatmentRec("regina.png",recommendation);
-        recommendation.setRating(3);
-        recommendation.setText("I enjoyed the experience and the food was top notch");
-        recommendation.setUser(userCrudService.getById((long) 2));
-        recommendation.setDate(new Date("01/26/2020"));
-        recommendation.setRestaurant(restaurantCrudService.getById((long) 2));
-        recommendationCrudService.add(recommendation);
+        review = new Review();
+        imgTreatmentRec("regina.png", review);
+        review.setRating(3);
+        review.setText("I enjoyed the experience and the food was top notch");
+        review.setUser(userCrudService.getById((long) 2));
+        review.setDate(new Date("01/26/2020"));
+        review.setRestaurant(restaurantCrudService.getById((long) 2));
+        reviewCrudService.add(review);
 
         //Adding cuisines
         Cuisine cuisine = new Cuisine();

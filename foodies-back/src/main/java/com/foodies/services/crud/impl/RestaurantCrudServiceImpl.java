@@ -1,12 +1,12 @@
 package com.foodies.services.crud.impl;
 
-import com.foodies.models.Recommendation;
+import com.foodies.models.Cuisine;
 import com.foodies.models.Restaurant;
 import com.foodies.models.User;
 import com.foodies.repositories.RestaurantRepository;
 import com.foodies.services.common.CrudServiceImpl;
-import com.foodies.services.crud.RecommendationCrudService;
 import com.foodies.services.crud.RestaurantCrudService;
+import com.foodies.services.crud.ReviewCrudService;
 import com.foodies.services.crud.UserCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
@@ -27,7 +27,7 @@ public class RestaurantCrudServiceImpl extends CrudServiceImpl<Restaurant> imple
     private UserCrudService userCrudService;
 
     @Autowired
-    private RecommendationCrudService recommendationCrudService;
+    private ReviewCrudService reviewCrudService;
 
     @Autowired
     private PasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -104,6 +104,18 @@ public class RestaurantCrudServiceImpl extends CrudServiceImpl<Restaurant> imple
         List<Restaurant> result = new ArrayList<>();
         restaurants.forEach(restaurant -> {
             if (restaurant.getName().toLowerCase().startsWith(name.substring(0,name.length()-1).toLowerCase()) || restaurant.getName().toLowerCase().equals(name.substring(0,name.length()-1).toLowerCase())) {
+                result.add(restaurant);
+            }
+        });
+        return result;
+    }
+
+    @Override
+    public List<Restaurant> getRestaurantsByCuisine(Cuisine cuisine) {
+        List<Restaurant> restaurants = restaurantRepository.findAll();
+        List<Restaurant> result = new ArrayList<>();
+        restaurants.forEach(restaurant -> {
+            if (restaurant.getCuisines().contains(cuisine)) {
                 result.add(restaurant);
             }
         });

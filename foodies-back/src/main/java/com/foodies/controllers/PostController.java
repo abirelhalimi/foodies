@@ -1,8 +1,9 @@
 package com.foodies.controllers;
 
+import com.foodies.models.Cuisine;
 import com.foodies.models.Menu;
 import com.foodies.models.Recipe;
-import com.foodies.models.Recommendation;
+import com.foodies.models.Review;
 import com.foodies.services.crud.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +19,7 @@ public class PostController {
     private RecipeCrudService recipeCrudService;
 
     @Autowired
-    private RecommendationCrudService recommendationCrudService;
+    private ReviewCrudService reviewCrudService;
 
     @Autowired
     private MenuCrudService menuCrudService;
@@ -35,10 +36,10 @@ public class PostController {
         return recipeCrudService.add(recipe);
     }
 
-    @PostMapping(value = "/recommendation/{id}")
-    public Recommendation add(@PathVariable("id") Long id, @Valid @RequestBody Recommendation recommendation) {
-        recommendation.setUser(userCrudService.getById(id));
-        return recommendationCrudService.add(recommendation);
+    @PostMapping(value = "/review/{id}")
+    public Review add(@PathVariable("id") Long id, @Valid @RequestBody Review review) {
+        review.setUser(userCrudService.getById(id));
+        return reviewCrudService.add(review);
     }
 
     @PostMapping(value = "/menu/{id}")
@@ -52,9 +53,9 @@ public class PostController {
         return recipeCrudService.update(recipeCrudService.getById(id), recipe);
     }
 
-    @PutMapping(value = "/recommendation/{id}")
-    public Recommendation edit(@PathVariable("id") Long id, @Valid @RequestBody Recommendation recommendation) {
-        return recommendationCrudService.update(recommendationCrudService.getById(id), recommendation);
+    @PutMapping(value = "/review/{id}")
+    public Review edit(@PathVariable("id") Long id, @Valid @RequestBody Review review) {
+        return reviewCrudService.update(reviewCrudService.getById(id), review);
     }
 
     @PutMapping(value = "/menu/{id}")
@@ -67,9 +68,9 @@ public class PostController {
         recipeCrudService.delete(id);
     }
 
-    @DeleteMapping(value = "/recommendation/{id}")
+    @DeleteMapping(value = "/review/{id}")
     public void deleteComment(@PathVariable("id") Long id) {
-        recommendationCrudService.delete(id);
+        reviewCrudService.delete(id);
     }
 
     @DeleteMapping(value = "/menu/{id}")
@@ -82,9 +83,9 @@ public class PostController {
         return recipeCrudService.getAll();
     }
 
-    @GetMapping(value = "/recommendation")
-    public List<Recommendation> getAllRecommendation() {
-        return recommendationCrudService.getAll();
+    @GetMapping(value = "/review")
+    public List<Review> getAllRecommendation() {
+        return reviewCrudService.getAll();
     }
 
     @GetMapping(value = "/menu")
@@ -97,9 +98,9 @@ public class PostController {
         return recipeCrudService.getByUser(id);
     }
 
-    @GetMapping(value = "/recommendation/{id}")
-    public List<Recommendation> getRecommendationsByUser(@PathVariable("id") Long id) {
-        return recommendationCrudService.getByUser(id);
+    @GetMapping(value = "/review-user/{id}")
+    public List<Review> getRecommendationsByUser(@PathVariable("id") Long id) {
+        return reviewCrudService.getByUser(id);
     }
 
     @GetMapping(value = "/menu/{id}")
@@ -108,9 +109,13 @@ public class PostController {
     }
 
 
-    @GetMapping(value = "/recommendations/{id}")
-    public List<Recommendation> getRestaurantRecommendations(@PathVariable Long id) {
-        return recommendationCrudService.getByRestaurant(id);
+    @GetMapping(value = "/review-restaurant/{id}")
+    public List<Review> getRestaurantRecommendations(@PathVariable Long id) {
+        return reviewCrudService.getByRestaurant(id);
     }
 
+    @PostMapping(value = "/recipes")
+    public List<Recipe> getRecipesByCuisine(Cuisine cuisine) {
+        return recipeCrudService.getRecipesByCuisine(cuisine);
+    }
 }

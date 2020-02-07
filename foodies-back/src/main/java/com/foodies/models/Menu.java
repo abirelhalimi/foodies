@@ -18,7 +18,7 @@ public class Menu {
     private byte[] image;
 
     private Date date;
-    private boolean isOffer;
+    private boolean isAnOffer;
 
     @ManyToOne
     private Restaurant restaurant;
@@ -29,6 +29,14 @@ public class Menu {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public boolean isAnOffer() {
+        return isAnOffer;
+    }
+
+    public void setAnOffer(boolean anOffer) {
+        isAnOffer = anOffer;
     }
 
     public String getText() {
@@ -61,13 +69,5 @@ public class Menu {
 
     public void setRestaurant(Restaurant restaurant) {
         this.restaurant = restaurant;
-    }
-
-    public boolean isOffer() {
-        return isOffer;
-    }
-
-    public void setOffer(boolean offer) {
-        isOffer = offer;
     }
 }
