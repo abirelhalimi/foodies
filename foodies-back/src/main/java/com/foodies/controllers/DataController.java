@@ -1,9 +1,6 @@
 package com.foodies.controllers;
 
-import com.foodies.models.Cuisine;
-import com.foodies.models.Review;
-import com.foodies.models.Restaurant;
-import com.foodies.models.User;
+import com.foodies.models.*;
 import com.foodies.services.crud.CuisineCrudService;
 import com.foodies.services.crud.ReviewCrudService;
 import com.foodies.services.crud.RestaurantCrudService;
@@ -134,9 +131,16 @@ public class DataController {
         //Adding recommendations
         Review review = new Review();
 
+        Rating rating = new Rating();
+
         //first recommendation
         imgTreatmentRec("regina.png", review);
-        review.setRating(5);
+        rating.setAccessibility(4);
+        rating.setDish(4);
+        rating.setLocation(5);
+        rating.setPrice(3);
+        rating.setService(4);
+        review.setRating(rating);
         review.setText("I enjoyed my experience and the food was top notch");
         review.setUser(userCrudService.getById((long) 1));
         review.setDate(new Date("01/25/2020"));
@@ -146,7 +150,13 @@ public class DataController {
         //second recommendation
         review = new Review();
         imgTreatmentRec("regina.png", review);
-        review.setRating(3);
+        rating = new Rating();
+        rating.setAccessibility(4);
+        rating.setDish(4);
+        rating.setLocation(5);
+        rating.setPrice(3);
+        rating.setService(4);
+        review.setRating(rating);
         review.setText("I enjoyed the experience and the food was top notch");
         review.setUser(userCrudService.getById((long) 2));
         review.setDate(new Date("01/26/2020"));

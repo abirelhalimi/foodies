@@ -1,7 +1,6 @@
 package com.foodies.models;
 
 import javax.persistence.*;
-import java.sql.Blob;
 import java.util.Date;
 
 @Entity
@@ -24,7 +23,10 @@ public class Review {
     private byte[] image;
 
     private String text;
-    private int rating;
+
+    @OneToOne(fetch=FetchType.LAZY, cascade = {CascadeType.ALL})
+    @JoinColumn(name="id_rating")
+    private Rating rating;
 
 
     public Date getDate() {
@@ -67,11 +69,11 @@ public class Review {
         this.id = id;
     }
 
-    public int getRating() {
+    public Rating getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(Rating rating) {
         this.rating = rating;
     }
 

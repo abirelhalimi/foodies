@@ -1,6 +1,7 @@
 package com.foodies.services.crud;
 
 import com.foodies.models.Cuisine;
+import com.foodies.models.Rating;
 import com.foodies.models.Restaurant;
 import com.foodies.services.common.CrudService;
 
@@ -15,4 +16,6 @@ public interface RestaurantCrudService extends CrudService<Restaurant> {
     List<Restaurant> searchRestaurant(String name);
 
     List<Restaurant> getRestaurantsByCuisine(Cuisine cuisine);
+
+    Rating getRestaurantRating(Long id);
 }

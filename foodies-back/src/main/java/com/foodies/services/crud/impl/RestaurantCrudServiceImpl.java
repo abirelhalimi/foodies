@@ -1,8 +1,6 @@
 package com.foodies.services.crud.impl;
 
-import com.foodies.models.Cuisine;
-import com.foodies.models.Restaurant;
-import com.foodies.models.User;
+import com.foodies.models.*;
 import com.foodies.repositories.RestaurantRepository;
 import com.foodies.services.common.CrudServiceImpl;
 import com.foodies.services.crud.RestaurantCrudService;
@@ -120,6 +118,20 @@ public class RestaurantCrudServiceImpl extends CrudServiceImpl<Restaurant> imple
             }
         });
         return result;
+    }
+
+    @Override
+    public Rating getRestaurantRating(Long id) {
+        Rating rating = new Rating(0, 0, 0, 0, 0);
+        List<Review> reviews = reviewCrudService.getByRestaurant(id);
+        for (Review review : reviews) {
+            rating.setDish(rating.getDish()+review.getRating().getDish());
+            rating.setService(rating.getService()+review.getRating().getService());
+            rating.setPrice(rating.getPrice()+review.getRating().getPrice());
+            rating.setLocation(rating.getLocation()+review.getRating().getLocation());
+            rating.setAccessibility(rating.getAccessibility()+review.getRating().getAccessibility());
+        }
+        return rating;
     }
 
 }

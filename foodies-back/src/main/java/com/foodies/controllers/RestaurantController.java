@@ -1,6 +1,7 @@
 package com.foodies.controllers;
 
 import com.foodies.models.Cuisine;
+import com.foodies.models.Rating;
 import com.foodies.models.Restaurant;
 import com.foodies.services.crud.RestaurantCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,11 @@ public class RestaurantController {
     @PostMapping(value = "/cuisines")
     public List<Restaurant> getRestaurantsByCuisine(@Valid @RequestBody Cuisine cuisine) {
         return restaurantCrudService.getRestaurantsByCuisine(cuisine);
+    }
+
+    @GetMapping(value = "/rating/{id}")
+    public Rating getRestaurantRating(@PathVariable Long id) {
+        return restaurantCrudService.getRestaurantRating(id);
     }
 
 }
