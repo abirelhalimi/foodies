@@ -14,7 +14,7 @@ public class Donation {
     @ManyToOne
     private Restaurant restaurant;
 
-    private boolean isOffer;
+    private boolean isOffer = false;
     private boolean pickedUp = false;
     private Date date;
 

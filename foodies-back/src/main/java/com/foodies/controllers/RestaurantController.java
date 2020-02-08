@@ -36,8 +36,8 @@ public class RestaurantController {
         return restaurantCrudService.unfollow(id, idUser);
     }
 
-    @PostMapping
-    public List<Restaurant> searchRestaurant(@Valid @RequestBody String name) {
+    @GetMapping(value = "/search")
+    public List<Restaurant> searchRestaurant(@RequestParam String name) {
         return restaurantCrudService.searchRestaurant(name);
     }
 

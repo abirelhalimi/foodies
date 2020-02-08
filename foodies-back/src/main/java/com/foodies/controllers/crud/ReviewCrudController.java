@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@RequestMapping(value = "/api/recommendations")
+@RequestMapping(value = "/api/reviews")
 @RestController
-public class RecommendationCrudController {
+public class ReviewCrudController {
 
     @Autowired
     private ReviewCrudService reviewCrudService;

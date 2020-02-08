@@ -39,4 +39,9 @@ public class UserCrudController {
     public User getById(@PathVariable Long id) {
         return userCrudService.getById(id);
     }
+
+    @GetMapping(value = "/find")
+    public User findByUsername(@RequestParam String username) {
+        return userCrudService.findByUsername(username);
+    }
 }

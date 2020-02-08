@@ -60,7 +60,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
         response.addHeader(SecurityConstants.TOKEN_HEADER, SecurityConstants.TOKEN_PREFIX + token);
         String userData = user.getUsername();
-        response.getWriter().write(userData);
+        response.getWriter().write(String.valueOf(user));
         response.getWriter().flush();
         response.getWriter().close();
     }
