@@ -18,7 +18,6 @@ public class Restaurant {
     private double longitude;
     private double latitude;
     private String telephone;
-    private int rating;
     private String email;
     private String password;
     private String username;
@@ -82,14 +81,6 @@ public class Restaurant {
         this.telephone = telephone;
     }
 
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -145,4 +136,5 @@ public class Restaurant {
     public void setFollowers(List<User> followers) {
         this.followers = followers;
     }
+
 }

@@ -1,7 +1,6 @@
 package com.foodies.models;
 
 import javax.persistence.*;
-import java.sql.Blob;
 import java.util.Date;
 
 @Entity
