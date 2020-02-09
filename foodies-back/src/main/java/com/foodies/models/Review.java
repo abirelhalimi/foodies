@@ -24,8 +24,9 @@ public class Review {
 
     private String text;
 
-    @OneToOne(fetch=FetchType.LAZY, cascade = {CascadeType.ALL})
-    @JoinColumn(name="id_rating")
+    @OneToOne(fetch = FetchType.LAZY)
+    @MapsId
+    @JoinColumn(name = "id")
     private Rating rating;
 
 

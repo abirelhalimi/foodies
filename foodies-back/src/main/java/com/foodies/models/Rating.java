@@ -1,10 +1,9 @@
 package com.foodies.models;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 @SequenceGenerator(name = "RATING_SQ", sequenceName = "rating_sequence")
@@ -12,11 +11,7 @@ public class Rating {
 
     @Id
     @GeneratedValue
-    private Long id_rating;
-
-    @OneToOne(fetch=FetchType.LAZY, cascade =  CascadeType.ALL, mappedBy = "rating")
-    @JsonIgnore
-    private Review review;
+    private Long id;
 
     private int dish;
     private int service;
@@ -37,11 +32,11 @@ public class Rating {
     }
 
     public Long getId() {
-        return id_rating;
+        return id;
     }
 
     public void setId(Long id) {
-        this.id_rating = id;
+        this.id = id;
     }
 
     public int getDish() {
@@ -84,11 +79,4 @@ public class Rating {
         this.accessibility = accessibility;
     }
 
-    public Review getReview() {
-        return review;
-    }
-
-    public void setReview(Review review) {
-        this.review = review;
-    }
 }
