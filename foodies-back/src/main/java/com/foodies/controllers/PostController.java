@@ -69,7 +69,7 @@ public class PostController {
     }
 
     @DeleteMapping(value = "/review/{id}")
-    public void deleteComment(@PathVariable("id") Long id) {
+    public void deleteReview(@PathVariable("id") Long id) {
         reviewCrudService.delete(id);
     }
 
@@ -84,7 +84,7 @@ public class PostController {
     }
 
     @GetMapping(value = "/review")
-    public List<Review> getAllRecommendation() {
+    public List<Review> getAllReviews() {
         return reviewCrudService.getAll();
     }
 
@@ -99,7 +99,7 @@ public class PostController {
     }
 
     @GetMapping(value = "/review-user/{id}")
-    public List<Review> getRecommendationsByUser(@PathVariable("id") Long id) {
+    public List<Review> getReviewsByUser(@PathVariable("id") Long id) {
         return reviewCrudService.getByUser(id);
     }
 

@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import static org.aspectj.bridge.MessageUtil.fail;
 
@@ -99,69 +101,6 @@ public class DataController {
         user.setUsername("kenadams");
         imgTreatment("ken.png", user);
         userCrudService.add(user);
-
-        //Adding restaurants
-        Restaurant restaurant = new Restaurant();
-
-        //first restaurant
-        restaurant.setAddress("34 BIS Rue Oued Fès, Rabat 10090");
-        restaurant.setEmail("bluespoon@gmail.com");
-        imgTreatmentR("bluespoon.png",restaurant);
-        restaurant.setPassword("bluespoon");
-        restaurant.setTelephone("0650-257842");
-        restaurant.setName("Bluespoon Coffee Kitchen");
-        restaurant.setUsername("bluespoon");
-        restaurant.setLatitude(34.000993);
-        restaurant.setLongitude(-6.848071);
-        restaurantCrudService.add(restaurant);
-
-        //second restaurant
-        restaurant = new Restaurant();
-        restaurant.setAddress("Rue Tansift, Rabat");
-        restaurant.setEmail("metros@gmail.com");
-        imgTreatmentR("metros.png",restaurant);
-        restaurant.setPassword("metros");
-        restaurant.setTelephone("05377-72425");
-        restaurant.setName("Metros De Pizza");
-        restaurant.setUsername("metros");
-        restaurant.setLatitude(34.003509);
-        restaurant.setLongitude(-6.848561);
-        restaurantCrudService.add(restaurant);
-
-        //Adding recommendations
-        Review review = new Review();
-
-        Rating rating = new Rating();
-
-        //first recommendation
-        imgTreatmentRec("regina.png", review);
-        rating.setAccessibility(4);
-        rating.setDish(4);
-        rating.setLocation(5);
-        rating.setPrice(3);
-        rating.setService(4);
-        review.setRating(rating);
-        review.setText("I enjoyed my experience and the food was top notch");
-        review.setUser(userCrudService.getById((long) 1));
-        review.setDate(new Date("01/25/2020"));
-        review.setRestaurant(restaurantCrudService.getById((long) 1));
-        reviewCrudService.add(review);
-
-        //second recommendation
-        review = new Review();
-        imgTreatmentRec("regina.png", review);
-        rating = new Rating();
-        rating.setAccessibility(4);
-        rating.setDish(4);
-        rating.setLocation(5);
-        rating.setPrice(3);
-        rating.setService(4);
-        review.setRating(rating);
-        review.setText("I enjoyed the experience and the food was top notch");
-        review.setUser(userCrudService.getById((long) 2));
-        review.setDate(new Date("01/26/2020"));
-        review.setRestaurant(restaurantCrudService.getById((long) 2));
-        reviewCrudService.add(review);
 
         //Adding cuisines
         Cuisine cuisine = new Cuisine();
@@ -469,6 +408,72 @@ public class DataController {
         cuisine = new Cuisine();
         cuisine.setName("Sandwiches");
         cuisineCrudService.add(cuisine);
+
+        //Adding restaurants
+        Restaurant restaurant = new Restaurant();
+
+        //first restaurant
+        restaurant.setAddress("34 BIS Rue Oued Fès, Rabat 10090");
+        restaurant.setEmail("bluespoon@gmail.com");
+        imgTreatmentR("bluespoon.png",restaurant);
+        restaurant.setPassword("bluespoon");
+        restaurant.setTelephone("0650-257842");
+        restaurant.setName("Bluespoon Coffee Kitchen");
+        restaurant.setUsername("bluespoon");
+        restaurant.setLatitude(34.000993);
+        restaurant.setLongitude(-6.848071);
+        List<Cuisine> cuisines = cuisineCrudService.getAll();
+        restaurant.setCuisines(cuisines.subList(0,5));
+        restaurantCrudService.add(restaurant);
+
+        //second restaurant
+        restaurant = new Restaurant();
+        restaurant.setAddress("Rue Tansift, Rabat");
+        restaurant.setEmail("metros@gmail.com");
+        imgTreatmentR("metros.png",restaurant);
+        restaurant.setPassword("metros");
+        restaurant.setTelephone("05377-72425");
+        restaurant.setName("Metros De Pizza");
+        restaurant.setUsername("metros");
+        restaurant.setLatitude(34.003509);
+        restaurant.setLongitude(-6.848561);
+        restaurant.setCuisines(cuisines.subList(5,10));
+        restaurantCrudService.add(restaurant);
+
+        //Adding recommendations
+        Review review = new Review();
+
+        Rating rating = new Rating();
+
+        //first recommendation
+        imgTreatmentRec("regina.png", review);
+        rating.setAccessibility(4);
+        rating.setDish(4);
+        rating.setLocation(5);
+        rating.setPrice(3);
+        rating.setService(4);
+        review.setRating(rating);
+        review.setText("I enjoyed my experience and the food was top notch");
+        review.setUser(userCrudService.getById((long) 1));
+        review.setDate(new Date("01/25/2020"));
+        review.setRestaurant(restaurantCrudService.getById((long) 1));
+        reviewCrudService.add(review);
+
+        //second recommendation
+        review = new Review();
+        imgTreatmentRec("regina.png", review);
+        rating = new Rating();
+        rating.setAccessibility(4);
+        rating.setDish(4);
+        rating.setLocation(5);
+        rating.setPrice(3);
+        rating.setService(4);
+        review.setRating(rating);
+        review.setText("I enjoyed the experience and the food was top notch");
+        review.setUser(userCrudService.getById((long) 2));
+        review.setDate(new Date("01/26/2020"));
+        review.setRestaurant(restaurantCrudService.getById((long) 2));
+        reviewCrudService.add(review);
 
         return "Database filled";
     }
