@@ -9,6 +9,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -20,6 +21,12 @@ public class CommentCrudServiceImpl extends CrudServiceImpl<Comment> implements 
     @Override
     protected CrudRepository<Comment, Long> repository() {
         return commentRepository;
+    }
+
+    @Override
+    public Comment add(Comment comment) {
+        comment.setDate(new Date());
+        return commentRepository.save(comment);
     }
 
     @Override
