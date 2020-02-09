@@ -7,6 +7,7 @@ import com.foodies.services.crud.DonationCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -71,4 +72,5 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
         donation.setPickedUp(true);
         donationRepository.save(donation);
     }
+
 }

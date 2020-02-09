@@ -22,7 +22,7 @@ public class DonationController {
 
     @GetMapping(value = "/{id}")
     public List<Donation> getAllByRestaurant(@PathVariable("id") Long id) {
-        return donationCrudService.getDonationsByRestaurant(id);
+        return donationCrudService.getAllByRestaurant(id);
     }
 
     @GetMapping(value = "/offers/{id}")

@@ -60,8 +60,10 @@ public class RestaurantCrudServiceImpl extends CrudServiceImpl<Restaurant> imple
             return false;
         }
         for (Restaurant restaurant : restaurants) {
-            if (restaurant.getEmail().equals(email) || restaurant.getUsername().equals(username)) {
-                return true;
+            if (restaurant.getEmail()!=null) {
+                if (restaurant.getEmail().equals(email) || restaurant.getUsername().equals(username)) {
+                    return true;
+                }
             }
         }
         return false;
