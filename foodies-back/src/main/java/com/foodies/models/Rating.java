@@ -1,5 +1,9 @@
 package com.foodies.models;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,7 +14,8 @@ public class Rating {
     @GeneratedValue
     private Long id_rating;
 
-    @OneToOne(fetch=FetchType.LAZY, mappedBy = "rating")
+    @OneToOne(fetch=FetchType.LAZY, cascade =  CascadeType.ALL, mappedBy = "rating")
+    @JsonIgnore
     private Review review;
 
     private int dish;

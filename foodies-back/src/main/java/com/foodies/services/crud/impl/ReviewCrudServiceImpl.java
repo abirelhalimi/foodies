@@ -54,9 +54,7 @@ public class ReviewCrudServiceImpl extends CrudServiceImpl<Review> implements Re
 
     @Override
     public Review add(Review review) {
-        reviewRepository.save(review);
-//        addRating(review.getRestaurant().getId());
-        return review;
+        return reviewRepository.save(review);
     }
 
 }
