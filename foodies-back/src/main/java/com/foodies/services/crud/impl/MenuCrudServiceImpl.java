@@ -9,6 +9,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -20,6 +21,12 @@ public class MenuCrudServiceImpl extends CrudServiceImpl<Menu> implements MenuCr
     @Override
     protected CrudRepository<Menu, Long> repository() {
         return menuRepository;
+    }
+
+    @Override
+    public Menu add(Menu menu) {
+        menu.setDate(new Date());
+        return menuRepository.save(menu);
     }
 
     @Override

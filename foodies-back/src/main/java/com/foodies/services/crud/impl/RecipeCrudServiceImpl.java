@@ -10,6 +10,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -21,6 +22,12 @@ public class RecipeCrudServiceImpl extends CrudServiceImpl<Recipe> implements Re
     @Override
     protected CrudRepository<Recipe, Long> repository() {
         return recipeRepository;
+    }
+
+    @Override
+    public Recipe add(Recipe recipe) {
+        recipe.setDate(new Date());
+        return recipeRepository.save(recipe);
     }
 
     @Override

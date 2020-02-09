@@ -26,8 +26,7 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
     @Override
     public Donation add(Donation donation) {
         donation.setDate(new Date());
-        donationRepository.save(donation);
-        return donation;
+        return donationRepository.save(donation);
     }
 
     @Override

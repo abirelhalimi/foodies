@@ -11,6 +11,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -19,12 +20,15 @@ public class ReviewCrudServiceImpl extends CrudServiceImpl<Review> implements Re
     @Autowired
     private ReviewRepository reviewRepository;
 
-    @Autowired
-    private RestaurantCrudService restaurantCrudService;
-
     @Override
     protected CrudRepository<Review, Long> repository() {
         return reviewRepository;
+    }
+
+    @Override
+    public Review add(Review review) {
+        review.setDate(new Date());
+        return reviewRepository.save(review);
     }
 
     @Override
@@ -50,11 +54,6 @@ public class ReviewCrudServiceImpl extends CrudServiceImpl<Review> implements Re
             }
         });
         return restaurantReviews;
-    }
-
-    @Override
-    public Review add(Review review) {
-        return reviewRepository.save(review);
     }
 
 }
