@@ -25,6 +25,14 @@ public class RestaurantCrudController {
         return restaurantCrudService.add(restaurant);
     }
 
+    @PostMapping("/multiple")
+    public String add(@Valid @RequestBody List<Restaurant> restaurants) {
+        restaurants.forEach(restaurant -> {
+            restaurantCrudService.add(restaurant);
+        });
+        return "restaurants added successfully";
+    }
+
     @PutMapping(value = "/{id}")
     public Restaurant update(@PathVariable("id") Long id, @Valid @RequestBody Restaurant newRestaurantData) {
         return restaurantCrudService.update(restaurantCrudService.getById(id), newRestaurantData);
