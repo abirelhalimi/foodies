@@ -30,6 +30,9 @@ public class PostController {
     @Autowired
     private RestaurantCrudService restaurantCrudService;
 
+    @Autowired
+    private DonationCrudService donationCrudService;
+
     @PostMapping(value = "/recipe/{id}")
     public Recipe add(@PathVariable("id") Long id, @Valid @RequestBody Recipe recipe) {
         recipe.setUser(userCrudService.getById(id));
@@ -101,6 +104,16 @@ public class PostController {
     @GetMapping(value = "/review-user/{id}")
     public List<Review> getReviewsByUser(@PathVariable("id") Long id) {
         return reviewCrudService.getByUser(id);
+    }
+
+    @GetMapping(value = "/user-posts/{id}")
+    public int getNumberOfPosts(@PathVariable Long id) {
+        return getReviewsByUser(id).size()+getRecipesByUser(id).size();
+    }
+
+    @GetMapping(value = "/restaurant-posts")
+    public int getNumberOfPostsRestaurant(@PathVariable Long id) {
+        return getMenusByRestaurant(id).size()+donationCrudService.getAllByRestaurant(id).size();
     }
 
     @GetMapping(value = "/menu/{id}")
