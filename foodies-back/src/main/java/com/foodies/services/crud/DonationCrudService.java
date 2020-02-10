@@ -10,4 +10,5 @@ public interface DonationCrudService extends CrudService<Donation> {
     void pickUp(Long id);
     List<Donation> getOffersByRestaurant(Long id);
     List<Donation> getAllByRestaurant(Long id);
+    void like(Long id);
 }

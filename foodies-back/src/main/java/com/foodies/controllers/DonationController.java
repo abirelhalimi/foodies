@@ -50,4 +50,9 @@ public class DonationController {
         donationCrudService.delete(id);
     }
 
+    @PostMapping(value = "/donation/like/{id}")
+    public void likeDonation(@PathVariable Long id) {
+        donationCrudService.like(id);
+    }
+
 }

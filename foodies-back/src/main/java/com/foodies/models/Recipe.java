@@ -14,6 +14,7 @@ public class Recipe {
     private Long id;
 
     private Date date;
+    private int likes;
 
     @Lob
     private byte[] image;
@@ -74,4 +75,11 @@ public class Recipe {
         this.cuisines = cuisines;
     }
 
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
 }

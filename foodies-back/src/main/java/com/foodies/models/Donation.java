@@ -16,6 +16,7 @@ public class Donation {
 
     private boolean isOffer = false;
     private boolean pickedUp = false;
+    private int likes = 0;
     private Date date;
 
     public Long getId() {
@@ -56,5 +57,13 @@ public class Donation {
 
     public void setOffer(boolean offer) {
         isOffer = offer;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 }
