@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface MenuCrudService extends CrudService<Menu> {
     List<Menu> getByRestaurant(Long id);
+    void like(Long id);
 }

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/foodies-ui/foodies-ui.iml" filepath="$PROJECT_DIR$/foodies-ui/foodies-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui-admin/ui-admin.iml" filepath="$PROJECT_DIR$/ui-admin/ui-admin.iml" />
     </modules>
   </component>
 </project>

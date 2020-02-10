@@ -8,4 +8,5 @@ import java.util.List;
 public interface ReviewCrudService extends CrudService<Review> {
     List<Review> getByUser(Long id);
     public List<Review> getByRestaurant(Long id);
+    void like(Long id);
 }

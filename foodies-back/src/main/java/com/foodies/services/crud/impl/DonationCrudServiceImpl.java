@@ -55,6 +55,13 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
     }
 
     @Override
+    public void like(Long id) {
+        Donation donation = getById(id);
+        donation.setLikes(donation.getLikes()+1);
+        update(getById(id), donation);
+    }
+
+    @Override
     public List<Donation> getOffersByRestaurant(Long id) {
         List<Donation> allDonations = donationRepository.findAll();
         List<Donation> userDonations = new ArrayList<>();

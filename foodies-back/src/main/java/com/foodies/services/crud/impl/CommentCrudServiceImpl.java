@@ -40,4 +40,11 @@ public class CommentCrudServiceImpl extends CrudServiceImpl<Comment> implements 
         });
         return postComments;
     }
+
+    @Override
+    public void like(Long id) {
+        Comment comment = getById(id);
+        comment.setLikes(comment.getLikes()+1);
+        update(getById(id),comment);
+    }
 }

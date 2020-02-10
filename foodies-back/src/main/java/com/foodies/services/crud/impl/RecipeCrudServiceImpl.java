@@ -53,4 +53,11 @@ public class RecipeCrudServiceImpl extends CrudServiceImpl<Recipe> implements Re
         });
         return result;
     }
+
+    @Override
+    public void like(Long id) {
+        Recipe recipe = getById(id);
+        recipe.setLikes(recipe.getLikes()+1);
+        update(getById(id),recipe);
+    }
 }

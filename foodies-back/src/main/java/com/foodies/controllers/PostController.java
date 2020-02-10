@@ -118,4 +118,19 @@ public class PostController {
     public List<Recipe> getRecipesByCuisine(Cuisine cuisine) {
         return recipeCrudService.getRecipesByCuisine(cuisine);
     }
+
+    @PostMapping(value = "/menu/like/{id}")
+    public void likeMenu(@PathVariable Long id) {
+        menuCrudService.like(id);
+    }
+
+    @PostMapping(value = "/recipe/like/{id}")
+    public void likeRecipe(@PathVariable Long id) {
+        recipeCrudService.like(id);
+    }
+
+    @PostMapping(value = "/review/like/{id}")
+    public void likeReview(@PathVariable Long id) {
+        reviewCrudService.like(id);
+    }
 }

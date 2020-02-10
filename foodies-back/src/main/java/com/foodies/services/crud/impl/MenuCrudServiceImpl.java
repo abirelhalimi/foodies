@@ -40,4 +40,11 @@ public class MenuCrudServiceImpl extends CrudServiceImpl<Menu> implements MenuCr
         });
         return restaurantMenus;
     }
+
+    @Override
+    public void like(Long id) {
+        Menu menu = getById(id);
+        menu.setLikes(menu.getLikes()+1);
+        update(getById(id), menu);
+    }
 }

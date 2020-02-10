@@ -30,6 +30,11 @@ public class CommentController {
         return commentCrudService.add(comment);
     }
 
+    @PostMapping(value = "/like/{id}")
+    public void like(@PathVariable Long id) {
+        commentCrudService.like(id);
+    }
+
     @PutMapping(value = "/{id}")
     public Comment edit(@PathVariable("id") Long id, @Valid @RequestBody Comment comment) {
         return commentCrudService.update(commentCrudService.getById(id), comment);

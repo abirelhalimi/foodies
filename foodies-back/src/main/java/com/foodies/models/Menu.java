@@ -12,6 +12,7 @@ public class Menu {
     private Long id;
 
     private String text;
+    private int likes;
 
     @Lob
     private byte[] image;
@@ -59,5 +60,13 @@ public class Menu {
 
     public void setRestaurant(Restaurant restaurant) {
         this.restaurant = restaurant;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 }

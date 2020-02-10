@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface CommentCrudService extends CrudService<Comment> {
     List<Comment> getCommentsByPost(Long id);
+    void like(Long id);
 }

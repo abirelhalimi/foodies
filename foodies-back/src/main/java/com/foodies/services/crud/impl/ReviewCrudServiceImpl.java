@@ -56,4 +56,11 @@ public class ReviewCrudServiceImpl extends CrudServiceImpl<Review> implements Re
         return restaurantReviews;
     }
 
+    @Override
+    public void like(Long id) {
+        Review review = getById(id);
+        review.setLikes(review.getLikes()+1);
+        update(getById(id), review);
+    }
+
 }

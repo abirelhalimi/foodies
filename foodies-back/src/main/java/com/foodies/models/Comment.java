@@ -13,6 +13,7 @@ public class Comment {
 
     private Date date;
     private String text;
+    private int likes = 0;
 
     @ManyToOne
     private User user;
@@ -60,4 +61,11 @@ public class Comment {
         this.text = text;
     }
 
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
 }
