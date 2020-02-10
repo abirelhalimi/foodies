@@ -30,6 +30,21 @@ public class DonationController {
         return donationCrudService.getOffersByRestaurant(id);
     }
 
+    @GetMapping(value = "/all")
+    public List<Donation> getAll() {
+        return donationCrudService.getAll();
+    }
+
+    @GetMapping(value = "/offer")
+    public List<Donation> getOffers() {
+        return donationCrudService.getOffers();
+    }
+
+    @GetMapping(value = "/donation")
+    public List<Donation> getDonations() {
+        return donationCrudService.getDonations();
+    }
+
     @PostMapping
     public Donation add(@Valid @RequestBody Donation donation) {
         return donationCrudService.add(donation);
