@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/RestaurantController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/UserCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/UserCrudServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +111,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server (ui-admin)">
+  <component name="RunManager" selected="Spring Boot.FoodiesApplication">
     <configuration name="E2E Tests (foodies-admin)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/foodies-admin/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -190,10 +189,10 @@
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="JavaScript Debug.Angular Application (foodies-admin)" />
       <item itemvalue="npm.Angular CLI Server (foodies-admin)" />
-      <item itemvalue="Protractor.E2E Tests (foodies-admin)" />
-      <item itemvalue="Spring Boot.FoodiesApplication" />
-      <item itemvalue="Protractor.E2E Tests (ui-admin)" />
       <item itemvalue="npm.Angular CLI Server (ui-admin)" />
+      <item itemvalue="Protractor.E2E Tests (foodies-admin)" />
+      <item itemvalue="Protractor.E2E Tests (ui-admin)" />
+      <item itemvalue="Spring Boot.FoodiesApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -246,7 +245,8 @@
       <workItem from="1581190892706" duration="3538000" />
       <workItem from="1581244041775" duration="25206000" />
       <workItem from="1581326516952" duration="1128000" />
-      <workItem from="1581329321468" duration="25325000" />
+      <workItem from="1581329321468" duration="28705000" />
+      <workItem from="1581410476080" duration="27662000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -472,7 +472,28 @@
       <option name="project" value="LOCAL" />
       <updated>1581363107536</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update">
+      <created>1581371693201</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1581371693201</updated>
+    </task>
+    <task id="LOCAL-00034" summary="ui-admin">
+      <created>1581434296335</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1581434296335</updated>
+    </task>
+    <task id="LOCAL-00035" summary="ui-admin">
+      <created>1581445494558</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1581445494558</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +527,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added foodies-ui module" />
     <MESSAGE value="crud services" />
     <MESSAGE value="created models, repositories and all crud services" />
     <MESSAGE value="crud controllers" />
@@ -528,9 +548,10 @@
     <MESSAGE value="added Date to posts" />
     <MESSAGE value="added Date to comment" />
     <MESSAGE value="added admin side add-restaurants" />
-    <MESSAGE value="update" />
     <MESSAGE value="update - like + ui-admin" />
     <MESSAGE value="update Donation" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Donation" />
+    <MESSAGE value="update" />
+    <MESSAGE value="ui-admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui-admin" />
   </component>
 </project>

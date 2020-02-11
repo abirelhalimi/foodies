@@ -92,6 +92,7 @@ public class DataController {
         user.setPassword("regina");
         user.setUsername("reginaphalange");
         imgTreatment("regina.png",user);
+
         userCrudService.add(user);
 
         //second user

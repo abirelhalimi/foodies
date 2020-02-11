@@ -39,18 +39,38 @@ public class UserCrudServiceImpl extends CrudServiceImpl<User> implements UserCr
         return user;
     }
 
-    @Override
-    public User update(User objectToUpdate, User newObjectData) {
-        if (newObjectData.getEmail() != null && userDoesntExists(newObjectData.getEmail(), newObjectData.getUsername())) {
-            objectToUpdate.setEmail(newObjectData.getEmail());
-        }
-
-        if (newObjectData.getPassword() != null) {
-            objectToUpdate.setPassword(encoder.encode(newObjectData.getPassword()));
-        }
-        userRepository.save(objectToUpdate);
-        return objectToUpdate;
-    }
+//    @Override
+//    public User update(User objectToUpdate, User newObjectData) {
+//        if (newObjectData.getEmail() != null && userDoesntExists(newObjectData.getEmail(), newObjectData.getUsername())) {
+//            objectToUpdate.setEmail(newObjectData.getEmail());
+//        }
+//
+//        if (newObjectData.getPassword() != null) {
+//            objectToUpdate.setPassword(encoder.encode(newObjectData.getPassword()));
+//        }
+//        if(newObjectData.getCuisines()!=null) {
+//            objectToUpdate.setCuisines(newObjectData.getCuisines());
+//        }
+//        if(newObjectData.getUsername()!=null) {
+//            objectToUpdate.setUsername(newObjectData.getUsername());
+//        }
+//        if(newObjectData.getBio()!=null) {
+//            objectToUpdate.setBio(newObjectData.getBio());
+//        }
+//        if(newObjectData.getFollowers()!=null) {
+//            objectToUpdate.setFollowers(newObjectData.getFollowers());
+//        }
+//        if(newObjectData.getFollowing()!=null) {
+//            objectToUpdate.setFollowing(newObjectData.getFollowing());
+//        }
+//        if(newObjectData.getFollowingRestaurant()!=null) {
+//            objectToUpdate.setFollowingRestaurant(newObjectData.getFollowingRestaurant());
+//        }
+//        if(newObjectData.getImage()!=null) {
+//            objectToUpdate.setImage(newObjectData.getImage());
+//        }
+//        return userRepository.save(objectToUpdate);
+//    }
 
     private boolean userDoesntExists(String email, String username) {
 

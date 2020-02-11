@@ -1,5 +1,6 @@
 package com.foodies.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -31,9 +32,11 @@ public class User implements UserDetails {
     private List<Cuisine> cuisines;
 
     @ManyToMany
+    @JoinTable(name="followers",joinColumns = @JoinColumn(name = "id_user"),inverseJoinColumns =@JoinColumn(name = "id_follower") )
     private List<User> followers;
 
-    @ManyToMany
+    @JsonIgnore
+    @ManyToMany(mappedBy = "followers")
     private List<User> following;
 
     @ManyToMany
