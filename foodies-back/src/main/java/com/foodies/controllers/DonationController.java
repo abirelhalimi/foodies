@@ -70,4 +70,9 @@ public class DonationController {
         donationCrudService.like(id);
     }
 
+    @PostMapping(value = "/unlike/{id}")
+    public void unlike(@PathVariable Long id) {
+        donationCrudService.unlike(id);
+    }
+
 }

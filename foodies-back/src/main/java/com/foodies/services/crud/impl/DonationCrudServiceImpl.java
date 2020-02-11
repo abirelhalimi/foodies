@@ -7,7 +7,6 @@ import com.foodies.services.crud.DonationCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -46,7 +45,7 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
     public List<Donation> getOffers() {
         List<Donation> donations = donationRepository.findAll();
         List<Donation> result = new ArrayList<>();
-        for (Donation donation: donations) {
+        for (Donation donation : donations) {
             if (donation.isOffer()) {
                 result.add(donation);
             }
@@ -82,7 +81,14 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
     @Override
     public void like(Long id) {
         Donation donation = getById(id);
-        donation.setLikes(donation.getLikes()+1);
+        donation.setLikes(donation.getLikes() + 1);
+        update(getById(id), donation);
+    }
+
+    @Override
+    public void unlike(Long id) {
+        Donation donation = getById(id);
+        donation.setLikes(donation.getLikes() - 1);
         update(getById(id), donation);
     }
 

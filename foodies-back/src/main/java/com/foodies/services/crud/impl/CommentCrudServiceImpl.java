@@ -44,7 +44,14 @@ public class CommentCrudServiceImpl extends CrudServiceImpl<Comment> implements 
     @Override
     public void like(Long id) {
         Comment comment = getById(id);
-        comment.setLikes(comment.getLikes()+1);
-        update(getById(id),comment);
+        comment.setLikes(comment.getLikes() + 1);
+        update(getById(id), comment);
+    }
+
+    @Override
+    public void unlike(Long id) {
+        Comment comment = getById(id);
+        comment.setLikes(comment.getLikes() - 1);
+        update(getById(id), comment);
     }
 }

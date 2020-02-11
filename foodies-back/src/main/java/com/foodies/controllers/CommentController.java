@@ -35,6 +35,11 @@ public class CommentController {
         commentCrudService.like(id);
     }
 
+    @PostMapping(value = "/unlike/{id}")
+    public void unlike(@PathVariable Long id) {
+        commentCrudService.unlike(id);
+    }
+
     @PutMapping(value = "/{id}")
     public Comment edit(@PathVariable("id") Long id, @Valid @RequestBody Comment comment) {
         return commentCrudService.update(commentCrudService.getById(id), comment);
