@@ -11,4 +11,5 @@ public interface RecipeCrudService extends CrudService<Recipe> {
 
     List<Recipe> getRecipesByCuisine(Cuisine cuisine);
     void like(Long id);
+    void unlike(Long id);
 }

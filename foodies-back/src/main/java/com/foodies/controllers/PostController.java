@@ -137,13 +137,27 @@ public class PostController {
         menuCrudService.like(id);
     }
 
+    @PostMapping(value = "/menu/unlike/{id}")
+    public void unlikeMenu(@PathVariable Long id) {
+        menuCrudService.unlike(id);
+    }
+
     @PostMapping(value = "/recipe/like/{id}")
     public void likeRecipe(@PathVariable Long id) {
         recipeCrudService.like(id);
     }
 
+    @PostMapping(value = "/recipe/unlike/{id}")
+    public void unlikeRecipe(@PathVariable Long id) {
+        recipeCrudService.unlike(id);
+    }
     @PostMapping(value = "/review/like/{id}")
     public void likeReview(@PathVariable Long id) {
         reviewCrudService.like(id);
+    }
+
+    @PostMapping(value = "/comment/unlike/{id}")
+    public void unlike(@PathVariable Long id) {
+        reviewCrudService.unlike(id);
     }
 }
