@@ -156,8 +156,8 @@ public class PostController {
         reviewCrudService.like(id);
     }
 
-    @PostMapping(value = "/comment/unlike/{id}")
-    public void unlike(@PathVariable Long id) {
+    @PostMapping(value = "/review/unlike/{id}")
+    public void unlikeReview(@PathVariable Long id) {
         reviewCrudService.unlike(id);
     }
 }

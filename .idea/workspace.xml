@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-admin/proxy.conf.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/ui-admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/ui-admin.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +67,7 @@
     <property name="findjar.last.used.dir" value="D:/installs" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/foodies-back/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ui-admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -81,20 +85,21 @@
     <property name="ts.external.directory.path" value="C:\Users\abir0\IdeaProjects\foodies\ui-admin\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin\src\app\user" />
       <recent name="C:\Users\abir0\IdeaProjects\foodies\foodies-back\src\main\resources" />
-      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\models" />
-      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\repositories" />
-      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\services" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-web\src\main\java\com\foodies" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.foodies.services" />
       <recent name="com.foodies" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin\src\app\user" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin" />
       <recent name="C:\Users\abir0\IdeaProjects\foodies\foodies-back\src\main\resources" />
-      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-web\src\main\java\com\foodies" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\models" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\repositories" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\services" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -109,7 +114,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.FoodiesApplication">
+  <component name="RunManager" selected="npm.Angular CLI Server (ui-admin)">
     <configuration name="E2E Tests (foodies-admin)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/foodies-admin/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -244,7 +249,7 @@
       <workItem from="1581244041775" duration="25206000" />
       <workItem from="1581326516952" duration="1128000" />
       <workItem from="1581329321468" duration="28705000" />
-      <workItem from="1581410476080" duration="32823000" />
+      <workItem from="1581410476080" duration="36133000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -505,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581457679174</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="entities details">
+      <created>1581461551757</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1581461551757</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +551,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="crud controllers" />
     <MESSAGE value="crud update" />
     <MESSAGE value="restaurant controller" />
     <MESSAGE value="user controller" />
@@ -564,6 +575,7 @@
     <MESSAGE value="ui-admin" />
     <MESSAGE value="update - fix followers/following" />
     <MESSAGE value="update - unlike" />
-    <option name="LAST_COMMIT_MESSAGE" value="update - unlike" />
+    <MESSAGE value="entities details" />
+    <option name="LAST_COMMIT_MESSAGE" value="entities details" />
   </component>
 </project>
