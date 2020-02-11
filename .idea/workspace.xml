@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/crud/RatingCrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/crud/RatingCrudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/UserCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/UserCrudServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +244,7 @@
       <workItem from="1581244041775" duration="25206000" />
       <workItem from="1581326516952" duration="1128000" />
       <workItem from="1581329321468" duration="28705000" />
-      <workItem from="1581410476080" duration="13802000" />
+      <workItem from="1581410476080" duration="21787000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -480,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581371693201</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="ui-admin">
+      <created>1581434296335</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1581434296335</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +518,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added foodies-ui module" />
     <MESSAGE value="crud services" />
     <MESSAGE value="created models, repositories and all crud services" />
     <MESSAGE value="crud controllers" />
@@ -539,6 +542,7 @@
     <MESSAGE value="update - like + ui-admin" />
     <MESSAGE value="update Donation" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="ui-admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui-admin" />
   </component>
 </project>
