@@ -48,6 +48,27 @@ public class UserCrudServiceImpl extends CrudServiceImpl<User> implements UserCr
         if (newObjectData.getPassword() != null) {
             objectToUpdate.setPassword(encoder.encode(newObjectData.getPassword()));
         }
+        if(newObjectData.getCuisines()!=null) {
+            objectToUpdate.setCuisines(newObjectData.getCuisines());
+        }
+        if(newObjectData.getUsername()!=null) {
+            objectToUpdate.setUsername(newObjectData.getUsername());
+        }
+        if(newObjectData.getBio()!=null) {
+            objectToUpdate.setBio(newObjectData.getBio());
+        }
+        if(newObjectData.getFollowers()!=null) {
+            objectToUpdate.setFollowers(newObjectData.getFollowers());
+        }
+        if(newObjectData.getFollowing()!=null) {
+            objectToUpdate.setFollowing(newObjectData.getFollowing());
+        }
+        if(newObjectData.getFollowingRestaurant()!=null) {
+            objectToUpdate.setFollowingRestaurant(newObjectData.getFollowingRestaurant());
+        }
+        if(newObjectData.getImage()!=null) {
+            objectToUpdate.setImage(newObjectData.getImage());
+        }
         userRepository.save(objectToUpdate);
         return objectToUpdate;
     }
