@@ -24,13 +24,13 @@ UserController {
     @GetMapping(value = "/{id}")
     public User view(@PathVariable Long id) {
         List<User> users = getAll();
-        final User[] result = {new User()};
-        users.forEach(user -> {
+        User result = new User();
+        for (User user : users) {
             if (user.getId().equals(id)) {
-                result[0] = user;
+                result = user;
             }
-        });
-        return userCrudService.getById(id);
+        }
+        return result;
     }
 
     @PostMapping(value = "/follow/{id}")
