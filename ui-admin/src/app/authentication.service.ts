@@ -11,6 +11,8 @@ export class AuthenticationService {
 
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
+  private userr: User;
+  private token: string;
 
   constructor(private http: HttpClient) {
     this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
@@ -18,7 +20,10 @@ export class AuthenticationService {
   }
 
   public get currentUserValue(): User {
-    return this.currentUserSubject.value;
+    this.userr = this.currentUserSubject.value;
+    // tslint:disable-next-line:max-line-length
+    // this.userr.token = this.token;
+    return this.userr;
   }
 
   login(username: string, password: string) {
@@ -26,14 +31,14 @@ export class AuthenticationService {
       username,
       password
     })
-      .pipe(map(user => {
-        // login successful if there's a jwt token in the response
-        // store user details and jwt token in local storage to keep user logged in between page refreshes
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        this.currentUserSubject.next(user);
-
-        return user;
-      }));
+    .pipe(map(user => {
+      // login successful if there's a jwt token in the response
+      // store user details and jwt token in local storage to keep user logged in between page refreshes
+      // this.token = user.heade
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      this.currentUserSubject.next(user);
+      return user;
+    }));
   }
 
   logout() {

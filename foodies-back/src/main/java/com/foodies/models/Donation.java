@@ -17,6 +17,7 @@ public class Donation {
     private boolean isOffer = false;
     private boolean pickedUp = false;
     private int likes = 0;
+    private String text;
     private Date date;
 
     public Long getId() {
@@ -65,5 +66,13 @@ public class Donation {
 
     public void setLikes(int likes) {
         this.likes = likes;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }
