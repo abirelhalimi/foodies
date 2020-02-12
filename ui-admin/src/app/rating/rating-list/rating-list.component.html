@@ -2,6 +2,7 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h2>Rating List</h2>
+    <button [routerLink]="['/rating-create']" class="btn btn-primary" style="margin-left: 1100px">Add Rating</button>
   </div>
 
   <div class="panel-body">
@@ -27,7 +28,7 @@
         <td>{{rating.service}}</td>
         <td>
           <button  [routerLink]="['/rating', rating.id]" class="btn btn-primary" style="margin-left: 10px">Details</button>
-          <button  [routerLink]="['/rating', rating.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
+          <button  [routerLink]="['/rating/update', rating.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
           <button (click)="deleteRating(rating.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
         </td>
       </tr>

@@ -1,8 +1,10 @@
 package com.foodies;
 
+import com.foodies.services.crud.UserCrudService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -19,6 +21,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
+
+    @Autowired
+    private UserCrudService userCrudService;
 
     private final AuthenticationManager authenticationManager;
 
@@ -57,32 +62,31 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .setExpiration(new Date(System.currentTimeMillis() + 864000000))
                 .claim("rol", roles)
                 .compact();
-
         response.addHeader(SecurityConstants.TOKEN_HEADER, SecurityConstants.TOKEN_PREFIX + token);
-//        String userData = user.getUsername();
-//        response.getWriter().write(String.valueOf(user));
-//        response.getWriter().flush();
-//        response.getWriter().close();
-        response.getWriter().println("{\n" +
-                "    \"id\": 1,\n" +
-                "    \"email\": \"user@gmail.com\",\n" +
-                "    \"password\": \"$2a$10$CqSf46uRvjvicccBXSZZTutM43Qhdc/mGfILav/FMpCz7j5ZgvR2q\",\n" +
-                "    \"role\": \"USER\",\n" +
-                "    \"bio\": \"null\",\n" +
-                "    \"cuisines\": \"[]\",\n" +
-                "    \"followers\": \"[]\",\n" +
-                "    \"followingRestaurant\": \"[]\",\n" +
-                "    \"enabled\": false,\n" +
-                "    \"username\": \"reginaphalange\",\n" +
-                "    \"authorities\": [\n" +
-                "        {\n" +
-                "            \"authority\": \"ROLE_USER\"\n" +
-                "        }\n" +
-                "    ],\n" +
-                "    \"accountNonExpired\": false,\n" +
-                "    \"accountNonLocked\": false,\n" +
-                "    \"credentialsNonExpired\": false\n" +
-                "}");
+//        System.out.println("\n***********: "+user.getUsername());
+        response.getWriter().write(String.valueOf(user));
+        response.getWriter().flush();
+        response.getWriter().close();
+//        response.getWriter().println("{\n" +
+//                "    \"id\": 1,\n" +
+//                "    \"email\": \"reginaphalange@gmail.com\",\n" +
+//                "    \"password\": \"$2a$10$CqSf46uRvjvicccBXSZZTutM43Qhdc/mGfILav/FMpCz7j5ZgvR2q\",\n" +
+//                "    \"role\": \"USER\",\n" +
+//                "    \"bio\": \"null\",\n" +
+//                "    \"cuisines\": \"[]\",\n" +
+//                "    \"followers\": \"[]\",\n" +
+//                "    \"followingRestaurant\": \"[]\",\n" +
+//                "    \"enabled\": false,\n" +
+//                "    \"username\": \"reginaphalange\",\n" +
+//                "    \"authorities\": [\n" +
+//                "        {\n" +
+//                "            \"authority\": \"ROLE_USER\"\n" +
+//                "        }\n" +
+//                "    ],\n" +
+//                "    \"accountNonExpired\": false,\n" +
+//                "    \"accountNonLocked\": false,\n" +
+//                "    \"credentialsNonExpired\": false\n" +
+//                "}");
     }
 }
 

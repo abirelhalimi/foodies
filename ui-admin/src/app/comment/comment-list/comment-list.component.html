@@ -2,6 +2,7 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h2>Comment List</h2>
+    <button [routerLink]="['/comment-create']" class="btn btn-primary" style="margin-left: 1100px">Add Comment</button>
   </div>
 
   <div class="panel-body">
@@ -25,7 +26,7 @@
         <td>{{comment.user.id}} : {{comment.user.username}}</td>
         <td>
           <button  [routerLink]="['/comment', comment.id]" class="btn btn-primary" style="margin-left: 10px">Details</button>
-          <button  [routerLink]="['/comment', comment.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
+          <button  [routerLink]="['/comment/update', comment.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
           <button (click)="deleteComment(comment.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
         </td>
       </tr>

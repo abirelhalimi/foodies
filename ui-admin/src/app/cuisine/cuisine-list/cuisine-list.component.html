@@ -2,6 +2,7 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h2>Cuisine List</h2>
+    <button [routerLink]="['/cuisine-create']" class="btn btn-primary" style="margin-left: 1100px">Add Cuisine</button>
   </div>
 
   <div class="panel-body">
@@ -19,7 +20,7 @@
         <td>{{cuisine.name}}</td>
         <td>
           <button  [routerLink]="['/cuisine', cuisine.id]" class="btn btn-primary" style="margin-left: 10px">Details</button>
-          <button  [routerLink]="['/cuisine', cuisine.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
+          <button  [routerLink]="['/cuisine/update', cuisine.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
           <button (click)="deleteCuisine(cuisine.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
         </td>
       </tr>

@@ -2,6 +2,7 @@
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h2>User List</h2>
+      <button [routerLink]="['/user-create']" class="btn btn-primary" style="margin-left: 1100px">Add User</button>
     </div>
 
     <div class="panel-body">
@@ -39,7 +40,7 @@
           </td>
           <td>
             <button [routerLink]="['/user', user.id]" class="btn btn-primary" >Details</button>
-            <button [routerLink]="['/user', user.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
+            <button [routerLink]="['/user/update', user.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
             <button (click)="deleteUser(user.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
           </td>
         </tr>

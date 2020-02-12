@@ -2,6 +2,7 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h2>Donation List</h2>
+    <button [routerLink]="['/donation-create']" class="btn btn-primary" style="margin-left: 1100px">Add Donation</button>
   </div>
 
   <div class="panel-body">
@@ -27,7 +28,7 @@
         <td>{{donation.restaurant.id}} : {{donation.restaurant.username}}</td>
         <td>
           <button  [routerLink]="['/donation', donation.id]" class="btn btn-primary" style="margin-left: 10px">Details</button>
-          <button  [routerLink]="['/donation', donation.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
+          <button  [routerLink]="['/donation/update', donation.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
           <button (click)="deleteDonation(donation.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
         </td>
       </tr>

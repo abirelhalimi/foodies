@@ -2,6 +2,7 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h2>Restaurant List</h2>
+    <button [routerLink]="['/restaurant-create']" class="btn btn-primary" style="margin-left: 1100px">Add Restaurant</button>
   </div>
 
   <div class="panel-body">
@@ -38,7 +39,7 @@
         </td>
         <td>
           <button  [routerLink]="['/restaurant', restaurant.id]" class="btn btn-primary" style="margin-left: 10px">Details</button><br>
-          <button  [routerLink]="['/restaurant', restaurant.id]" class="btn btn-warning" style="margin-left: 10px">Update</button><br>
+          <button  [routerLink]="['/restaurant/update', restaurant.id]" class="btn btn-warning" style="margin-left: 10px">Update</button><br>
           <button (click)="deleteRestaurant(restaurant.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
         </td>
       </tr>

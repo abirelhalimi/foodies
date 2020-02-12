@@ -15,7 +15,6 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = this.authenticationService.currentUserValue;
-    alert(this.currentUser.token);
   }
 
 }
