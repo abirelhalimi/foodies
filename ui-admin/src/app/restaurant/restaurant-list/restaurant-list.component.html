@@ -1,0 +1,48 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Restaurant List</h2>
+  </div>
+
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>username</th>
+        <th>name</th>
+        <th>email</th>
+        <th>role</th>
+        <th>mobile number</th>
+        <th>latitude</th>
+        <th>longitude</th>
+        <th>followers</th>
+        <th>cuisines</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let restaurant of restaurants">
+        <td>{{restaurant.id}}</td>
+        <td>{{restaurant.username}}</td>
+        <td>{{restaurant.name}}</td>
+        <td>{{restaurant.email}}</td>
+        <td>{{restaurant.role}}</td>
+        <td>{{restaurant.telephone}}</td>
+        <td>{{restaurant.latitude}}</td>
+        <td>{{restaurant.longitude}}</td>
+        <td>
+          <h6 *ngFor="let follower of restaurant.followers">{{follower.id}} : {{follower.username}}</h6>
+        </td>
+        <td>
+          <h6 *ngFor="let cuisine of restaurant.cuisines">{{cuisine.id}} : {{cuisine.name}}</h6>
+        </td>
+        <td>
+          <button  [routerLink]="['/restaurant', restaurant.id]" class="btn btn-primary" style="margin-left: 10px">Details</button><br>
+          <button  [routerLink]="['/restaurant', restaurant.id]" class="btn btn-warning" style="margin-left: 10px">Update</button><br>
+          <button (click)="deleteRestaurant(restaurant.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

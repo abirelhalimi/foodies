@@ -1,0 +1,37 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Rating List</h2>
+  </div>
+
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>accessibility</th>
+        <th>dish</th>
+        <th>location</th>
+        <th>price</th>
+        <th>service</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let rating of ratings">
+        <td>{{rating.id}}</td>
+        <td>{{rating.accessibility}}</td>
+        <td>{{rating.dish}}</td>
+        <td>{{rating.location}}</td>
+        <td>{{rating.price}}</td>
+        <td>{{rating.service}}</td>
+        <td>
+          <button  [routerLink]="['/rating', rating.id]" class="btn btn-primary" style="margin-left: 10px">Details</button>
+          <button  [routerLink]="['/rating', rating.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
+          <button (click)="deleteRating(rating.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

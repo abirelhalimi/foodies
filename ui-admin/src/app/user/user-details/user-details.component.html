@@ -1,0 +1,34 @@
+<h2>User Details</h2>
+
+<hr/>
+<div *ngIf="user">
+  <div>
+    <label><b>Id: </b></label> {{user.id}}
+  </div>
+  <div>
+    <label><b>Username: </b></label> {{user.username}}
+  </div>
+  <div>
+  <label><b>Email: </b></label> {{user.email}}
+  </div>
+  <div>
+    <label><b>Role: </b></label> {{user.role}}
+  </div>
+  <div>
+    <label><b>Cuisines: </b></label> <h6 *ngFor="let cuisine of user.cuisines">&nbsp;&nbsp;&nbsp;&nbsp;{{cuisine.id}} : {{cuisine.name}}</h6>
+  </div>
+  <div>
+    <label><b>Followers: </b></label> <h6 *ngFor="let follower of user.followers">&nbsp;&nbsp;&nbsp;&nbsp;{{follower.id}} : {{follower.username}}</h6>
+  </div>
+  <div>
+    <label><b>Following Users: </b></label> <h6 *ngFor="let followingUser of user.following">&nbsp;&nbsp;&nbsp;&nbsp;{{followingUser.id}} : {{followingUser.username}}</h6>
+  </div>
+  <div>
+    <label><b>Following Restaurants: </b></label> <h6 *ngFor="let followingRestaurant of user.followingRestaurant">&nbsp;&nbsp;&nbsp;&nbsp;{{followingRestaurant.id}}: {{followingRestaurant.username}}</h6>
+  </div>
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to User List</button><br>

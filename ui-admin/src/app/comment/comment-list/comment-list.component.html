@@ -1,0 +1,35 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Comment List</h2>
+  </div>
+
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>date</th>
+        <th>likes</th>
+        <th>text</th>
+        <th>user</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let comment of comments">
+        <td>{{comment.id}}</td>
+        <td>{{comment.date}}</td>
+        <td>{{comment.likes}}</td>
+        <td>{{comment.text}}</td>
+        <td>{{comment.user.id}} : {{comment.user.username}}</td>
+        <td>
+          <button  [routerLink]="['/comment', comment.id]" class="btn btn-primary" style="margin-left: 10px">Details</button>
+          <button  [routerLink]="['/comment', comment.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
+          <button (click)="deleteComment(comment.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

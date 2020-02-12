@@ -1,0 +1,40 @@
+<h2>Restaurant Details</h2>
+
+<hr/>
+<div *ngIf="restaurant">
+  <div>
+    <label><b>Id: </b></label> {{restaurant.id}}
+  </div>
+  <div>
+    <label><b>Username: </b></label> {{restaurant.username}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{restaurant.email}}
+  </div>
+  <div>
+    <label><b>Role: </b></label> {{restaurant.role}}
+  </div>
+  <div>
+    <label><b>Name: </b></label> {{restaurant.name}}
+  </div>
+  <div>
+    <label><b>Phone number: </b></label> {{restaurant.telephone}}
+  </div>
+  <div>
+    <label><b>Longitude: </b></label> {{restaurant.longitude}}
+  </div>
+  <div>
+    <label><b>Latitude: </b></label> {{restaurant.latitude}}
+  </div>
+  <div>
+    <label><b>Cuisines: </b></label> <h6 *ngFor="let cuisine of restaurant.cuisines">&nbsp;&nbsp;&nbsp;&nbsp;{{cuisine.id}} : {{cuisine.name}}</h6>
+  </div>
+  <div>
+    <label><b>Followers: </b></label> <h6 *ngFor="let follower of restaurant.followers">&nbsp;&nbsp;&nbsp;&nbsp;{{follower.id}} : {{follower.username}}</h6>
+  </div>
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Restaurant List</button><br>

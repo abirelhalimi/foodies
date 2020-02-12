@@ -1,0 +1,28 @@
+<h2>Rating Details</h2>
+
+<hr/>
+<div *ngIf="rating">
+  <div>
+    <label><b>Id: </b></label> {{rating.id}}
+  </div>
+  <div>
+    <label><b>Service: </b></label> {{rating.service}}
+  </div>
+  <div>
+    <label><b>Price: </b></label> {{rating.price}}
+  </div>
+  <div>
+    <label><b>Location: </b></label> {{rating.location}}
+  </div>
+  <div>
+    <label><b>Dish: </b></label> {{rating.dish}}
+  </div>
+  <div>
+    <label><b>Accessibility: </b></label> {{rating.accessibility}}
+  </div>
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Rating List</button><br>
