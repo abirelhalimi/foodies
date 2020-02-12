@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   ) {
     // redirect to home if already logged in
     if (this.authenticationService.currentUserValue) {
-      this.router.navigate(['/']);
+      this.router.navigate(['dashboard']);
     }
   }
 
@@ -54,7 +54,6 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          console.log(data);
           this.router.navigate([this.returnUrl])
             .then(() => window.location.reload());
         },

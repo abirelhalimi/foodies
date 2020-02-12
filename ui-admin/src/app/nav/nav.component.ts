@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthenticationService} from '../authentication.service';
+import {User} from '../user/user';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  private currentUser: User;
+
+  constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
+    this.currentUser = this.authenticationService.currentUserValue;
+    alert(this.currentUser.token);
   }
 
 }

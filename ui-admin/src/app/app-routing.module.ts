@@ -15,17 +15,17 @@ import {LoginComponent} from './login/login.component';
 import {AuthGuard} from './guards';
 
 const routes: Routes = [
-  {path: 'dashboard', component: DashboardComponent},
-  {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'users', component: UserListComponent, canActivate: [AuthGuard]},
-  {path: 'reviews', component: ReviewListComponent},
-  {path: 'restaurants', component: RestaurantListComponent},
-  {path: 'recipes', component: RecipeListComponent},
-  {path: 'ratings', component: RatingListComponent},
-  {path: 'menus', component: MenuListComponent},
-  {path: 'donations', component: DonationListComponent},
-  {path: 'cuisines', component: CuisineListComponent},
-  {path: 'comments', component: CommentListComponent},
+  {path: 'reviews', component: ReviewListComponent, canActivate: [AuthGuard]},
+  {path: 'restaurants', component: RestaurantListComponent, canActivate: [AuthGuard]},
+  {path: 'recipes', component: RecipeListComponent, canActivate: [AuthGuard]},
+  {path: 'ratings', component: RatingListComponent, canActivate: [AuthGuard]},
+  {path: 'menus', component: MenuListComponent, canActivate: [AuthGuard]},
+  {path: 'donations', component: DonationListComponent, canActivate: [AuthGuard]},
+  {path: 'cuisines', component: CuisineListComponent, canActivate: [AuthGuard]},
+  {path: 'comments', component: CommentListComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
 
 ];
