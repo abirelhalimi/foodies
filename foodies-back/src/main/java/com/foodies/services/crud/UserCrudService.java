@@ -17,4 +17,6 @@ public interface UserCrudService extends CrudService<User> {
     void removeFollowingRestaurant(User userUnfollowing, Restaurant restaurantToUnfollow);
 
     User findByUsername(String username);
+
+    List<User> getFollowing(Long id);
 }

@@ -35,4 +35,9 @@ UserController {
     public List<User> unfollow(@PathVariable Long id, @Valid @RequestBody Long idUser) {
         return userCrudService.unfollow(id, idUser);
     }
+
+    @GetMapping(value = "/following")
+    public List<User> getFollowing(Long id) {
+        return userCrudService.getFollowing(id);
+    }
 }
