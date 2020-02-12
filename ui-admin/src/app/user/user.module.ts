@@ -4,6 +4,7 @@ import {UserDetailsComponent} from './user-details/user-details.component';
 import {CreateUserComponent} from './create-user/create-user.component';
 import {UpdateUserComponent} from './update-user/update-user.component';
 import {UserService} from './user.service';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import {UserService} from './user.service';
   ],
   imports: [
     CommonModule,
+    FormsModule,
   ],
   providers: [UserService]
 })

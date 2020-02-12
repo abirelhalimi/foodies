@@ -64,29 +64,29 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .compact();
         response.addHeader(SecurityConstants.TOKEN_HEADER, SecurityConstants.TOKEN_PREFIX + token);
 //        System.out.println("\n***********: "+user.getUsername());
-        response.getWriter().write(String.valueOf(user));
-        response.getWriter().flush();
-        response.getWriter().close();
-//        response.getWriter().println("{\n" +
-//                "    \"id\": 1,\n" +
-//                "    \"email\": \"reginaphalange@gmail.com\",\n" +
-//                "    \"password\": \"$2a$10$CqSf46uRvjvicccBXSZZTutM43Qhdc/mGfILav/FMpCz7j5ZgvR2q\",\n" +
-//                "    \"role\": \"USER\",\n" +
-//                "    \"bio\": \"null\",\n" +
-//                "    \"cuisines\": \"[]\",\n" +
-//                "    \"followers\": \"[]\",\n" +
-//                "    \"followingRestaurant\": \"[]\",\n" +
-//                "    \"enabled\": false,\n" +
-//                "    \"username\": \"reginaphalange\",\n" +
-//                "    \"authorities\": [\n" +
-//                "        {\n" +
-//                "            \"authority\": \"ROLE_USER\"\n" +
-//                "        }\n" +
-//                "    ],\n" +
-//                "    \"accountNonExpired\": false,\n" +
-//                "    \"accountNonLocked\": false,\n" +
-//                "    \"credentialsNonExpired\": false\n" +
-//                "}");
+//        response.getWriter().write(String.valueOf(user));
+//        response.getWriter().flush();
+//        response.getWriter().close();
+        response.getWriter().println("{\n" +
+                "    \"id\": 1,\n" +
+                "    \"email\": \"reginaphalange@gmail.com\",\n" +
+                "    \"password\": \"$2a$10$CqSf46uRvjvicccBXSZZTutM43Qhdc/mGfILav/FMpCz7j5ZgvR2q\",\n" +
+                "    \"role\": \"USER\",\n" +
+                "    \"bio\": \"null\",\n" +
+                "    \"cuisines\": \"[]\",\n" +
+                "    \"followers\": \"[]\",\n" +
+                "    \"followingRestaurant\": \"[]\",\n" +
+                "    \"enabled\": false,\n" +
+                "    \"username\": \"reginaphalange\",\n" +
+                "    \"authorities\": [\n" +
+                "        {\n" +
+                "            \"authority\": \"ROLE_USER\"\n" +
+                "        }\n" +
+                "    ],\n" +
+                "    \"accountNonExpired\": false,\n" +
+                "    \"accountNonLocked\": false,\n" +
+                "    \"credentialsNonExpired\": false\n" +
+                "}");
     }
 }
 

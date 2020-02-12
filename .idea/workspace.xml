@@ -4,6 +4,9 @@
     <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/user/create-user/create-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/user/create-user/create-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/user/create-user/create-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/user/create-user/create-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/user/user.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,21 +85,22 @@
     <property name="ts.external.directory.path" value="C:\Users\abir0\IdeaProjects\foodies\ui-admin\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin\src\app\checkbox" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin\src\app\user" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies\foodies-back\src\main\resources" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-web\src\main\java\com\foodies" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.foodies.services" />
+      <recent name="com.foodies" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin\src\app" />
       <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin" />
       <recent name="C:\Users\abir0\IdeaProjects\foodies\foodies-back\src\main\resources" />
       <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\models" />
       <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\repositories" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.foodies.services" />
-      <recent name="com.foodies" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin\src\app\user" />
-      <recent name="C:\Users\abir0\IdeaProjects\foodies\foodies-back\src\main\resources" />
-      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-web\src\main\java\com\foodies" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -111,7 +115,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.FoodiesApplication">
+  <component name="RunManager" selected="npm.Angular CLI Server (ui-admin)">
     <configuration name="E2E Tests (foodies-admin)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/foodies-admin/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -249,7 +253,7 @@
       <workItem from="1581410476080" duration="36263000" />
       <workItem from="1581502508252" duration="308000" />
       <workItem from="1581513406715" duration="7797000" />
-      <workItem from="1581527657899" duration="8383000" />
+      <workItem from="1581527657899" duration="14153000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -559,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581536734620</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="update jwt">
+      <created>1581537594970</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1581537594970</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
