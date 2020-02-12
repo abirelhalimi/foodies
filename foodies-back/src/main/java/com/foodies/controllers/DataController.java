@@ -1,10 +1,7 @@
 package com.foodies.controllers;
 
 import com.foodies.models.*;
-import com.foodies.services.crud.CuisineCrudService;
-import com.foodies.services.crud.ReviewCrudService;
-import com.foodies.services.crud.RestaurantCrudService;
-import com.foodies.services.crud.UserCrudService;
+import com.foodies.services.crud.*;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,6 +32,18 @@ public class DataController {
 
     @Autowired
     private CuisineCrudService cuisineCrudService;
+
+    @Autowired
+    private RecipeCrudService recipeCrudService;
+
+    @Autowired
+    private MenuCrudService menuCrudService;
+
+    @Autowired
+    private DonationCrudService donationCrudService;
+
+    @Autowired
+    private CommentCrudService commentCrudService;
 
     private void imgTreatment(String name, User user) throws IOException {
 
@@ -81,27 +90,53 @@ public class DataController {
 
     }
 
+    private void imgTreatmentDonation(String name, Donation donation) throws IOException {
+
+        InputStream inputStream = this.getClass()
+                .getClassLoader()
+                .getResourceAsStream(name);
+
+        if(inputStream == null) {
+            fail("Unable to get resources");
+        }
+        else {
+            donation.setImage(IOUtils.toByteArray(inputStream));
+        }
+
+    }
+
+    private void imgTreatmentMenu(String name, Menu menu) throws IOException {
+
+        InputStream inputStream = this.getClass()
+                .getClassLoader()
+                .getResourceAsStream(name);
+
+        if(inputStream == null) {
+            fail("Unable to get resources");
+        }
+        else {
+            menu.setImage(IOUtils.toByteArray(inputStream));
+        }
+
+    }
+
+    private void imgTreatmentRecipe(String name, Recipe recipe) throws IOException {
+
+        InputStream inputStream = this.getClass()
+                .getClassLoader()
+                .getResourceAsStream(name);
+
+        if(inputStream == null) {
+            fail("Unable to get resources");
+        }
+        else {
+            recipe.setImage(IOUtils.toByteArray(inputStream));
+        }
+
+    }
+
     @GetMapping
     public String populateDatabase() throws IOException {
-
-        //Adding users
-        User user = new User();
-
-        //first user
-        user.setEmail("regina@gmail.com");
-        user.setPassword("regina");
-        user.setUsername("reginaphalange");
-        imgTreatment("regina.png",user);
-
-        userCrudService.add(user);
-
-        //second user
-        user = new User();
-        user.setEmail("ken@gmail.com");
-        user.setPassword("ken");
-        user.setUsername("kenadams");
-        imgTreatment("ken.png", user);
-        userCrudService.add(user);
 
         //Adding cuisines
         Cuisine cuisine = new Cuisine();
@@ -410,6 +445,29 @@ public class DataController {
         cuisine.setName("Sandwiches");
         cuisineCrudService.add(cuisine);
 
+
+        //Adding users
+        User user = new User();
+
+        //first user
+        user.setEmail("regina@gmail.com");
+        user.setPassword("regina");
+        user.setUsername("reginaphalange");
+        user.setCuisines(cuisineCrudService.getAll().subList(26,35));
+        imgTreatment("regina.png",user);
+
+        userCrudService.add(user);
+
+        //second user
+        user = new User();
+        user.setEmail("ken@gmail.com");
+        user.setPassword("ken");
+        user.setUsername("kenadams");
+        user.setCuisines(cuisineCrudService.getAll().subList(42,50));
+        imgTreatment("ken.png", user);
+        userCrudService.add(user);
+
+
         //Adding restaurants
         Restaurant restaurant = new Restaurant();
 
@@ -475,6 +533,80 @@ public class DataController {
         review.setDate(new Date("01/26/2020"));
         review.setRestaurant(restaurantCrudService.getById((long) 2));
         reviewCrudService.add(review);
+
+        //recipe 1
+        Recipe recipe = new Recipe();
+        recipe.setUser(userCrudService.getById((long) 1));
+        recipe.setCuisines(cuisineCrudService.getAll().subList(5,10));
+        recipe.setText("this is a recipe written by regina phalange");
+        imgTreatmentRecipe("regina.png",recipe);
+        recipeCrudService.add(recipe);
+
+        //recipe 2
+        recipe = new Recipe();
+        recipe.setUser(userCrudService.getById((long) 2));
+        recipe.setCuisines(cuisineCrudService.getAll().subList(10,12));
+        recipe.setText("this is a recipe written by ken adams");
+        imgTreatmentRecipe("ken.png",recipe);
+        recipeCrudService.add(recipe);
+
+        //menu 1
+        Menu menu = new Menu();
+        menu.setRestaurant(restaurantCrudService.getById((long) 1));
+        menu.setText("this is a menu posted by bluespoon");
+        imgTreatmentMenu("bluespoon.png",menu);
+        menuCrudService.add(menu);
+
+        //menu 2
+        menu = new Menu();
+        menu.setRestaurant(restaurantCrudService.getById((long) 2));
+        menu.setText("this is a menu posted by metros");
+        imgTreatmentMenu("metros.png",menu);
+        menuCrudService.add(menu);
+
+        //donation 1
+        Donation donation = new Donation();
+        donation.setText("this is a donation by bluespoon");
+        donation.setRestaurant(restaurantCrudService.getById((long) 1));
+        imgTreatmentDonation("bluespoon.png",donation);
+        donationCrudService.add(donation);
+
+        //donation 2
+        donation = new Donation();
+        donation.setText("this is a donation by metros");
+        donation.setRestaurant(restaurantCrudService.getById((long) 2));
+        imgTreatmentDonation("metros.png",donation);
+        donationCrudService.add(donation);
+
+        //offer 1
+        donation = new Donation();
+        donation.setText("this is an offer by bluespoon");
+        donation.setRestaurant(restaurantCrudService.getById((long) 1));
+        donation.setOffer(true);
+        imgTreatmentDonation("bluespoon.png",donation);
+        donationCrudService.add(donation);
+
+        //donation 2
+        donation = new Donation();
+        donation.setText("this is an offer by metros");
+        donation.setRestaurant(restaurantCrudService.getById((long) 2));
+        imgTreatmentDonation("metros.png",donation);
+        donation.setOffer(true);
+        donationCrudService.add(donation);
+
+        //comment 1
+        Comment comment =  new Comment();
+        comment.setRecipe(recipeCrudService.getById((long) 1));
+        comment.setText("this is a comment by ken on regina's recipe");
+        comment.setUser(userCrudService.getById((long) 2));
+        commentCrudService.add(comment);
+
+        //comment 2
+        comment =  new Comment();
+        comment.setRecipe(recipeCrudService.getById((long) 2));
+        comment.setText("this is a comment by regina on ken's recipe");
+        comment.setUser(userCrudService.getById((long) 1));
+        commentCrudService.add(comment);
 
         return "Database filled";
     }

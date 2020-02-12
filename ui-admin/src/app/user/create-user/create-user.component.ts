@@ -48,10 +48,4 @@ export class CreateUserComponent implements OnInit {
     this.router.navigate(['/users']);
   }
 
-
-  addCuisine(id: number) {
-    let cusina;
-    this.cuisineService.getCuisine(id).then(res => cusina = res);
-    this.chosen.push(cusina);
-  }
 }
