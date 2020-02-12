@@ -1,0 +1,37 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Donation List</h2>
+  </div>
+
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>date</th>
+        <th>likes</th>
+        <th>offer</th>
+        <th>pickedUp</th>
+        <th>restaurant</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let donation of donations">
+        <td>{{donation.id}}</td>
+        <td>{{donation.date}}</td>
+        <td>{{donation.likes}}</td>
+        <td>{{donation.offer}}</td>
+        <td>{{donation.pickedUp}}</td>
+        <td>{{donation.restaurant.id}} : {{donation.restaurant.username}}</td>
+        <td>
+          <button  [routerLink]="['/donation', donation.id]" class="btn btn-primary" style="margin-left: 10px">Details</button>
+          <button  [routerLink]="['/donation', donation.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
+          <button (click)="deleteDonation(donation.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

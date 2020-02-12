@@ -1,0 +1,30 @@
+<h2>Review Details</h2>
+
+<hr/>
+<div *ngIf="review">
+  <div>
+    <label><b>Id: </b></label> {{review.id}}
+  </div>
+  <div>
+    <label><b>Date: </b></label> {{review.date}}
+  </div>
+  <div>
+    <label><b>Likes: </b></label> {{review.likes}}
+  </div>
+  <div>
+    <label><b>Rating: </b></label> {{review.rating.id}}
+  </div>
+  <div>
+    <label><b>Text: </b></label> {{review.text}}
+  </div>
+  <div>
+    <label><b>User: </b></label> {{review.user.id}} - {{review.user.username}}
+  </div>
+  <div>
+    <label><b>Restaurant: </b></label> {{review.restaurant.id}} - {{review.restaurant.username}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Review List</button><br>

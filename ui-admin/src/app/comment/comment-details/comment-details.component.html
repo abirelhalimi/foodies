@@ -1,0 +1,25 @@
+<h2>Comment Details</h2>
+
+<hr/>
+<div *ngIf="comment">
+  <div>
+    <label><b>Id: </b></label> {{comment.id}}
+  </div>
+  <div>
+    <label><b>Picked Up: </b></label> {{comment.text}}
+  </div>
+  <div>
+    <label><b>Date: </b></label> {{comment.date}}
+  </div>
+  <div>
+    <label><b>Likes: </b></label> {{comment.likes}}
+  </div>
+  <div>
+    <label><b>Restaurant: </b></label> {{comment.user.id}} - {{comment.user.username}}
+  </div>
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Comment List</button><br>

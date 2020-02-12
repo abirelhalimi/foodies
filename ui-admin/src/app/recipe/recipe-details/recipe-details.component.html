@@ -1,0 +1,28 @@
+<h2>Recipe Details</h2>
+
+<hr/>
+<div *ngIf="recipe">
+  <div>
+    <label><b>Id: </b></label> {{recipe.id}}
+  </div>
+  <div>
+    <label><b>Text: </b></label> {{recipe.text}}
+  </div>
+  <div>
+    <label><b>Likes: </b></label> {{recipe.likes}}
+  </div>
+  <div>
+    <label><b>Date: </b></label> {{recipe.date}}
+  </div>
+  <div>
+    <label><b>User: </b></label> {{recipe.user.id}} - {{recipe.user.username}}
+  </div>
+  <div>
+    <label><b>Cuisines: </b></label> <h6 *ngFor="let cuisine of recipe.cuisines">&nbsp;&nbsp;&nbsp;&nbsp;{{cuisine.id}} : {{cuisine.name}}</h6>
+  </div>
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Recipe List</button><br>

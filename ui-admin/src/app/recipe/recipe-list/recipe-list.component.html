@@ -1,0 +1,38 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Recipe List</h2>
+  </div>
+
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>date</th>
+        <th>likes</th>
+        <th>text</th>
+        <th>user</th>
+        <th>cuisines</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let recipe of recipes">
+        <td>{{recipe.id}}</td>
+        <td>{{recipe.date}}</td>
+        <td>{{recipe.likes}}</td>
+        <td>{{recipe.text}}</td>
+        <td>{{recipe.user.id}} : {{recipe.user.username}}</td>
+        <td>
+          <h6 *ngFor="let cuisine of recipe.cuisines">{{cuisine.id}} : {{cuisine.name}}</h6>
+        </td>
+        <td>
+          <button  [routerLink]="['/recipe', recipe.id]" class="btn btn-primary" style="margin-left: 10px">Details</button><br>
+          <button  [routerLink]="['/recipe', recipe.id]" class="btn btn-warning" style="margin-left: 10px">Update</button><br>
+          <button (click)="deleteRecipe(recipe.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

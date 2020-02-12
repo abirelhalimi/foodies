@@ -1,0 +1,16 @@
+<h2>Cuisine Details</h2>
+
+<hr/>
+<div *ngIf="cuisine">
+  <div>
+    <label><b>Id: </b></label> {{cuisine.id}}
+  </div>
+  <div>
+    <label><b>Name: </b></label> {{cuisine.name}}
+  </div>
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Cuisine List</button><br>

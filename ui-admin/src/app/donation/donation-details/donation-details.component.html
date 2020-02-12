@@ -1,0 +1,28 @@
+<h2>Donation Details</h2>
+
+<hr/>
+<div *ngIf="donation">
+  <div>
+    <label><b>Id: </b></label> {{donation.id}}
+  </div>
+  <div>
+    <label><b>Offer: </b></label> {{donation.offer}}
+  </div>
+  <div>
+    <label><b>Picked Up: </b></label> {{donation.pickedUp}}
+  </div>
+  <div>
+    <label><b>Date: </b></label> {{donation.date}}
+  </div>
+  <div>
+    <label><b>Likes: </b></label> {{donation.likes}}
+  </div>
+  <div>
+    <label><b>Restaurant: </b></label> {{donation.restaurant.id}} - {{donation.restaurant.username}}
+  </div>
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Donation List</button><br>

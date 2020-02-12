@@ -1,0 +1,25 @@
+<h2>Menu Details</h2>
+
+<hr/>
+<div *ngIf="menu">
+  <div>
+    <label><b>Id: </b></label> {{menu.id}}
+  </div>
+  <div>
+    <label><b>Text: </b></label> {{menu.text}}
+  </div>
+  <div>
+    <label><b>Date: </b></label> {{menu.date}}
+  </div>
+  <div>
+    <label><b>Likes: </b></label> {{menu.likes}}
+  </div>
+  <div>
+    <label><b>Restaurant: </b></label> {{menu.restaurant.id}} - {{menu.restaurant.username}}
+  </div>
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Menu List</button><br>
