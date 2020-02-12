@@ -15,7 +15,7 @@ public class CommentController {
     @Autowired
     private CommentCrudService commentCrudService;
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/bypost/{id}")
     public List<Comment> getCommentsByPost(@PathVariable("id") Long id) {
         return commentCrudService.getCommentsByPost(id);
     }
