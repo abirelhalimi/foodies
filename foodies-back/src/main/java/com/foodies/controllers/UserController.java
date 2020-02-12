@@ -23,17 +23,24 @@ UserController {
 
     @GetMapping(value = "/{id}")
     public User view(@PathVariable Long id) {
+        List<User> users = getAll();
+        final User[] result = {new User()};
+        users.forEach(user -> {
+            if (user.getId().equals(id)) {
+                result[0] = user;
+            }
+        });
         return userCrudService.getById(id);
     }
 
     @PostMapping(value = "/follow/{id}")
-    public List<User> follow(@PathVariable Long id, @Valid @RequestBody Long idUser) {
-        return userCrudService.follow(id, idUser);
+    public List<User> follow(@PathVariable Long id, @Valid @RequestBody User user) {
+        return userCrudService.follow(id, user.getId());
     }
 
     @PostMapping(value = "/unfollow/{id}")
-    public List<User> unfollow(@PathVariable Long id, @Valid @RequestBody Long idUser) {
-        return userCrudService.unfollow(id, idUser);
+    public List<User> unfollow(@PathVariable Long id, @Valid @RequestBody User user) {
+        return userCrudService.unfollow(id, user.getId());
     }
 
     @GetMapping(value = "/following")

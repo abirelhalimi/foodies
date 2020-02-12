@@ -2,6 +2,7 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h2>Review List</h2>
+    <button [routerLink]="['/review-create']" class="btn btn-primary" style="margin-left: 1100px">Add Review</button>
   </div>
 
   <div class="panel-body">
@@ -30,7 +31,7 @@
 
         <td>
           <button  [routerLink]="['/review', review.id]" class="btn btn-primary" >Details</button>
-          <button  [routerLink]="['/review', review.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
+          <button  [routerLink]="['/review/update', review.id]" class="btn btn-warning" style="margin-left: 10px">Update</button>
           <button (click)="deleteReview(review.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
         </td>
       </tr>

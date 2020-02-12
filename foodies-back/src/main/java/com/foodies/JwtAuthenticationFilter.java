@@ -65,7 +65,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 //        response.getWriter().close();
         response.getWriter().println("{\n" +
                 "    \"id\": 1,\n" +
-                "    \"email\": \"user@gmail.com\",\n" +
+                "    \"email\": \"reginaphalange@gmail.com\",\n" +
                 "    \"password\": \"$2a$10$CqSf46uRvjvicccBXSZZTutM43Qhdc/mGfILav/FMpCz7j5ZgvR2q\",\n" +
                 "    \"role\": \"USER\",\n" +
                 "    \"bio\": \"null\",\n" +

@@ -6,7 +6,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +31,7 @@ public class User implements UserDetails {
     private List<Cuisine> cuisines;
 
     @ManyToMany
-    @JoinTable(name="followers",joinColumns = @JoinColumn(name = "id_user"),inverseJoinColumns =@JoinColumn(name = "id_follower") )
+    @JoinTable(name = "followers", joinColumns = @JoinColumn(name = "id_user"), inverseJoinColumns = @JoinColumn(name = "id_follower"))
     private List<User> followers;
 
     @JsonIgnore

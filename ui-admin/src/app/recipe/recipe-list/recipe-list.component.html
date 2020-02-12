@@ -2,6 +2,7 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h2>Recipe List</h2>
+    <button [routerLink]="['/recipe-create']" class="btn btn-primary" style="margin-left: 1100px">Add Recipe</button>
   </div>
 
   <div class="panel-body">
@@ -28,7 +29,7 @@
         </td>
         <td>
           <button  [routerLink]="['/recipe', recipe.id]" class="btn btn-primary" style="margin-left: 10px">Details</button><br>
-          <button  [routerLink]="['/recipe', recipe.id]" class="btn btn-warning" style="margin-left: 10px">Update</button><br>
+          <button  [routerLink]="['/recipe/update', recipe.id]" class="btn btn-warning" style="margin-left: 10px">Update</button><br>
           <button (click)="deleteRecipe(recipe.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
         </td>
       </tr>
