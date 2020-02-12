@@ -14,7 +14,6 @@ import {RecipeModule} from './recipe/recipe.module';
 import {RestaurantModule} from './restaurant/restaurant.module';
 import {ReviewModule} from './review/review.module';
 import {UserModule} from './user/user.module';
-import {UserService} from './user/user.service';
 import {HttpClientModule} from '@angular/common/http';
 import {UserListComponent} from './user/user-list/user-list.component';
 import {AppRoutingModule} from './app-routing.module';
@@ -36,7 +35,8 @@ import {MenuListComponent} from './menu/menu-list/menu-list.component';
 import {DonationListComponent} from './donation/donation-list/donation-list.component';
 import {CuisineListComponent} from './cuisine/cuisine-list/cuisine-list.component';
 import {CommentListComponent} from './comment/comment-list/comment-list.component';
-import { LoginComponent } from './login/login.component';
+import {LoginComponent} from './login/login.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -77,7 +77,8 @@ import { LoginComponent } from './login/login.component';
     MenuRoutingModule,
     DonationRoutingModule,
     CuisineRoutingModule,
-    CommentRoutingModule
+    CommentRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

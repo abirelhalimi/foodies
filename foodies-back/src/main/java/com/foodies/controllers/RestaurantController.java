@@ -47,8 +47,6 @@ public class RestaurantController {
         return restaurantCrudService.getRestaurantsByCuisine(cuisine);
     }
 
-
-
     @GetMapping(value = "/rating/{id}")
     public Rating getRestaurantRating(@PathVariable Long id) {
         return restaurantCrudService.getRestaurantRating(id);

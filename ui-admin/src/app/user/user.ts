@@ -11,4 +11,5 @@ export class User {
   followers: User[];
   following: User[];
   followingRestaurant: Restaurant[];
+  token?: string;
 }

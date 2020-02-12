@@ -12,11 +12,12 @@ import {DonationListComponent} from './donation/donation-list/donation-list.comp
 import {CuisineListComponent} from './cuisine/cuisine-list/cuisine-list.component';
 import {CommentListComponent} from './comment/comment-list/comment-list.component';
 import {LoginComponent} from './login/login.component';
+import {AuthGuard} from './guards';
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-  {path: 'users', component: UserListComponent},
+  {path: 'users', component: UserListComponent, canActivate: [AuthGuard]},
   {path: 'reviews', component: ReviewListComponent},
   {path: 'restaurants', component: RestaurantListComponent},
   {path: 'recipes', component: RecipeListComponent},
