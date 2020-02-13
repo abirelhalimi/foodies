@@ -1,0 +1,22 @@
+.search-restaurant-input {
+  background-color: #1f4343;
+  color: #8de4af;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+.search-restaurant-input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #a5c0af;
+}
+.search-restaurant-input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #a5c0af;
+}
+.search-restaurant-input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #a5c0af;
+}
+.search-restaurant-input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #a5c0af;
+}

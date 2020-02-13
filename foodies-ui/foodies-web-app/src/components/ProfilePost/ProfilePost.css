@@ -1,0 +1,66 @@
+.profile-post-container {
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 19rem;
+  height: 19rem;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #002727;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  -webkit-box-shadow: inset 0px -38px 24px -4px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: inset 0px -38px 24px -4px rgba(0, 0, 0, 0.42);
+  box-shadow: inset 0px -38px 24px -4px rgba(0, 0, 0, 0.42);
+  margin: 1rem;
+}
+.profile-post-container:hover > .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.5;
+  background-color: rgb(32, 21, 21);
+}
+.profile-post-icons-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-post-icon {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+.profile-post-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.profile-post-numbers {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.profile-post-caption {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-post-caption-label {
+  color: #8de4af;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
