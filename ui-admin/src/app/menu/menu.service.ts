@@ -36,7 +36,7 @@ export class MenuService {
       .catch(this.handleError);
   }
 
-  createRating(menu: Menu): Promise<Menu> {
+  createMenu(menu: Menu): Promise<Menu> {
     return this.http.put('/api/menus/', menu)
       .toPromise()
       .then(response => response as Menu)

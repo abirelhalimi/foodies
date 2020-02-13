@@ -1,1 +1,36 @@
-<p>create-rating works!</p>
+<h3>Create Rating</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="accessibility">Accessibility</label>
+      <input type="number" class="form-control" id="accessibility" required [(ngModel)]="rating.accessibility" name="accessibility">
+    </div>
+
+    <div class="form-group">
+      <label for="dish">Dish</label>
+      <input type="number" class="form-control" id="dish" required [(ngModel)]="rating.dish" name="dish">
+    </div>
+
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="number" class="form-control" id="location" required [(ngModel)]="rating.location" name="location">
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" id="price" required [(ngModel)]="rating.price" name="price">
+    </div>
+
+    <div class="form-group">
+      <label for="service">Service</label>
+      <input type="number" class="form-control" id="service" required [(ngModel)]="rating.service" name="service">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

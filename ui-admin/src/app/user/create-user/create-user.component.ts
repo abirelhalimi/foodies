@@ -3,7 +3,6 @@ import {User} from '../user';
 import {UserService} from '../user.service';
 import {Router} from '@angular/router';
 import {CuisineService} from '../../cuisine/cuisine.service';
-import {Cuisine} from '../../cuisine/cuisine';
 
 @Component({
   selector: 'app-create-user',
@@ -14,8 +13,6 @@ export class CreateUserComponent implements OnInit {
 
   user: User = new User();
   submitted = false;
-  cuisines: Cuisine[];
-  chosen = [];
 
   constructor(private userService: UserService,
               private router: Router,
@@ -23,8 +20,6 @@ export class CreateUserComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cuisineService.getCuisines()
-      .then(cuisines => this.cuisines = cuisines);
   }
 
   newUser(): void {

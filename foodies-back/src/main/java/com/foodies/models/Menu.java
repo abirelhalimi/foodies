@@ -13,6 +13,7 @@ public class Menu {
 
     private String text;
     private int likes;
+    private boolean menuItem = true;
 
     @Lob
     private byte[] image;
@@ -68,5 +69,13 @@ public class Menu {
 
     public void setLikes(int likes) {
         this.likes = likes;
+    }
+
+    public boolean isMenuItem() {
+        return menuItem;
+    }
+
+    public void setMenuItem(boolean menuItem) {
+        this.menuItem = menuItem;
     }
 }

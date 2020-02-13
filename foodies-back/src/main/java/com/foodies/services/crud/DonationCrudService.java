@@ -1,5 +1,6 @@
 package com.foodies.services.crud;
 
+import com.foodies.models.Code;
 import com.foodies.models.Donation;
 import com.foodies.services.common.CrudService;
 
@@ -14,4 +15,5 @@ public interface DonationCrudService extends CrudService<Donation> {
     void unlike(Long id);
     List<Donation> getOffers();
     List<Donation> getDonations();
+    Code claimOffer(Long id);
 }

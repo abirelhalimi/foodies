@@ -1,6 +1,8 @@
 package com.foodies.services.crud.impl;
 
+import com.foodies.models.Code;
 import com.foodies.models.Donation;
+import com.foodies.repositories.CodeRepository;
 import com.foodies.repositories.DonationRepository;
 import com.foodies.services.common.CrudServiceImpl;
 import com.foodies.services.crud.DonationCrudService;
@@ -18,6 +20,9 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
     @Autowired
     private DonationRepository donationRepository;
 
+    @Autowired
+    private CodeRepository codeRepository;
+
     @Override
     protected CrudRepository<Donation, Long> repository() {
         return donationRepository;
@@ -26,7 +31,15 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
     @Override
     public Donation add(Donation donation) {
         donation.setDate(new Date());
-        return donationRepository.save(donation);
+        donationRepository.save(donation);
+        Code code;
+        for (int i=0; i<donation.getQuantity();i++) {
+            code = new Code();
+            code.setCode(randomAlphaNumeric(8));
+            code.setDonation(donation);
+            codeRepository.save(code);
+        }
+        return donation;
     }
 
     @Override
@@ -39,6 +52,33 @@ public class DonationCrudServiceImpl extends CrudServiceImpl<Donation> implement
             }
         }
         return result;
+    }
+
+    @Override
+    public Code claimOffer(Long id) {
+        Donation donation = getById(id);
+        List<Code> codes = codeRepository.findAll();
+        List<Code> offerCodes = new ArrayList<>();
+        codes.forEach(code -> {
+            if (code.getDonation().getId().equals(id)) {
+                offerCodes.add(code);
+            }
+        });
+        Code code = offerCodes.get(1);
+        codeRepository.delete(code);
+        donation.setQuantity(donation.getQuantity()-1);
+        return code;
+    }
+
+
+    private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    private static String randomAlphaNumeric(int count) {
+        StringBuilder builder = new StringBuilder();
+        while (count-- != 0) {
+            int character = (int)(Math.random()*ALPHA_NUMERIC_STRING.length());
+            builder.append(ALPHA_NUMERIC_STRING.charAt(character));
+        }
+        return builder.toString();
     }
 
     @Override

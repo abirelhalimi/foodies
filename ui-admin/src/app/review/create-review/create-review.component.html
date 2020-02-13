@@ -1,1 +1,30 @@
-<p>create-review works!</p>
+<h3>Create Review</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="text">Text</label>
+      <input type="text" class="form-control" id="text" required [(ngModel)]="review.text" name="text">
+    </div>
+
+    <div class="form-group">
+      <label for="user">User Id</label>
+      <input type="number" class="form-control" id="user" required [(ngModel)]="review.user.id" name="user">
+    </div>
+
+    <div class="form-group">
+      <label for="restaurant">Restaurant Id</label>
+      <input type="number" class="form-control" id="restaurant" required [(ngModel)]="review.restaurant.id" name="restaurant">
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating Id</label>
+      <input type="number" class="form-control" id="rating" required [(ngModel)]="review.rating.id" name="rating">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

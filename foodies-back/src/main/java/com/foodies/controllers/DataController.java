@@ -568,6 +568,7 @@ public class DataController {
         Donation donation = new Donation();
         donation.setText("this is a donation by bluespoon");
         donation.setRestaurant(restaurantCrudService.getById((long) 1));
+        donation.setQuantity(80);
         imgTreatmentDonation("bluespoon.png",donation);
         donationCrudService.add(donation);
 
@@ -575,6 +576,7 @@ public class DataController {
         donation = new Donation();
         donation.setText("this is a donation by metros");
         donation.setRestaurant(restaurantCrudService.getById((long) 2));
+        donation.setQuantity(150);
         imgTreatmentDonation("metros.png",donation);
         donationCrudService.add(donation);
 
@@ -582,6 +584,7 @@ public class DataController {
         donation = new Donation();
         donation.setText("this is an offer by bluespoon");
         donation.setRestaurant(restaurantCrudService.getById((long) 1));
+        donation.setQuantity(50);
         donation.setOffer(true);
         imgTreatmentDonation("bluespoon.png",donation);
         donationCrudService.add(donation);
@@ -589,6 +592,7 @@ public class DataController {
         //donation 2
         donation = new Donation();
         donation.setText("this is an offer by metros");
+        donation.setQuantity(20);
         donation.setRestaurant(restaurantCrudService.getById((long) 2));
         imgTreatmentDonation("metros.png",donation);
         donation.setOffer(true);

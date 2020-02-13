@@ -16,6 +16,7 @@ public class Donation {
 
     private boolean isOffer = false;
     private boolean pickedUp = false;
+    private int quantity = 10;
     private int likes = 0;
     private String text;
     private Date date;
@@ -85,5 +86,13 @@ public class Donation {
 
     public void setImage(byte[] image) {
         this.image = image;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
