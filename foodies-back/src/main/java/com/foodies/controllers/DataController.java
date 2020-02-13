@@ -538,7 +538,7 @@ public class DataController {
         Recipe recipe = new Recipe();
         recipe.setUser(userCrudService.getById((long) 1));
         recipe.setCuisines(cuisineCrudService.getAll().subList(5,10));
-        recipe.setText("This salad is a great way to enjoy grilled chicken in a fresh and light dish. Simply slice or chop grilled chicken breast. Cut grilled corn kernels off the cob.  Toss chopped Romaine lettuce, cherry tomatoes sliced in half, chopped red onion and avocado (if you happen to have it on hand) in a big bowl. In a small cup, whisk oil, vinegar, salt, pepper, garlic and Italian seasoning or dried oregano. Pour over salad, toss gently to coat and serve.");
+        recipe.setText("Simply slice or chop grilled chicken breast. Cut grilled corn kernels off the cob. Toss chopped Romaine lettuce, cherry tomatoes sliced in half, chopped red onion and avocado (if you happen to have it on hand) in a big bowl.");
         imgTreatmentRecipe("recipe1.png",recipe);
         recipeCrudService.add(recipe);
 
@@ -546,9 +546,7 @@ public class DataController {
         recipe = new Recipe();
         recipe.setUser(userCrudService.getById((long) 2));
         recipe.setCuisines(cuisineCrudService.getAll().subList(10,12));
-        recipe.setText("Heat grill to medium-high. Season chicken with coriander, oregano, salt, and pepper. Grill, covered, turning halfway through, until golden and no longer pink, 18 to 22 minutes. Let rest 5 minutes, then slice.\n" +
-                "Meanwhile, make dressing. Whisk olive oil, red wine vinegar, and parsley in a small bowl and season with salt and pepper.\n" +
-                "Divide lettuce, cucumbers, tomatoes, avocado, feta, and olives among four serving bowls. Top with sliced chicken, then drizzle with dressing.");
+        recipe.setText("Heat grill to medium-high. Season chicken with coriander, oregano, salt, and pepper. Grill, covered, turning halfway through, until golden and no longer pink, 18 to 22 minutes. Let rest 5 minutes, then slice.");
         imgTreatmentRecipe("recipe2.png",recipe);
         recipeCrudService.add(recipe);
 
