@@ -1,0 +1,19 @@
+.intersets-container {
+  display: flex;
+  padding: 30px;
+  max-width: -moz-fit-content;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px 0 20px 0;
+  flex-wrap: wrap;
+  max-width: 66%;
+  justify-content: center;
+  align-items: center;
+}
+.intersets-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}

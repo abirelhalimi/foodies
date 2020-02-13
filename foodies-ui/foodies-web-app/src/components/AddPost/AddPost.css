@@ -1,0 +1,43 @@
+.add-new-post-profile-picture-input-container {
+  display: flex;
+  padding: 20px;
+  width: 90%;
+}
+.add-new-post-input {
+  color: black;
+}
+.add-new-post-title-container {
+  padding: 15px;
+  padding-left: 25px;
+  box-shadow: 0px 0px 2px grey;
+  font-weight: bold;
+}
+.add-new-post-container {
+  background-color: #e4f3df;
+  box-shadow: 0px 0px 7px grey;
+  border-radius: 7px;
+}
+.add-new-post-photo-upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+}
+
+.add-new-post-photo-upload-btn-wrapper input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.add-new-post-image-preview {
+  -webkit-box-shadow: inset 0px 0px 50px 6px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: inset 0px 0px 50px 6px rgba(0, 0, 0, 0.39);
+  box-shadow: inset 0px 0px 50px 6px rgba(0, 0, 0, 0.39);
+  width: 5rem;
+  border-radius: 1.5rem;
+}

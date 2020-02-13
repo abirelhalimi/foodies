@@ -1,0 +1,26 @@
+.profile-img {
+  border-radius: 50%;
+  border: 5px solid white;
+  width: 11rem;
+  height: 11rem;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  margin-top: 10rem;
+}
+.individual-profile-container {
+  display: flex;
+  justify-content: center;
+  background-color: #002727;
+  height: 12rem;
+  align-items: center;
+}
+.individual-profile-posts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
