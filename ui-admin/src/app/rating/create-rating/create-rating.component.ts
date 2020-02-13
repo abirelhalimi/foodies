@@ -31,7 +31,7 @@ export class CreateRatingComponent implements OnInit {
   save() {
     this.ratingService.createRating(this.rating)
       .then(data => console.log(data));
-    this.rating = new Rating();
+    this.newRating();
     this.goToList();
   }
 

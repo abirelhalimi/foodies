@@ -2,32 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Code.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/repositories/CodeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DonationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DonationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Donation.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Donation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/models/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/DonationCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/DonationCrudService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/DonationCrudServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/services/crud/impl/DonationCrudServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/comment/create-comment/create-comment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/comment/create-comment/create-comment.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/cuisine/create-cuisine/create-cuisine.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/cuisine/create-cuisine/create-cuisine.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/donation/create-donation/create-donation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/donation/create-donation/create-donation.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/menu/create-menu/create-menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/menu/create-menu/create-menu.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/menu/menu.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/menu/menu.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/rating/create-rating/create-rating.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/rating/create-rating/create-rating.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/comment/comment.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/comment/comment.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/comment/create-comment/create-comment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/comment/create-comment/create-comment.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/cuisine/create-cuisine/create-cuisine.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/cuisine/create-cuisine/create-cuisine.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/cuisine/cuisine.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/cuisine/cuisine.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/donation/create-donation/create-donation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/donation/create-donation/create-donation.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/donation/donation-list/donation-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/donation/donation-list/donation-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/donation/donation.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/donation/donation.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/donation/donation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/donation/donation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/menu/create-menu/create-menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/menu/create-menu/create-menu.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/menu/menu.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/menu/menu.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/nav/nav.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui-admin/src/app/rating/create-rating/create-rating.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/rating/create-rating/create-rating.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/rating/rating.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/rating/rating.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/recipe/create-recipe/create-recipe.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/recipe/create-recipe/create-recipe.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/recipe/recipe.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/recipe/recipe.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/restaurant/create-restaurant/create-restaurant.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/restaurant/create-restaurant/create-restaurant.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/restaurant/create-restaurant/create-restaurant.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/restaurant/create-restaurant/create-restaurant.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/restaurant/restaurant.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/restaurant/restaurant.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/review/create-review/create-review.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/review/create-review/create-review.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/review/create-review/create-review.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/review/create-review/create-review.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/review/review.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/review/review.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/user/create-user/create-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/user/create-user/create-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/recipe/create-recipe/create-recipe.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/recipe/create-recipe/create-recipe.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/recipe/recipe.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/recipe/recipe.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -274,7 +263,7 @@
       <workItem from="1581410476080" duration="36263000" />
       <workItem from="1581502508252" duration="308000" />
       <workItem from="1581513406715" duration="7797000" />
-      <workItem from="1581527657899" duration="25575000" />
+      <workItem from="1581527657899" duration="30557000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -605,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581551962452</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="update Code Donation Claim offer">
+      <created>1581561532217</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1581561532217</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -639,7 +635,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update - Data Controller" />
     <MESSAGE value="Added JWT" />
     <MESSAGE value="Update - Donation Service &amp; Controller" />
     <MESSAGE value="Update - Restaurant service" />
@@ -664,6 +659,7 @@
     <MESSAGE value="update jwt" />
     <MESSAGE value="update userController" />
     <MESSAGE value="update DataController" />
-    <option name="LAST_COMMIT_MESSAGE" value="update DataController" />
+    <MESSAGE value="update Code Donation Claim offer" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Code Donation Claim offer" />
   </component>
 </project>

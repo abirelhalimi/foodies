@@ -1,1 +1,26 @@
-<p>create-donation works!</p>
+<h3>Create Donation</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="quantity">Quantity</label>
+      <input type="number" class="form-control" id="quantity" required [(ngModel)]="donation.quantity" name="quantity">
+    </div>
+
+    <div class="form-group">
+      <label for="offer">Offer</label>
+      <input type="boolean" class="form-control" id="offer" required [(ngModel)]="donation.offer" name="offer">
+    </div>
+
+    <div class="form-group">
+      <label for="restaurant">Restaurant</label>
+      <input type="number" class="form-control" id="restaurant" required [(ngModel)]="donation.restaurant" name="restaurant">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
