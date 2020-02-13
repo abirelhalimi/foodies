@@ -20,6 +20,9 @@ public class Donation {
     private String text;
     private Date date;
 
+    @Lob
+    private byte[] image;
+
     public Long getId() {
         return id;
     }
@@ -74,5 +77,13 @@ public class Donation {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 }

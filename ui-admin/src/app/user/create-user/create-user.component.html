@@ -17,15 +17,6 @@
       <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
     </div>
 
-    <div class="form-group">
-      <label >Cuisines</label><br>
-      <div *ngFor="let cuisine of cuisines">
-        <input type="checkbox" (click)="addCuisine(cuisine.id)"/> {{cuisine.name}}
-      </div>
-<!--      <input type="password" class="form-control" id="cuisines" required [(ngModel)]="user.password" name="password">-->
-    </div>
-
-
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>
