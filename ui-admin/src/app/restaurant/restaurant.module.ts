@@ -4,12 +4,14 @@ import {RestaurantDetailsComponent} from './restaurant-details/restaurant-detail
 import {CreateRestaurantComponent} from './create-restaurant/create-restaurant.component';
 import {UpdateRestaurantComponent} from './update-restaurant/update-restaurant.component';
 import {RestaurantService} from './restaurant.service';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [RestaurantDetailsComponent, CreateRestaurantComponent, UpdateRestaurantComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [RestaurantService]
 })

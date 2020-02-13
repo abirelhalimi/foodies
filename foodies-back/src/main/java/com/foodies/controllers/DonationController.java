@@ -1,5 +1,6 @@
 package com.foodies.controllers;
 
+import com.foodies.models.Code;
 import com.foodies.models.Donation;
 import com.foodies.services.crud.DonationCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,6 +74,16 @@ public class DonationController {
     @PostMapping(value = "/unlike/{id}")
     public void unlike(@PathVariable Long id) {
         donationCrudService.unlike(id);
+    }
+
+    @GetMapping(value = "/claimOffer/{id}")
+    public Code claimOffer(@PathVariable Long id) {
+        return donationCrudService.claimOffer(id);
+    }
+
+    @GetMapping(value = "/claimDonation/{id}")
+    public Code claimDonation(@PathVariable Long id) {
+        return donationCrudService.claimOffer(id);
     }
 
 }

@@ -36,7 +36,7 @@ export class RecipeService {
       .catch(this.handleError);
   }
 
-  createRestaurant(recipe: Recipe): Promise<Recipe> {
+  createRecipe(recipe: Recipe): Promise<Recipe> {
     return this.http.put('/api/recipes/', recipe)
       .toPromise()
       .then(response => response as Recipe)

@@ -1,1 +1,47 @@
-<p>create-restaurant works!</p>
+<h3>Create Restaurant</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" required [(ngModel)]="restaurant.username" name="username">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" required [(ngModel)]="restaurant.email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" required [(ngModel)]="restaurant.password" name="password">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="restaurant.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="telephone">Phone number</label>
+      <input type="text" class="form-control" id="telephone" required [(ngModel)]="restaurant.telephone" name="telephone">
+    </div>
+
+    <div class="form-group">
+      <label for="longitude">Longitude</label>
+      <input type="number" class="form-control" id="longitude" required [(ngModel)]="restaurant.longitude" name="longitude">
+    </div>
+
+    <div class="form-group">
+      <label for="latitude">Latitude</label>
+      <input type="number" class="form-control" id="latitude" required [(ngModel)]="restaurant.latitude" name="latitude">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
