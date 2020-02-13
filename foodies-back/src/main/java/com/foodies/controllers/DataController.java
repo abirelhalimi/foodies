@@ -489,7 +489,7 @@ public class DataController {
         restaurant = new Restaurant();
         restaurant.setAddress("Rue Tansift, Rabat");
         restaurant.setEmail("metros@gmail.com");
-        imgTreatmentR("metros.png",restaurant);
+        imgTreatmentR("metros.jpg",restaurant);
         restaurant.setPassword("metros");
         restaurant.setTelephone("05377-72425");
         restaurant.setName("Metros De Pizza");
@@ -538,77 +538,79 @@ public class DataController {
         Recipe recipe = new Recipe();
         recipe.setUser(userCrudService.getById((long) 1));
         recipe.setCuisines(cuisineCrudService.getAll().subList(5,10));
-        recipe.setText("this is a recipe written by regina phalange");
-        imgTreatmentRecipe("regina.png",recipe);
+        recipe.setText("This salad is a great way to enjoy grilled chicken in a fresh and light dish. Simply slice or chop grilled chicken breast. Cut grilled corn kernels off the cob.  Toss chopped Romaine lettuce, cherry tomatoes sliced in half, chopped red onion and avocado (if you happen to have it on hand) in a big bowl. In a small cup, whisk oil, vinegar, salt, pepper, garlic and Italian seasoning or dried oregano. Pour over salad, toss gently to coat and serve.");
+        imgTreatmentRecipe("recipe1.png",recipe);
         recipeCrudService.add(recipe);
 
         //recipe 2
         recipe = new Recipe();
         recipe.setUser(userCrudService.getById((long) 2));
         recipe.setCuisines(cuisineCrudService.getAll().subList(10,12));
-        recipe.setText("this is a recipe written by ken adams");
-        imgTreatmentRecipe("ken.png",recipe);
+        recipe.setText("Heat grill to medium-high. Season chicken with coriander, oregano, salt, and pepper. Grill, covered, turning halfway through, until golden and no longer pink, 18 to 22 minutes. Let rest 5 minutes, then slice.\n" +
+                "Meanwhile, make dressing. Whisk olive oil, red wine vinegar, and parsley in a small bowl and season with salt and pepper.\n" +
+                "Divide lettuce, cucumbers, tomatoes, avocado, feta, and olives among four serving bowls. Top with sliced chicken, then drizzle with dressing.");
+        imgTreatmentRecipe("recipe2.png",recipe);
         recipeCrudService.add(recipe);
 
         //menu 1
         Menu menu = new Menu();
         menu.setRestaurant(restaurantCrudService.getById((long) 1));
-        menu.setText("this is a menu posted by bluespoon");
-        imgTreatmentMenu("bluespoon.png",menu);
+        menu.setText("Special Menu for February");
+        imgTreatmentMenu("menu1.png",menu);
         menuCrudService.add(menu);
 
         //menu 2
         menu = new Menu();
         menu.setRestaurant(restaurantCrudService.getById((long) 2));
-        menu.setText("this is a menu posted by metros");
-        imgTreatmentMenu("metros.png",menu);
+        menu.setText("This weekend's special menu just for you !");
+        imgTreatmentMenu("menu2.jpg",menu);
         menuCrudService.add(menu);
 
         //donation 1
         Donation donation = new Donation();
-        donation.setText("this is a donation by bluespoon");
+        donation.setText("All available tonight for free enough for 80 people.");
         donation.setRestaurant(restaurantCrudService.getById((long) 1));
         donation.setQuantity(80);
-        imgTreatmentDonation("bluespoon.png",donation);
+        imgTreatmentDonation("menu1.png",donation);
         donationCrudService.add(donation);
 
         //donation 2
         donation = new Donation();
-        donation.setText("this is a donation by metros");
+        donation.setText("This weekend 150 meal will be offered for free. Hurry Up and get your code !");
         donation.setRestaurant(restaurantCrudService.getById((long) 2));
         donation.setQuantity(150);
-        imgTreatmentDonation("metros.png",donation);
+        imgTreatmentDonation("menu2.jpg",donation);
         donationCrudService.add(donation);
 
         //offer 1
         donation = new Donation();
-        donation.setText("this is an offer by bluespoon");
+        donation.setText("20% off in the next 2 hours !!!");
         donation.setRestaurant(restaurantCrudService.getById((long) 1));
         donation.setQuantity(50);
         donation.setOffer(true);
-        imgTreatmentDonation("bluespoon.png",donation);
+        imgTreatmentDonation("menu1.png",donation);
         donationCrudService.add(donation);
 
         //donation 2
         donation = new Donation();
-        donation.setText("this is an offer by metros");
+        donation.setText("STUDENTS : 70% off your order this whole weekend !");
         donation.setQuantity(20);
         donation.setRestaurant(restaurantCrudService.getById((long) 2));
-        imgTreatmentDonation("metros.png",donation);
+        imgTreatmentDonation("menu2.png",donation);
         donation.setOffer(true);
         donationCrudService.add(donation);
 
         //comment 1
         Comment comment =  new Comment();
         comment.setRecipe(recipeCrudService.getById((long) 1));
-        comment.setText("this is a comment by ken on regina's recipe");
+        comment.setText("Great recipe. Grilled chicken goes really well with the salad. Do you know how many calories are in it ?");
         comment.setUser(userCrudService.getById((long) 2));
         commentCrudService.add(comment);
 
         //comment 2
         comment =  new Comment();
         comment.setRecipe(recipeCrudService.getById((long) 2));
-        comment.setText("this is a comment by regina on ken's recipe");
+        comment.setText("My family is coming over for dinner this friday. I'll try your recipe and hopefully they'll like it");
         comment.setUser(userCrudService.getById((long) 1));
         commentCrudService.add(comment);
 

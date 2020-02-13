@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79489968-6b9e-427c-a627-9c36dbb2db0b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ui-admin/node_modules/blob/.idea/blob.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-admin/node_modules/clone/clone.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-admin/node_modules/node-releases/.idea/node-releases.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-admin/node_modules/socket.io-adapter/.idea/socket.io-adapter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/comment/comment.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/comment/comment.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/comment/create-comment/create-comment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/comment/create-comment/create-comment.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/cuisine/create-cuisine/create-cuisine.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/cuisine/create-cuisine/create-cuisine.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/cuisine/cuisine.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/cuisine/cuisine.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/donation/create-donation/create-donation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/donation/create-donation/create-donation.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/donation/donation-list/donation-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/donation/donation-list/donation-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/donation/donation.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/donation/donation.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/donation/donation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/donation/donation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/menu/create-menu/create-menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/menu/create-menu/create-menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/menu/menu.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/menu/menu.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/nav/nav.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/rating/create-rating/create-rating.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/rating/create-rating/create-rating.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/recipe/create-recipe/create-recipe.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/recipe/create-recipe/create-recipe.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui-admin/src/app/recipe/recipe.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui-admin/src/app/recipe/recipe.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/java/com/foodies/controllers/DataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/resources/bluespoon.png" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/resources/bluespoon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/resources/ken.png" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/resources/ken.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/resources/metros.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodies-back/src/main/resources/regina.png" beforeDir="false" afterPath="$PROJECT_DIR$/foodies-back/src/main/resources/regina.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,15 +36,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fe026fe71f343dd69fe408161526f33b2dbf7388" />
+        <entry key="$PROJECT_DIR$" value="fr_admin" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,40 +72,34 @@
     <property name="findjar.last.used.dir" value="D:/installs" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ui-admin/src/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/foodies-back/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="" />
-    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/ui-admin/node_modules/protractor" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
-    <property name="ts.external.directory.path" value="C:\Users\abir0\IdeaProjects\foodies\ui-admin\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin\src\app\checkbox" />
-      <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin\src\app\user" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\abir0\IdeaProjects\foodies\foodies-back\src\main\resources" />
-      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-web\src\main\java\com\foodies" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\models" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\repositories" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\services" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.foodies.services" />
       <recent name="com.foodies" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin\src\app" />
-      <recent name="C:\Users\abir0\IdeaProjects\foodies\ui-admin" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\abir0\IdeaProjects\foodies\foodies-back\src\main\resources" />
-      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\models" />
-      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-back\src\main\java\com\foodies\repositories" />
+      <recent name="C:\Users\abir0\IdeaProjects\foodies-app\foodies-web\src\main\java\com\foodies" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -126,26 +115,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.FoodiesApplication">
-    <configuration name="E2E Tests (foodies-admin)" type="JavaScriptTestRunnerProtractor">
-      <config-file value="$PROJECT_DIR$/foodies-admin/e2e/protractor.conf.js" />
-      <node-interpreter value="project" />
-      <protractor-options value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method v="2" />
-    </configuration>
-    <configuration name="E2E Tests (ui-admin)" type="JavaScriptTestRunnerProtractor">
-      <config-file value="$PROJECT_DIR$/ui-admin/e2e/protractor.conf.js" />
-      <node-interpreter value="project" />
-      <protractor-package value="$PROJECT_DIR$/ui-admin/node_modules/protractor" />
-      <protractor-options value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Angular Application (foodies-admin)" type="JavascriptDebugType" uri="http://localhost:4200">
-      <method v="2" />
-    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -179,33 +148,8 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Angular CLI Server (foodies-admin)" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/foodies-admin/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="Angular CLI Server (ui-admin)" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/ui-admin/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Debug Application" />
-      <item itemvalue="JavaScript Debug.Angular Application (foodies-admin)" />
-      <item itemvalue="npm.Angular CLI Server (foodies-admin)" />
-      <item itemvalue="npm.Angular CLI Server (ui-admin)" />
-      <item itemvalue="Protractor.E2E Tests (foodies-admin)" />
-      <item itemvalue="Protractor.E2E Tests (ui-admin)" />
       <item itemvalue="Spring Boot.FoodiesApplication" />
     </list>
   </component>
@@ -257,13 +201,7 @@
       <workItem from="1581166953415" duration="2062000" />
       <workItem from="1581177434473" duration="4319000" />
       <workItem from="1581190892706" duration="3538000" />
-      <workItem from="1581244041775" duration="25206000" />
-      <workItem from="1581326516952" duration="1128000" />
-      <workItem from="1581329321468" duration="28705000" />
-      <workItem from="1581410476080" duration="36263000" />
-      <workItem from="1581502508252" duration="308000" />
-      <workItem from="1581513406715" duration="7797000" />
-      <workItem from="1581527657899" duration="30557000" />
+      <workItem from="1581244041775" duration="17650000" />
     </task>
     <task id="LOCAL-00001" summary="added foodies-ui module">
       <created>1574376538066</created>
@@ -468,140 +406,7 @@
       <option name="project" value="LOCAL" />
       <updated>1581264171630</updated>
     </task>
-    <task id="LOCAL-00030" summary="update">
-      <created>1581281960481</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1581281960481</updated>
-    </task>
-    <task id="LOCAL-00031" summary="update - like + ui-admin">
-      <created>1581346218606</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1581346218606</updated>
-    </task>
-    <task id="LOCAL-00032" summary="update Donation">
-      <created>1581363107536</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1581363107536</updated>
-    </task>
-    <task id="LOCAL-00033" summary="update">
-      <created>1581371693201</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1581371693201</updated>
-    </task>
-    <task id="LOCAL-00034" summary="ui-admin">
-      <created>1581434296335</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1581434296335</updated>
-    </task>
-    <task id="LOCAL-00035" summary="ui-admin">
-      <created>1581445494558</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1581445494558</updated>
-    </task>
-    <task id="LOCAL-00036" summary="update - fix followers/following">
-      <created>1581456368513</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1581456368513</updated>
-    </task>
-    <task id="LOCAL-00037" summary="update - unlike">
-      <created>1581457679174</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1581457679174</updated>
-    </task>
-    <task id="LOCAL-00038" summary="entities details">
-      <created>1581461551757</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1581461551757</updated>
-    </task>
-    <task id="LOCAL-00039" summary="admin - crud">
-      <created>1581464971446</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1581464971446</updated>
-    </task>
-    <task id="LOCAL-00040" summary="ui-admin fixed">
-      <created>1581506241491</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1581506241491</updated>
-    </task>
-    <task id="LOCAL-00041" summary="ui-admin fixed">
-      <created>1581506406846</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1581506406846</updated>
-    </task>
-    <task id="LOCAL-00042" summary="added getFollowing for user">
-      <created>1581517864299</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1581517864299</updated>
-    </task>
-    <task id="LOCAL-00043" summary="update follow">
-      <created>1581529530702</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1581529530702</updated>
-    </task>
-    <task id="LOCAL-00044" summary="update jwt">
-      <created>1581536734620</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1581536734620</updated>
-    </task>
-    <task id="LOCAL-00045" summary="update jwt">
-      <created>1581537594970</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1581537594970</updated>
-    </task>
-    <task id="LOCAL-00046" summary="update userController">
-      <created>1581543974830</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1581543974830</updated>
-    </task>
-    <task id="LOCAL-00047" summary="update DataController">
-      <created>1581551962452</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1581551962452</updated>
-    </task>
-    <task id="LOCAL-00048" summary="update Code Donation Claim offer">
-      <created>1581561532217</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1581561532217</updated>
-    </task>
-    <option name="localTasksCounter" value="49" />
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -635,31 +440,29 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="added foodies-ui module" />
+    <MESSAGE value="crud services" />
+    <MESSAGE value="created models, repositories and all crud services" />
+    <MESSAGE value="crud controllers" />
+    <MESSAGE value="crud update" />
+    <MESSAGE value="restaurant controller" />
+    <MESSAGE value="user controller" />
+    <MESSAGE value="user controller update" />
+    <MESSAGE value="all controllers. New Post Type." />
+    <MESSAGE value="Added Data Controller" />
+    <MESSAGE value="Update - Security configuration" />
+    <MESSAGE value="Update - Data Controller" />
     <MESSAGE value="Added JWT" />
     <MESSAGE value="Update - Donation Service &amp; Controller" />
     <MESSAGE value="Update - Restaurant service" />
     <MESSAGE value="Update - JWT Settings" />
     <MESSAGE value="update - datacontroller. Changed img type" />
+    <MESSAGE value="update" />
     <MESSAGE value="fix - search result" />
     <MESSAGE value="fixed error" />
     <MESSAGE value="added Date to posts" />
     <MESSAGE value="added Date to comment" />
     <MESSAGE value="added admin side add-restaurants" />
-    <MESSAGE value="update - like + ui-admin" />
-    <MESSAGE value="update Donation" />
-    <MESSAGE value="update" />
-    <MESSAGE value="ui-admin" />
-    <MESSAGE value="update - fix followers/following" />
-    <MESSAGE value="update - unlike" />
-    <MESSAGE value="entities details" />
-    <MESSAGE value="admin - crud" />
-    <MESSAGE value="ui-admin fixed" />
-    <MESSAGE value="added getFollowing for user" />
-    <MESSAGE value="update follow" />
-    <MESSAGE value="update jwt" />
-    <MESSAGE value="update userController" />
-    <MESSAGE value="update DataController" />
-    <MESSAGE value="update Code Donation Claim offer" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Code Donation Claim offer" />
+    <option name="LAST_COMMIT_MESSAGE" value="added admin side add-restaurants" />
   </component>
 </project>
