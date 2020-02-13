@@ -505,7 +505,7 @@ public class DataController {
         Rating rating = new Rating();
 
         //first recommendation
-        imgTreatmentRec("regina.png", review);
+        imgTreatmentRec("recipe1.png", review);
         rating.setAccessibility(4);
         rating.setDish(4);
         rating.setLocation(5);
@@ -520,7 +520,7 @@ public class DataController {
 
         //second recommendation
         review = new Review();
-        imgTreatmentRec("regina.png", review);
+        imgTreatmentRec("recipe2.png", review);
         rating = new Rating();
         rating.setAccessibility(4);
         rating.setDish(4);
