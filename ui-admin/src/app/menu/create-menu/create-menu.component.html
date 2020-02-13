@@ -1,1 +1,21 @@
-<p>create-menu works!</p>
+<h3>Create Menu</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="text">Text</label>
+      <input type="text" class="form-control" id="text" required [(ngModel)]="menu.text" name="text">
+    </div>
+
+    <div class="form-group">
+      <label for="restaurant">Restaurant</label>
+      <input type="number" class="form-control" id="restaurant" required [(ngModel)]="menu.restaurant" name="restaurant">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

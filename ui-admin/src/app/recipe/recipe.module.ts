@@ -4,12 +4,14 @@ import {RecipeDetailsComponent} from './recipe-details/recipe-details.component'
 import {UpdateRecipeComponent} from './update-recipe/update-recipe.component';
 import {CreateRecipeComponent} from './create-recipe/create-recipe.component';
 import {RecipeService} from './recipe.service';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [RecipeDetailsComponent, UpdateRecipeComponent, CreateRecipeComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [RecipeService]
 })

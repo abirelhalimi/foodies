@@ -6,5 +6,6 @@ export class Donation {
   likes: number;
   offer: boolean;
   pickedUp: boolean;
+  quantity: number;
   restaurant: Restaurant;
 }

@@ -4,12 +4,14 @@ import {DonationDetailsComponent} from './donation-details/donation-details.comp
 import {CreateDonationComponent} from './create-donation/create-donation.component';
 import {UpdateDonationComponent} from './update-donation/update-donation.component';
 import {DonationService} from './donation.service';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [DonationDetailsComponent, CreateDonationComponent, UpdateDonationComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [DonationService]
 })
