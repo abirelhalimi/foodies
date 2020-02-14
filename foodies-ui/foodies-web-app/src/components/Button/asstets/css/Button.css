@@ -1,0 +1,17 @@
+.outlined {
+  background-color: unset;
+  border: 1px solid #8de4af;
+  border-radius: 2px;
+  color: #8de4af;
+  cursor: pointer;
+  height: 36px;
+}
+
+.filled {
+  background-color: #8de4af;
+  border: 1px solid #8de4af;
+  border-radius: 2px;
+  color: #1f4343;
+  cursor: pointer;
+  height: 36px;
+}

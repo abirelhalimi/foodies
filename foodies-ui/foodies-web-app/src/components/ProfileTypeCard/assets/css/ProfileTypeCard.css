@@ -1,0 +1,17 @@
+.individual-profile {
+  background-color: #002727;
+  height: 150px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8de4af;
+  font-size: calc(10px + 2vmin);
+  border-radius: 11px;
+  margin: 20px;
+}
+.individual-profile:hover {
+  cursor: pointer;
+  background-color: #001818;
+}

@@ -1,0 +1,5 @@
+.add-rating-container {
+  margin: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}

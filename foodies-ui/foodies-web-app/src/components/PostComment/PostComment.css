@@ -1,0 +1,32 @@
+.post-modal-comment-container-container {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem;
+  background-color: #fff;
+  border-radius: 10px;
+  background-color: #e4f3df;
+  box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+}
+.post-modal-comment-container {
+  padding-bottom: 0.3rem;
+  width: 100%;
+}
+.post-modal-comment-profile {
+  display: flex;
+  align-items: center;
+}
+.post-modal-comment-text {
+  font-size: calc(1px + 2vmin);
+}
+.post-modal-profile-image-comment {
+  width: calc(20px + 2vmin);
+  height: calc(20px + 2vmin);
+  margin-right: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.post-modal-profile-username-comment {
+  font-size: calc(1px + 2vmin);
+  font-weight: 600;
+  cursor: pointer;
+}

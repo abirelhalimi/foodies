@@ -1,0 +1,48 @@
+.cover {
+  overflow: hidden;
+  background-image: url("./../background-image.svg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  min-height: 650px;
+  background-color: #002727;
+}
+
+.home-container {
+  position: relative;
+  background-color: #002727;
+}
+
+.primary-text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-weight: 700;
+  font-size: 25px;
+  color: #eff3dc;
+}
+.secondary-text {
+  position: absolute;
+  top: 37%;
+  left: 10%;
+  font-weight: 700;
+  font-size: 41px;
+  color: #eff3dc;
+}
+
+.home-description {
+  position: absolute;
+  top: 46%;
+  left: 10%;
+  width: 34%;
+  color: #eff3dc;
+  min-width: 17rem;
+}
+.logo-central {
+  height: 237px;
+  position: absolute;
+  left: 54%;
+  top: 25%;
+}
