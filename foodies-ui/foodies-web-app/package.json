@@ -15,7 +15,7 @@
     "jsonwebtoken": "^8.5.1",
     "lodash.isempty": "^4.4.0",
     "moment": "^2.24.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-modal": "^3.11.1",
