@@ -9,7 +9,7 @@
     "@material/react-tab": "^0.15.0",
     "@material/react-tab-bar": "^0.15.0",
     "axios": "^0.21.1",
-    "highcharts": "^8.0.0",
+    "highcharts": "^9.0.0",
     "highcharts-react-official": "^2.2.2",
     "i": "^0.3.6",
     "jsonwebtoken": "^8.5.1",
